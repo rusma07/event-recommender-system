@@ -1,0 +1,15 @@
+.home-page {
+  padding: 1rem;
+}
+
+.home-content {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .home-content {
+    flex-direction: column;
+  }
+}
