@@ -1,13 +1,14 @@
-import mongoose from "mongoose";
-import { configDotenv } from "dotenv";
+const express = require('express');
+const dotenv = require('dotenv');
+const connectDB = require('./config/db');
 
-configDotenv();
-export const connectDB = async()=>{
-    try {
-        const conn=await mongoose.connect(process.env.MONGO_URI);
-        console.log(`MongoDB Connected:${conn.connection.host}`);
-    } catch (error) {
-        console.log(`Error;${error.message}`);
-        process.exit(1);
-    }
-}
+dotenv.config();         // Load .env variables
+connectDB();             // Connect to MongoDB
+
+const app = express();
+app.use(express.json());
+
+// Your routes here...
+app.listen(5000, () => {
+  console.log('Server running on port 5000');
+});
