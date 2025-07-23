@@ -1,0 +1,16 @@
+.schedule {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  flex: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.schedule h3 {
+  margin-bottom: 1rem;
+  color: #004d99;
+}
+
+.schedule ul li {
+  margin-bottom: 0.5rem;
+}
