@@ -5,38 +5,17 @@
     "image": "https://utfs.io/f/XwQF9HrqwfTjtgWPbjf9humZ1o6f2ydkLXsJFI7xa5zqcRWM",
     "date": "Sat Jul 26 2025-Fri Aug 01 2025",
     "location": "Google Meet",
-    "tags": [
-      "Tech",
-      "Web",
-      "Devops",
-      "Community",
-      "Local",
-      "Education",
-      "Networking",
-      "Free",
-      "Online"
-    ],
-    "price": "Free",
-    "mode": "sat jul 26 2025-fri aug 01 2025"
+    "tags": "{Tech, Web, Devops, Community, Local, Education, Networking, Free, Online}",
+    "price": "Free"
   },
   {
-    "title": "QSilver28 – Quantum Programming Workshop",
+    "title": "QSilver28  Quantum Programming Workshop",
     "url": "https://www.nepvents.com/events/cmcokn87q00007wuyhcnil9rw",
     "image": "https://utfs.io/f/XwQF9HrqwfTjU2FJpb7BI6CfPhcdEWGKAjNrFl9nbyR3Vo5p",
     "date": "Mon Jul 28 2025-Sat Aug 02 2025",
-    "location": "St. Xavier's College, Maitighar, Kathmandu, Nepal",
-    "tags": [
-      "Tech",
-      "Education",
-      "Online",
-      "Hybrid",
-      "Global",
-      "Free",
-      "Engineering",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "mon jul 28 2025-sat aug 02 2025"
+    "location": "St. Xaviers College, Maitighar, Kathmandu, Nepal",
+    "tags": "{Tech, Education, Online, Hybrid, Global, Free, Engineering, Community}",
+    "price": "Free"
   },
   {
     "title": "Programmers Unknown Battleground",
@@ -44,36 +23,8 @@
     "image": "https://utfs.io/f/XwQF9HrqwfTj7oXvdBKeYTiransNmUq72W3HfxwkpM6Q1yGC",
     "date": "Thu Jul 31 2025-Sat Aug 02 2025",
     "location": "Birtamode, Jhapa",
-    "tags": [
-      "Tech",
-      "Community",
-      "Local",
-      "Networking",
-      "Blockchain",
-      "Ai",
-      "Graphic Design",
-      "Web",
-      "Engineering"
-    ],
-    "price": "Rs 2000/Team",
-    "mode": "thu jul 31 2025-sat aug 02 2025"
-  },
-  {
-    "title": "9-Day Node.js & MongoDB Workshop",
-    "url": "https://www.nepvents.com/events/cmdfkmhze00028yuyclt97q6l",
-    "image": "https://utfs.io/f/XwQF9HrqwfTjAIxuKp9Pxpj6kOt1bgVCRDLuhlGdofnWyvIN",
-    "date": "Sat Jul 26 2025-Sun Aug 03 2025",
-    "location": "Online",
-    "tags": [
-      "Web",
-      "Tech",
-      "Devops",
-      "Free",
-      "Online",
-      "Education"
-    ],
-    "price": "Free",
-    "mode": "sat jul 26 2025-sun aug 03 2025"
+    "tags": "{Tech, Community, Local, Networking, Blockchain, Ai, Graphic Design, Web, Engineering}",
+    "price": "Rs 2000Team"
   },
   {
     "title": "Nepal Cloud Meetup - July 2025",
@@ -81,17 +32,8 @@
     "image": "https://utfs.io/f/XwQF9HrqwfTjgtlkoPUbDA3xOh4e5b2aClskm19TuIMvEKiH",
     "date": "Sat Jul 26 2025",
     "location": "Microsoft Teams",
-    "tags": [
-      "Tech",
-      "Education",
-      "Free",
-      "Devops",
-      "Ai",
-      "Community",
-      "Online"
-    ],
-    "price": "Free",
-    "mode": "sat jul 26 2025"
+    "tags": "{Tech, Education, Free, Devops, Ai, Community, Online}",
+    "price": "Free"
   },
   {
     "title": "Cloud One 0 One",
@@ -99,33 +41,35 @@
     "image": "https://utfs.io/f/XwQF9HrqwfTjFRbPA6MhOLcf4kR1AyQxHdrg57MiIWjnPBYS",
     "date": "Sat Jul 26 2025",
     "location": "Google Meet",
-    "tags": [
-      "Tech",
-      "Community",
-      "Education",
-      "Networking",
-      "Free",
-      "Online"
-    ],
-    "price": "Free",
-    "mode": "sat jul 26 2025"
+    "tags": "{Tech, Community, Education, Networking, Free, Online}",
+    "price": "Free"
   },
   {
-    "title": "Hands-On DevOps: BUILD | DEPLOY | MONITOR",
+    "title": "9-Day Node.js  MongoDB Workshop",
+    "url": "https://www.nepvents.com/events/cmdfkmhze00028yuyclt97q6l",
+    "image": "https://utfs.io/f/XwQF9HrqwfTjAIxuKp9Pxpj6kOt1bgVCRDLuhlGdofnWyvIN",
+    "date": "Sat Jul 26 2025-Sun Aug 03 2025",
+    "location": "Online",
+    "tags": "{Web, Tech, Devops, Free, Online, Education}",
+    "price": "Free"
+  },
+  {
+    "title": "Hands-On DevOps BUILD  DEPLOY  MONITOR",
     "url": "https://www.nepvents.com/events/cmdg27s6r00088yuytzara9dw",
     "image": "https://utfs.io/f/XwQF9HrqwfTj0qzYLS5bn4gdxRqZ5tYm9soLAPrQiHFO3hBE",
     "date": "Sun Jul 27 2025-Tue Jul 29 2025",
     "location": "Google Meet",
-    "tags": [
-      "Devops",
-      "Online",
-      "Free",
-      "Community",
-      "Education",
-      "Tech"
-    ],
-    "price": "Free",
-    "mode": "sun jul 27 2025-tue jul 29 2025"
+    "tags": "{Devops, Online, Free, Community, Education, Tech}",
+    "price": "Free"
+  },
+  {
+    "title": "UIUX Design Workshop",
+    "url": "https://www.nepvents.com/events/cmdhlvgx4000g8yuyp152mnc7",
+    "image": "https://utfs.io/f/XwQF9HrqwfTjF44n6Q5MhOLcf4kR1AyQxHdrg57MiIWjnPBY",
+    "date": "Sun Jul 27 2025-Sun Aug 17 2025",
+    "location": "Google Meet",
+    "tags": "{Tech, Graphic Design, Online, Free, Education}",
+    "price": "Free"
   },
   {
     "title": "ArcGIS Training for Future-Ready Engineers",
@@ -133,14 +77,17 @@
     "image": "https://utfs.io/f/XwQF9HrqwfTjZfMg0EhpMIPs6uRvbctfj2E4wQqJ9rzLohUg",
     "date": "Mon Jul 28 2025-Sun Aug 03 2025",
     "location": "Google Meet",
-    "tags": [
-      "Engineering",
-      "Online",
-      "Education",
-      "Tech"
-    ],
-    "price": "Rs 200-250",
-    "mode": "mon jul 28 2025-sun aug 03 2025"
+    "tags": "{Engineering, Online, Education, Tech}",
+    "price": "Rs 200-250"
+  },
+  {
+    "title": "Getting Started with Linux  Cybersecurity",
+    "url": "https://www.nepvents.com/events/cmdhfqwot000c8yuy4ma8r4k3",
+    "image": "https://utfs.io/f/XwQF9HrqwfTjGQU0Y62U8RQKEPWNIu1lSLryzmFfCvY0ghn2",
+    "date": "Mon Jul 28 2025-Wed Jul 30 2025",
+    "location": "Embark College",
+    "tags": "{Tech, Cybersecurity, Free, Education, Community}",
+    "price": "Free"
   },
   {
     "title": "QTalk Series Ep 7",
@@ -148,15 +95,8 @@
     "image": "https://utfs.io/f/XwQF9HrqwfTjDIFp7tNtO4AHMNwciK5yB62C0pe7RgDqhrfb",
     "date": "Sat Aug 09 2025",
     "location": "Zoom",
-    "tags": [
-      "Tech",
-      "Community",
-      "Online",
-      "Free",
-      "Education"
-    ],
-    "price": "Free",
-    "mode": "sat aug 09 2025"
+    "tags": "{Tech, Community, Online, Free, Education}",
+    "price": "Free"
   },
   {
     "title": "CSITAN Networking Bootcamp 2082",
@@ -164,16 +104,8 @@
     "image": "https://utfs.io/f/XwQF9HrqwfTjfGqLSvgUX4hNxKH0Sdo1R7QJzgq8UmunyGVb",
     "date": "Sun Aug 10 2025-Tue Aug 12 2025",
     "location": "Horizon Gautam Buddha School, Drivertole, Tilottama-05",
-    "tags": [
-      "Tech",
-      "Networking",
-      "Engineering",
-      "Education",
-      "Community",
-      "Physical"
-    ],
-    "price": "Rs. 500",
-    "mode": "sun aug 10 2025-tue aug 12 2025"
+    "tags": "{Tech, Networking, Engineering, Education, Community, Physical}",
+    "price": "Rs. 500"
   },
   {
     "title": "NEPAL-US AI HACKATHON",
@@ -181,31 +113,17 @@
     "image": "https://utfs.io/f/XwQF9HrqwfTjn3bRiuaYW3R9LCEytg0MvVOUz5xklSpBhuif",
     "date": "Sun Aug 17 2025-Sun Aug 24 2025",
     "location": "U.S.",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Community",
-      "Networking",
-      "Online",
-      "Engineering"
-    ],
-    "price": "Free",
-    "mode": "sun aug 17 2025-sun aug 24 2025"
+    "tags": "{Ai, Tech, Community, Networking, Online, Engineering}",
+    "price": "Free"
   },
   {
     "title": "UbuCon Asia 2025",
     "url": "https://www.nepvents.com/events/cm7qbzsoh00004lql2dgklp1c",
     "image": "https://utfs.io/f/XwQF9HrqwfTjmXVvJF4W6sSABi9xU75bOMJXyZLjGwT2DQpk",
     "date": "Sat Aug 30 2025-Mon Sep 01 2025",
-    "location": "St. Xavier's College, Maitighar, Kathmandu",
-    "tags": [
-      "Tech",
-      "Engineering",
-      "Community",
-      "Networking"
-    ],
-    "price": "Rs 2000 - 3500",
-    "mode": "sat aug 30 2025-mon sep 01 2025"
+    "location": "St. Xaviers College, Maitighar, Kathmandu",
+    "tags": "{Tech, Engineering, Community, Networking}",
+    "price": "Rs 2000 - 3500"
   },
   {
     "title": "Leapfrog 60 Days of Learning",
@@ -213,15 +131,8 @@
     "image": "https://utfs.io/f/XwQF9HrqwfTjZVQptThpMIPs6uRvbctfj2E4wQqJ9rzLohUg",
     "date": "Sun Jun 01 2025-Wed Jul 30 2025",
     "location": "Online",
-    "tags": [
-      "Tech",
-      "Community",
-      "Education",
-      "Online",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sun jun 01 2025-wed jul 30 2025"
+    "tags": "{Tech, Community, Education, Online, Free}",
+    "price": "Free"
   },
   {
     "title": "Qloo LLM Hackathon",
@@ -229,16 +140,8 @@
     "image": "https://utfs.io/f/XwQF9HrqwfTjZguGAahpMIPs6uRvbctfj2E4wQqJ9rzLohUg",
     "date": "Tue Jul 01 2025-Fri Aug 01 2025",
     "location": "Devpost",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Online",
-      "Global",
-      "Web",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "tue jul 01 2025-fri aug 01 2025"
+    "tags": "{Ai, Tech, Online, Global, Web, Community}",
+    "price": "Free"
   },
   {
     "title": "Software Fellowship 2026",
@@ -246,69 +149,35 @@
     "image": "https://utfs.io/f/XwQF9HrqwfTjKZWqD4n4OuWldSU7xfzNFRyPBJbVsiLXT2jq",
     "date": "Tue Jul 15 2025-Thu Jul 24 2025",
     "location": "Pulchowk Campus",
-    "tags": [
-      "Tech",
-      "Web",
-      "Ai",
-      "Cybersecurity",
-      "Data Analysis",
-      "Networking",
-      "Engineering",
-      "Community",
-      "Education"
-    ],
-    "price": "NRs. 250",
-    "mode": "tue jul 15 2025-thu jul 24 2025"
+    "tags": "{Tech, Web, Ai, Cybersecurity, Data Analysis, Networking, Engineering, Community, Education}",
+    "price": "NRs. 250"
   },
   {
-    "title": "Doodles to Deadlines: Navigating Your Creative Career",
+    "title": "Doodles to Deadlines Navigating Your Creative Career",
     "url": "https://www.nepvents.com/events/cmd8xnrpl000cafuyn9zt5v1i",
-    "image": "https://utfs.io/f/XwQF9HrqwfTjpwp0WxuOiayJ85c3eUGqxIFpkmMQhZTKltsH",
+    "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed Jul 23 2025",
     "location": "Google Meet",
-    "tags": [
-      "Graphic Design",
-      "Online",
-      "Community",
-      "Networking",
-      "Free",
-      "Tech",
-      "Art"
-    ],
-    "price": "Free",
-    "mode": "wed jul 23 2025"
+    "tags": "{Graphic Design, Online, Community, Networking, Free, Tech, Art}",
+    "price": "Free"
   },
   {
-    "title": "Design Thinking: Mastering Discovery and Design",
+    "title": "Design Thinking Mastering Discovery and Design",
     "url": "https://www.nepvents.com/events/cmdcmcqne0000afuy0lqegc0h",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Jul 22 2025",
     "location": "Google Meet",
-    "tags": [
-      "Tech",
-      "Community",
-      "Online",
-      "Networking",
-      "Engineering",
-      "Education"
-    ],
-    "price": "Free",
-    "mode": "tue jul 22 2025"
+    "tags": "{Tech, Community, Online, Networking, Engineering, Education}",
+    "price": "Free"
   },
   {
     "title": "Mapping Your Tech Journey with Project Management",
     "url": "https://www.nepvents.com/events/cmdcps5wv0006afuydwknecaj",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Jul 22 2025",
-    "location": "Kantipur Engineering College (KEC)",
-    "tags": [
-      "Tech",
-      "Community",
-      "Education",
-      "Networking"
-    ],
-    "price": "Free",
-    "mode": "tue jul 22 2025"
+    "location": "Kantipur Engineering College KEC",
+    "tags": "{Tech, Community, Education, Networking}",
+    "price": "Free"
   },
   {
     "title": "HTML CSS WORKSHOP",
@@ -316,16 +185,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Jul 20 2025",
     "location": "CSIT BLOCK, Patan Multiple Campus",
-    "tags": [
-      "Web",
-      "Tech",
-      "Education",
-      "Free",
-      "Online",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "sun jul 20 2025"
+    "tags": "{Web, Tech, Education, Free, Online, Community}",
+    "price": "Free"
   },
   {
     "title": "IEEE Cubing Nepal 2025",
@@ -333,13 +194,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Jul 19 2025-Sun Jul 20 2025",
     "location": "Pulchowk Campus, Lalitpur, Nepal",
-    "tags": [
-      "Community",
-      "Local",
-      "Gaming"
-    ],
-    "price": "Rs 350",
-    "mode": "sat jul 19 2025-sun jul 20 2025"
+    "tags": "{Community, Local, Gaming}",
+    "price": "Rs 350"
   },
   {
     "title": "Technomorph Hackathon",
@@ -347,50 +203,35 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Jul 19 2025",
     "location": "FSU Hall, Purwanchal Campus",
-    "tags": [
-      "Tech",
-      "Engineering",
-      "Robotics",
-      "Local",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "sat jul 19 2025"
+    "tags": "{Tech, Engineering, Robotics, Local, Community}",
+    "price": "Free"
   },
   {
-    "title": "Git Ready: Take Care of Your Code",
+    "title": "Cyber Security  Ethical Hacking Online Workshop",
+    "url": "https://www.nepvents.com/events/cmd73ngkg0004afuygsfwbufw",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat Jul 19 2025-Sun Jul 20 2025",
+    "location": "Online",
+    "tags": "{Cybersecurity, Tech, Education, Online, Free, Community}",
+    "price": "Free"
+  },
+  {
+    "title": "Git Ready Take Care of Your Code",
     "url": "https://www.nepvents.com/events/cmd4iaz1x0004d4uxvd9wxvym",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Jul 19 2025",
     "location": "Google Meet",
-    "tags": [
-      "Tech",
-      "Community",
-      "Free",
-      "Online",
-      "Education",
-      "Web",
-      "Devops"
-    ],
-    "price": "Free",
-    "mode": "sat jul 19 2025"
+    "tags": "{Tech, Community, Free, Online, Education, Web, Devops}",
+    "price": "Free"
   },
   {
-    "title": "Aqore Hackathon 2025: Innovate Staffing with AI",
+    "title": "Aqore Hackathon 2025 Innovate Staffing with AI",
     "url": "https://www.nepvents.com/events/cmcc09vjp00087vuymfwlbfzr",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Jul 19 2025-Sun Jul 20 2025",
     "location": "Techspire College, Kathmandu",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Business",
-      "Networking",
-      "Startup",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sat jul 19 2025-sun jul 20 2025"
+    "tags": "{Ai, Tech, Business, Networking, Startup, Free}",
+    "price": "Free"
   },
   {
     "title": "Computer Vision Workshop",
@@ -398,82 +239,35 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Jul 18 2025",
     "location": "Sagarmatha Engineering College",
-    "tags": [
-      "Tech",
-      "Ai",
-      "Engineering",
-      "Education",
-      "Community",
-      "Robotics",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "fri jul 18 2025"
+    "tags": "{Tech, Ai, Engineering, Education, Community, Robotics, Free}",
+    "price": "Free"
   },
   {
-    "title": "Cloud-Native Development: Accelerating Delivery with AWS",
+    "title": "Cloud-Native Development Accelerating Delivery with AWS",
     "url": "https://www.nepvents.com/events/cmd0fo76100006tuyagos6foc",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed Jul 16 2025",
     "location": "Google Meet",
-    "tags": [
-      "Tech",
-      "Devops",
-      "Community",
-      "Online",
-      "Engineering"
-    ],
-    "price": "Free",
-    "mode": "wed jul 16 2025"
+    "tags": "{Tech, Devops, Community, Online, Engineering}",
+    "price": "Free"
   },
   {
-    "title": "MODEL FORGE EP 3 : Information Theory",
+    "title": "MODEL FORGE EP 3  Information Theory",
     "url": "https://www.nepvents.com/events/cmcupchlv0004mdvg9zwv8zes",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Jul 15 2025",
     "location": "Google Meet",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Online",
-      "Education",
-      "Free",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "tue jul 15 2025"
+    "tags": "{Ai, Tech, Online, Education, Free, Community}",
+    "price": "Free"
   },
   {
-    "title": "Bug Bounty 101: Hack, Hunt, Secure",
+    "title": "Bug Bounty 101 Hack, Hunt, Secure",
     "url": "https://www.nepvents.com/events/cmcvst9kj0000a1uyu4s2io11",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Jul 12 2025-Sun Jul 13 2025",
     "location": "Google Meet",
-    "tags": [
-      "Cybersecurity",
-      "Tech",
-      "Online",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sat jul 12 2025-sun jul 13 2025"
-  },
-  {
-    "title": "Hack a Flag - All Nepal CTF Contest",
-    "url": "https://www.nepvents.com/events/cmcihdsxg00086fuyhcy808ma",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Fri Jul 11 2025",
-    "location": "Pulchowk Campus",
-    "tags": [
-      "Tech",
-      "Cybersecurity",
-      "Community",
-      "Networking",
-      "Education",
-      "Engineering"
-    ],
-    "price": "Early Bird: 3500, IEEE: 2500",
-    "mode": "fri jul 11 2025"
+    "tags": "{Cybersecurity, Tech, Online, Free}",
+    "price": "Free"
   },
   {
     "title": "DeerHack 2025",
@@ -481,20 +275,26 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Jul 11 2025-Sun Jul 13 2025",
     "location": "Deerwalk Complex, Kathmandu, Nepal",
-    "tags": [
-      "Ai",
-      "Web",
-      "Tech",
-      "Blockchain",
-      "Engineering",
-      "Robotics",
-      "Community",
-      "Education",
-      "Networking",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "fri jul 11 2025-sun jul 13 2025"
+    "tags": "{Ai, Web, Tech, Blockchain, Engineering, Robotics, Community, Education, Networking, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "Hack a Flag - All Nepal CTF Contest",
+    "url": "https://www.nepvents.com/events/cmcihdsxg00086fuyhcy808ma",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Fri Jul 11 2025",
+    "location": "Pulchowk Campus",
+    "tags": "{Tech, Cybersecurity, Community, Networking, Education, Engineering}",
+    "price": "Early Bird 3500, IEEE 2500"
+  },
+  {
+    "title": "2-Day Online Workshop on Devops",
+    "url": "https://www.nepvents.com/events/cmctz25c400007pux2uu879b0",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Thu Jul 10 2025-Fri Jul 11 2025",
+    "location": "Google Meet",
+    "tags": "{Tech, Devops, Online, Education, Community, Web}",
+    "price": "Free"
   },
   {
     "title": "Turboline x IIMS Hackathon 2025",
@@ -502,48 +302,62 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Jul 10 2025-Sat Jul 12 2025",
     "location": "Kathmandu, Nepal",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Networking",
-      "Hybrid",
-      "Global",
-      "Engineering"
-    ],
-    "price": "Rs 5000/ Team",
-    "mode": "thu jul 10 2025-sat jul 12 2025"
+    "tags": "{Ai, Tech, Networking, Hybrid, Global, Engineering}",
+    "price": "Rs 5000 Team"
   },
   {
-    "title": "Beyond+2: The Cosmos Hackathon",
+    "title": "AI, Data  NEPSE  How Tech is Transforming Finance",
+    "url": "https://www.nepvents.com/events/cmctzdpp10000aguywehnfc8f",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Wed Jul 09 2025",
+    "location": "Google Meet",
+    "tags": "{Ai, Business, Online, Education, Community, Tech}",
+    "price": "Free"
+  },
+  {
+    "title": "Hacking for Empowered Women",
+    "url": "https://www.nepvents.com/events/cmbaw8j4v0002bjuyuu6if6ld",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Wed Jul 09 2025-Fri Jul 11 2025",
+    "location": "Selected Teams will be Invited",
+    "tags": "{Tech, Community, Health, Culture, Free, Education, Mobile Development, Networking}",
+    "price": "Free"
+  },
+  {
+    "title": "Battle for Speed 2025",
+    "url": "https://www.nepvents.com/events/cmcn0aorv000gczuyzeblsh7g",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun Jul 06 2025",
+    "location": "Auditorium Hall, WRC",
+    "tags": "{Tech, Robotics, Local}",
+    "price": "Free"
+  },
+  {
+    "title": "Quantum   Episode 02",
+    "url": "https://www.nepvents.com/events/cmcj0t574000a6fuyaz5jh0h8",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat Jul 05 2025",
+    "location": "Microsoft Teams",
+    "tags": "{Ai, Tech, Engineering, Education, Online, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "QTalk Series 2025  Ep 6",
+    "url": "https://www.nepvents.com/events/cmckm0r8u0004czuydv2wg9rs",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Fri Jul 04 2025",
+    "location": "Zoom",
+    "tags": "{Tech, Online, Community, Education}",
+    "price": "Free"
+  },
+  {
+    "title": "Beyond2 The Cosmos Hackathon",
     "url": "https://www.nepvents.com/events/cmcbyisv000067vuylhw5ur4a",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Jul 04 2025-Sat Jul 05 2025",
     "location": "Cosmos College of Management and Technology, Lalitpur",
-    "tags": [
-      "Tech",
-      "Community",
-      "Education",
-      "Networking",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "fri jul 04 2025-sat jul 05 2025"
-  },
-  {
-    "title": "7 days Workshop on SolidWorks",
-    "url": "https://www.nepvents.com/events/cmckkoksb0000czuyzkxkvo9b",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Thu Jul 03 2025-Wed Jul 09 2025",
-    "location": "DMAE, Pulchwok Campus",
-    "tags": [
-      "Engineering",
-      "Robotics",
-      "Tech",
-      "Education",
-      "Community"
-    ],
-    "price": "Rs 300",
-    "mode": "thu jul 03 2025-wed jul 09 2025"
+    "tags": "{Tech, Community, Education, Networking, Free}",
+    "price": "Free"
   },
   {
     "title": "INGENIUM 2025",
@@ -551,54 +365,35 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Jul 03 2025",
     "location": "Nepal Engineering College",
-    "tags": [
-      "Engineering",
-      "Tech",
-      "Robotics",
-      "Education",
-      "Free",
-      "Community",
-      "Networking"
-    ],
-    "price": "Free",
-    "mode": "thu jul 03 2025"
+    "tags": "{Engineering, Tech, Robotics, Education, Free, Community, Networking}",
+    "price": "Free"
   },
   {
-    "title": "Pioneering Safe Cyberspace: Bridging Technology and Light for Security",
+    "title": "Pioneering Safe Cyberspace Bridging Technology and Light for Security",
     "url": "https://www.nepvents.com/events/cmcm6rgz2000eczuy83jktmhq",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Jul 03 2025",
     "location": "Embark College, Pulchowk",
-    "tags": [
-      "Cybersecurity",
-      "Tech",
-      "Community",
-      "Engineering",
-      "Free",
-      "Local",
-      "Education",
-      "Networking"
-    ],
-    "price": "Free",
-    "mode": "thu jul 03 2025"
+    "tags": "{Cybersecurity, Tech, Community, Engineering, Free, Local, Education, Networking}",
+    "price": "Free"
   },
   {
-    "title": "IEEE CTF MASTERCLASS: The Mentorship Session",
+    "title": "IEEE CTF MASTERCLASS The Mentorship Session",
     "url": "https://www.nepvents.com/events/cmbzb80w2000cd5uykhovh76l",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Jul 03 2025",
     "location": "Library Hall, Pulchowk Campus",
-    "tags": [
-      "Cybersecurity",
-      "Engineering",
-      "Local",
-      "Free",
-      "Online",
-      "Tech",
-      "Networking"
-    ],
-    "price": "Rs 60",
-    "mode": "thu jul 03 2025"
+    "tags": "{Cybersecurity, Engineering, Local, Free, Online, Tech, Networking}",
+    "price": "Rs 60"
+  },
+  {
+    "title": "7 days Workshop on SolidWorks",
+    "url": "https://www.nepvents.com/events/cmckkoksb0000czuyzkxkvo9b",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Thu Jul 03 2025-Wed Jul 09 2025",
+    "location": "DMAE, Pulchwok Campus",
+    "tags": "{Engineering, Robotics, Tech, Education, Community}",
+    "price": "Rs 300"
   },
   {
     "title": "Coding Challenge For Girls",
@@ -606,16 +401,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed Jul 02 2025",
     "location": "Hotel Palm International, Milanchowk, Butwal-9, Rupandehi, Nepal",
-    "tags": [
-      "Tech",
-      "Local",
-      "Community",
-      "Education",
-      "Networking",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "wed jul 02 2025"
+    "tags": "{Tech, Local, Community, Education, Networking, Free}",
+    "price": "Free"
   },
   {
     "title": "CodeSprint Hackathon",
@@ -623,17 +410,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Jul 01 2025",
     "location": "Nepal Engineering College",
-    "tags": [
-      "Tech",
-      "Engineering",
-      "Networking",
-      "Ai",
-      "Web",
-      "Blockchain",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "tue jul 01 2025"
+    "tags": "{Tech, Engineering, Networking, Ai, Web, Blockchain, Community}",
+    "price": "Free"
   },
   {
     "title": "LaTeX Workshop 2025",
@@ -641,50 +419,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Jun 29 2025-Tue Jul 01 2025",
     "location": "Pulchowk Campus",
-    "tags": [
-      "Tech",
-      "Education",
-      "Literature",
-      "Engineering",
-      "Community"
-    ],
-    "price": "Rs 100 (Refundable)",
-    "mode": "sun jun 29 2025-tue jul 01 2025"
-  },
-  {
-    "title": "Improve Workplace Efficiency Using AI",
-    "url": "https://www.nepvents.com/events/cmcdm9yfs00046kuxzldokqjx",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sat Jun 28 2025",
-    "location": "Google Meet",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Education",
-      "Business",
-      "Online",
-      "Hybrid",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sat jun 28 2025"
-  },
-  {
-    "title": "NPLAcademia GradTalk",
-    "url": "https://www.nepvents.com/events/cmcbe6ssm000a7huwc23d068f",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sat Jun 28 2025",
-    "location": "Zoom",
-    "tags": [
-      "Education",
-      "Networking",
-      "Online",
-      "Tech",
-      "Free",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "sat jun 28 2025"
+    "tags": "{Tech, Education, Literature, Engineering, Community}",
+    "price": "Rs 100 Refundable"
   },
   {
     "title": "ICRTAI 2025",
@@ -692,50 +428,44 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Jun 28 2025-Sun Jun 29 2025",
     "location": "Birtamod, Koshi Province, Nepal",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Networking",
-      "Health",
-      "Education",
-      "Business",
-      "Hybrid"
-    ],
-    "price": "To Be Updated",
-    "mode": "sat jun 28 2025-sun jun 29 2025"
+    "tags": "{Ai, Tech, Networking, Health, Education, Business, Hybrid}",
+    "price": "To Be Updated"
+  },
+  {
+    "title": "Improve Workplace Efficiency Using AI",
+    "url": "https://www.nepvents.com/events/cmcdm9yfs00046kuxzldokqjx",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat Jun 28 2025",
+    "location": "Google Meet",
+    "tags": "{Ai, Tech, Education, Business, Online, Hybrid, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "NPLAcademia GradTalk",
+    "url": "https://www.nepvents.com/events/cmcbe6ssm000a7huwc23d068f",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat Jun 28 2025",
+    "location": "Zoom",
+    "tags": "{Education, Networking, Online, Tech, Free, Community}",
+    "price": "Free"
+  },
+  {
+    "title": "STEAM Expo 2025 Project Demonstration",
+    "url": "https://www.nepvents.com/events/cmc2sj9q000067ouyf8ogiixi",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Fri Jun 27 2025",
+    "location": "Forestry Museum, Hetauda-10",
+    "tags": "{Robotics, Tech, Education, Community, Networking}",
+    "price": "Rs.2000Project"
   },
   {
     "title": "Your First Step Into Cloud",
     "url": "https://www.nepvents.com/events/cmc4vxlx6000496uwy8c05w6n",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Jun 27 2025",
-    "location": "Online (Zoom)",
-    "tags": [
-      "Tech",
-      "Community",
-      "Online",
-      "Education",
-      "Networking",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "fri jun 27 2025"
-  },
-  {
-    "title": "STEAM Expo 2025: Project Demonstration",
-    "url": "https://www.nepvents.com/events/cmc2sj9q000067ouyf8ogiixi",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Fri Jun 27 2025",
-    "location": "Forestry Museum, Hetauda-10",
-    "tags": [
-      "Robotics",
-      "Tech",
-      "Education",
-      "Community",
-      "Networking"
-    ],
-    "price": "Rs.2000/Project",
-    "mode": "fri jun 27 2025"
+    "location": "Online Zoom",
+    "tags": "{Tech, Community, Online, Education, Networking, Free}",
+    "price": "Free"
   },
   {
     "title": "Ambition Hackfest 2082",
@@ -743,18 +473,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Jun 26 2025-Sat Jun 28 2025",
     "location": "Mid-Baneshwor, Kathmandu",
-    "tags": [
-      "Tech",
-      "Community",
-      "Ai",
-      "Local",
-      "Graphic Design",
-      "Web",
-      "Engineering",
-      "Networking"
-    ],
-    "price": "Rs. 2000/Team",
-    "mode": "thu jun 26 2025-sat jun 28 2025"
+    "tags": "{Tech, Community, Ai, Local, Graphic Design, Web, Engineering, Networking}",
+    "price": "Rs. 2000Team"
+  },
+  {
+    "title": "5 Day Graphic Design  Illustrator Workshop",
+    "url": "https://www.nepvents.com/events/cmc5se7ko000696uwi40p75we",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Thu Jun 26 2025-Mon Jun 30 2025",
+    "location": "Google Meet",
+    "tags": "{Graphic Design, Online, Free, Art, Tech}",
+    "price": "Free"
   },
   {
     "title": "Texas Career Fair 2025",
@@ -762,33 +491,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Jun 26 2025",
     "location": "TIC College, Mitrapark, Kathmandu",
-    "tags": [
-      "Networking",
-      "Education",
-      "Business",
-      "Tech",
-      "Community",
-      "Local",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "thu jun 26 2025"
-  },
-  {
-    "title": "5 Day Graphic Design & Illustrator Workshop",
-    "url": "https://www.nepvents.com/events/cmc5se7ko000696uwi40p75we",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Thu Jun 26 2025-Mon Jun 30 2025",
-    "location": "Google Meet",
-    "tags": [
-      "Graphic Design",
-      "Online",
-      "Free",
-      "Art",
-      "Tech"
-    ],
-    "price": "Free",
-    "mode": "thu jun 26 2025-mon jun 30 2025"
+    "tags": "{Networking, Education, Business, Tech, Community, Local, Free}",
+    "price": "Free"
   },
   {
     "title": "7-Day Cybersecurity Workshop",
@@ -796,16 +500,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed Jun 25 2025-Tue Jul 01 2025",
     "location": "Online",
-    "tags": [
-      "Cybersecurity",
-      "Tech",
-      "Online",
-      "Education",
-      "Free",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "wed jun 25 2025-tue jul 01 2025"
+    "tags": "{Cybersecurity, Tech, Online, Education, Free, Community}",
+    "price": "Free"
   },
   {
     "title": "The Design Thinking Workshop",
@@ -813,14 +509,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Jun 24 2025-Wed Jun 25 2025",
     "location": "ICTC Building, Pulchowk Campus",
-    "tags": [
-      "Tech",
-      "Community",
-      "Networking",
-      "Education"
-    ],
-    "price": "Free",
-    "mode": "tue jun 24 2025-wed jun 25 2025"
+    "tags": "{Tech, Community, Networking, Education}",
+    "price": "Free"
   },
   {
     "title": "Cloud Native Exchange - Talk Tech, Share Ideas",
@@ -828,16 +518,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Jun 22 2025",
     "location": "DeerwalkCollege, Kathmandu",
-    "tags": [
-      "Tech",
-      "Devops",
-      "Education",
-      "Community",
-      "Networking",
-      "Engineering"
-    ],
-    "price": "Free",
-    "mode": "sun jun 22 2025"
+    "tags": "{Tech, Devops, Education, Community, Networking, Engineering}",
+    "price": "Free"
+  },
+  {
+    "title": "AWS Fundamentals Workshop Immersive Hands-On Experience",
+    "url": "https://www.nepvents.com/events/cmbyjjlwm0004d5uyqa3zjgw4",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat Jun 21 2025",
+    "location": "NCIT, Balkumari, Lalitpur",
+    "tags": "{Devops, Education, Tech, Community, Networking, Free}",
+    "price": "Free"
   },
   {
     "title": "Hack for Business",
@@ -845,65 +536,35 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Jun 21 2025-Mon Jun 23 2025",
     "location": "Kathmandu University , Dhulikhel",
-    "tags": [
-      "Business",
-      "Tech",
-      "Community",
-      "Entrepreneurship",
-      "Engineering"
-    ],
-    "price": "Rs. 3,500/Team",
-    "mode": "sat jun 21 2025-mon jun 23 2025"
+    "tags": "{Business, Tech, Community, Entrepreneurship, Engineering}",
+    "price": "Rs. 3,500Team"
   },
   {
-    "title": "AWS Fundamentals Workshop: Immersive Hands-On Experience",
-    "url": "https://www.nepvents.com/events/cmbyjjlwm0004d5uyqa3zjgw4",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sat Jun 21 2025",
-    "location": "NCIT, Balkumari, Lalitpur",
-    "tags": [
-      "Devops",
-      "Education",
-      "Tech",
-      "Community",
-      "Networking",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sat jun 21 2025"
-  },
-  {
-    "title": "Proteus: PCB Design and Fabrication Workshop",
+    "title": "Proteus PCB Design and Fabrication Workshop",
     "url": "https://www.nepvents.com/events/cmbz8ituh0006d5uy58idytlv",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Jun 20 2025-Mon Jun 23 2025",
     "location": "Department of Electrical Engineering, Pulchowk Campus",
-    "tags": [
-      "Engineering",
-      "Education",
-      "Tech",
-      "Robotics",
-      "Community"
-    ],
-    "price": "Rs. 250",
-    "mode": "fri jun 20 2025-mon jun 23 2025"
+    "tags": "{Engineering, Education, Tech, Robotics, Community}",
+    "price": "Rs. 250"
   },
   {
-    "title": "Model Forge Ep 2: Model Training and Evaluation",
+    "title": "Model Forge Ep 2 Model Training and Evaluation",
     "url": "https://www.nepvents.com/events/cmbz9el5d0008d5uy99k6j938",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Jun 19 2025",
     "location": "Google Meet",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Online",
-      "Education",
-      "Free",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "thu jun 19 2025"
+    "tags": "{Ai, Tech, Online, Education, Free, Community}",
+    "price": "Free"
+  },
+  {
+    "title": "The LaunchPad Building Careers  Connections",
+    "url": "https://www.nepvents.com/events/cmbqnd9x800008yuxv0d0yk5z",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat Jun 14 2025",
+    "location": "A-one Banquet, Shankhamul",
+    "tags": "{Tech, Community, Networking, Engineering, Business, Startup, Entrepreneurship, Free, Local}",
+    "price": "Rs 150 - Rs 300"
   },
   {
     "title": "Research Talk-13",
@@ -911,36 +572,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Jun 14 2025",
     "location": "Virtual",
-    "tags": [
-      "Environment",
-      "Education",
-      "Online",
-      "Community",
-      "Tech",
-      "Engineering"
-    ],
-    "price": "Free",
-    "mode": "sat jun 14 2025"
-  },
-  {
-    "title": "The LaunchPad: Building Careers & Connections",
-    "url": "https://www.nepvents.com/events/cmbqnd9x800008yuxv0d0yk5z",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sat Jun 14 2025",
-    "location": "A-one Banquet, Shankhamul",
-    "tags": [
-      "Tech",
-      "Community",
-      "Networking",
-      "Engineering",
-      "Business",
-      "Startup",
-      "Entrepreneurship",
-      "Free",
-      "Local"
-    ],
-    "price": "Rs 150 - Rs 300",
-    "mode": "sat jun 14 2025"
+    "tags": "{Environment, Education, Online, Community, Tech, Engineering}",
+    "price": "Free"
   },
   {
     "title": "WordCamp Pokhara 2025",
@@ -948,16 +581,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Jun 13 2025-Sat Jun 14 2025",
     "location": "Pokhara Event Center, Pokhara",
-    "tags": [
-      "Web",
-      "Tech",
-      "Community",
-      "Local",
-      "Networking",
-      "Education"
-    ],
-    "price": "Rs 1200 (Students) Or Rs 1500",
-    "mode": "fri jun 13 2025-sat jun 14 2025"
+    "tags": "{Web, Tech, Community, Local, Networking, Education}",
+    "price": "Rs 1200 Students Or Rs 1500"
   },
   {
     "title": "Online Research Paper Writing Workshop",
@@ -965,15 +590,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Jun 12 2025",
     "location": "Online",
-    "tags": [
-      "Tech",
-      "Education",
-      "Engineering",
-      "Community",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "thu jun 12 2025"
+    "tags": "{Tech, Education, Engineering, Community, Free}",
+    "price": "Free"
   },
   {
     "title": "Hack For Nepal",
@@ -981,49 +599,53 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Jun 12 2025-Sat Jun 14 2025",
     "location": "NCIT, Balkumari, Lalitpur",
-    "tags": [
-      "Tech",
-      "Community",
-      "Local",
-      "Health",
-      "Ai",
-      "Engineering"
-    ],
-    "price": "Rs 2000/Team If Shortlisted",
-    "mode": "thu jun 12 2025-sat jun 14 2025"
+    "tags": "{Tech, Community, Local, Health, Ai, Engineering}",
+    "price": "Rs 2000Team If Shortlisted"
   },
   {
-    "title": "Git & Github Training",
+    "title": "Git  Github Training",
     "url": "https://www.nepvents.com/events/cmbor0a3x0004bsuyhtw8tcw7",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed Jun 11 2025-Thu Jun 12 2025",
     "location": "Online",
-    "tags": [
-      "Tech",
-      "Devops",
-      "Engineering",
-      "Education",
-      "Online",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "wed jun 11 2025-thu jun 12 2025"
+    "tags": "{Tech, Devops, Engineering, Education, Online, Free}",
+    "price": "Free"
   },
   {
-    "title": "Model Forge Ep 1 – Optimization Algorithms in Machine Learning",
+    "title": "Model Forge Ep 1  Optimization Algorithms in Machine Learning",
     "url": "https://www.nepvents.com/events/cmbjlzhlb000o6huyxktt5qq0",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed Jun 11 2025",
     "location": "Google Meet",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Online",
-      "Education",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "wed jun 11 2025"
+    "tags": "{Ai, Tech, Online, Education, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "InnoSphere 1.0  Idea Pitching Competition",
+    "url": "https://www.nepvents.com/events/cmbhf68p6000a6huyyk9c4g6v",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun Jun 08 2025",
+    "location": "School of Engineering, PU",
+    "tags": "{Tech, Business, Health, Pitching, Entrepreneurship}",
+    "price": "Rs. 100"
+  },
+  {
+    "title": "InnoSphere 1.0  Software Project Exhibition",
+    "url": "https://www.nepvents.com/events/cmbhgau80000i6huyqws22ag1",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun Jun 08 2025",
+    "location": "School of Engineering, PU",
+    "tags": "{Tech, Engineering, Education, Web, Ai, Blockchain, Mobile Development}",
+    "price": "Rs. 500"
+  },
+  {
+    "title": "QTalk Series E5",
+    "url": "https://www.nepvents.com/events/cmbdxwlfg000abouyk8zhvjyn",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun Jun 08 2025",
+    "location": "Zoom",
+    "tags": "{Tech, Online, Free, Education, Engineering, Community}",
+    "price": "Free"
   },
   {
     "title": "BMC InnovateX Hackathon",
@@ -1031,56 +653,62 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Jun 08 2025-Tue Jun 10 2025",
     "location": "Butwal Multiple Campus, Butwal-03, Rupandehi",
-    "tags": [
-      "Tech",
-      "Community",
-      "Blockchain",
-      "Networking",
-      "Ai",
-      "Free",
-      "Hybrid",
-      "Online",
-      "Web",
-      "Engineering"
-    ],
-    "price": "Free",
-    "mode": "sun jun 08 2025-tue jun 10 2025"
+    "tags": "{Tech, Community, Blockchain, Networking, Ai, Free, Hybrid, Online, Web, Engineering}",
+    "price": "Free"
   },
   {
-    "title": "InnoSphere 1.0 – NextGen Innovators Expo (School-Level)",
+    "title": "InnoSphere 1.0  NextGen Innovators Expo School-Level",
     "url": "https://www.nepvents.com/events/cmbhg11sn000e6huyfhhx52yv",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Jun 08 2025",
     "location": "School of Engineering, PU",
-    "tags": [
-      "Tech",
-      "Education",
-      "Engineering",
-      "Robotics",
-      "Local",
-      "Community",
-      "Networking"
-    ],
-    "price": "Free",
-    "mode": "sun jun 08 2025"
+    "tags": "{Tech, Education, Engineering, Robotics, Local, Community, Networking}",
+    "price": "Free"
   },
   {
-    "title": "InnoSphere 1.0 – Software Project Exhibition",
-    "url": "https://www.nepvents.com/events/cmbhgau80000i6huyqws22ag1",
+    "title": "InnoSphere 1.0  InnoCanvas",
+    "url": "https://www.nepvents.com/events/cmbhg5vny000g6huyr1dt5gnx",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Jun 08 2025",
     "location": "School of Engineering, PU",
-    "tags": [
-      "Tech",
-      "Engineering",
-      "Education",
-      "Web",
-      "Ai",
-      "Blockchain",
-      "Mobile Development"
-    ],
-    "price": "Rs. 500",
-    "mode": "sun jun 08 2025"
+    "tags": "{Graphic Design, Art, Education, Tech, Networking, Community}",
+    "price": "Rs. 300"
+  },
+  {
+    "title": "InnoSphere 1.0  Hardware Project Exhibition",
+    "url": "https://www.nepvents.com/events/cmbhfd8mq000c6huy0pvdt5qt",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun Jun 08 2025",
+    "location": "School of Engineering, PU",
+    "tags": "{Engineering, Tech, Robotics, Local, Education, Community}",
+    "price": "Rs. 500"
+  },
+  {
+    "title": "AI  ML on AWS",
+    "url": "https://www.nepvents.com/events/cmbf4cgl000066huy7mvgd5da",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat Jun 07 2025",
+    "location": "Advance College of Engineering  Management, Kalanki, Kathmandu",
+    "tags": "{Ai, Tech, Community, Education, Networking, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "AI  Future on Web Development",
+    "url": "https://www.nepvents.com/events/cmbet8kkh00006huyo7545m3z",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat Jun 07 2025",
+    "location": "Google Meet",
+    "tags": "{Ai, Web, Tech, Online, Education}",
+    "price": "Free"
+  },
+  {
+    "title": "INKSPIRE Research Writing for Beginners",
+    "url": "https://www.nepvents.com/events/cmbds42x90008bouyg3mphr64",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat Jun 07 2025",
+    "location": "Google Meet",
+    "tags": "{Education, Tech, Online, Community, Free}",
+    "price": "Free"
   },
   {
     "title": "Generative AI on AWS",
@@ -1088,50 +716,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Jun 06 2025",
     "location": "IMS Software, Tripureshwor, Kathmandu",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Community",
-      "Networking",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "fri jun 06 2025"
-  },
-  {
-    "title": "Introduction to IoT: Unlocking the Future of Connected Devices",
-    "url": "https://www.nepvents.com/events/cmbd3a76y0000bouy9xrj7yks",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Thu Jun 05 2025",
-    "location": "Google Meet",
-    "tags": [
-      "Tech",
-      "Ai",
-      "Online",
-      "Free",
-      "Robotics",
-      "Engineering"
-    ],
-    "price": "Free",
-    "mode": "thu jun 05 2025"
-  },
-  {
-    "title": "CodeWar 1.0",
-    "url": "https://www.nepvents.com/events/cm9zsnuf800007yusdhvwipy0",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Thu Jun 05 2025-Fri Jun 06 2025",
-    "location": "BCA Lab, Mechi Multiple Campus",
-    "tags": [
-      "Tech",
-      "Community",
-      "Local",
-      "Education",
-      "Free",
-      "Hybrid",
-      "Gaming"
-    ],
-    "price": "Free",
-    "mode": "thu jun 05 2025-fri jun 06 2025"
+    "tags": "{Ai, Tech, Community, Networking, Free}",
+    "price": "Free"
   },
   {
     "title": "Waste Hackathon 2025",
@@ -1139,33 +725,26 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Jun 05 2025",
     "location": "Budhanilkantha Municipality Hall",
-    "tags": [
-      "Tech",
-      "Environment",
-      "Sustainability",
-      "Local",
-      "Community",
-      "Engineering"
-    ],
-    "price": "Free",
-    "mode": "thu jun 05 2025"
+    "tags": "{Tech, Environment, Sustainability, Local, Community, Engineering}",
+    "price": "Free"
   },
   {
-    "title": "AWS Lambda Hackathon",
-    "url": "https://www.nepvents.com/events/cmbhwb80c000k6huyiy8i1jxq",
+    "title": "CodeWar 1.0",
+    "url": "https://www.nepvents.com/events/cm9zsnuf800007yusdhvwipy0",
     "image": "https://www.nepvents.com/completed.svg",
-    "date": "Tue Jun 03 2025-Mon Jun 30 2025",
-    "location": "Online",
-    "tags": [
-      "Web",
-      "Tech",
-      "Ai",
-      "Online",
-      "Global",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "tue jun 03 2025-mon jun 30 2025"
+    "date": "Thu Jun 05 2025-Fri Jun 06 2025",
+    "location": "BCA Lab, Mechi Multiple Campus",
+    "tags": "{Tech, Community, Local, Education, Free, Hybrid, Gaming}",
+    "price": "Free"
+  },
+  {
+    "title": "Introduction to IoT Unlocking the Future of Connected Devices",
+    "url": "https://www.nepvents.com/events/cmbd3a76y0000bouy9xrj7yks",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Thu Jun 05 2025",
+    "location": "Google Meet",
+    "tags": "{Tech, Ai, Online, Free, Robotics, Engineering}",
+    "price": "Free"
   },
   {
     "title": "Hacking for Empowered Women - Orientation Session",
@@ -1173,33 +752,26 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Jun 03 2025",
     "location": "Zoom",
-    "tags": [
-      "Tech",
-      "Community",
-      "Online",
-      "Local",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "tue jun 03 2025"
+    "tags": "{Tech, Community, Online, Local, Free}",
+    "price": "Free"
   },
   {
-    "title": "Hack4SafeFood: Hackathon for Innovating Food Safety in Nepal",
+    "title": "AWS Lambda Hackathon",
+    "url": "https://www.nepvents.com/events/cmbhwb80c000k6huyiy8i1jxq",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Tue Jun 03 2025-Mon Jun 30 2025",
+    "location": "Online",
+    "tags": "{Web, Tech, Ai, Online, Global, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "Hack4SafeFood Hackathon for Innovating Food Safety in Nepal",
     "url": "https://www.nepvents.com/events/cmbaz8ya50004bjuywm8dlmoh",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Mon Jun 02 2025-Fri Jun 06 2025",
     "location": "Kathmandu, Nepal",
-    "tags": [
-      "Tech",
-      "Health",
-      "Environment",
-      "Sustainability",
-      "Local",
-      "Mobile Development",
-      "Ai"
-    ],
-    "price": "Free",
-    "mode": "mon jun 02 2025-fri jun 06 2025"
+    "tags": "{Tech, Health, Environment, Sustainability, Local, Mobile Development, Ai}",
+    "price": "Free"
   },
   {
     "title": "NPLCoder GenAI Builders Fellowship",
@@ -1207,33 +779,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Jun 01 2025-Sun Jul 13 2025",
     "location": "Kathmandu, Nepal",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Community",
-      "Education",
-      "Free",
-      "Online",
-      "Hybrid"
-    ],
-    "price": "Free",
-    "mode": "sun jun 01 2025-sun jul 13 2025"
-  },
-  {
-    "title": "Building AI Agents (Part I)",
-    "url": "https://www.nepvents.com/events/cmazlfna300028xuyuph7skb5",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sat May 31 2025",
-    "location": "Google Meet",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Education",
-      "Free",
-      "Online"
-    ],
-    "price": "Free",
-    "mode": "sat may 31 2025"
+    "tags": "{Ai, Tech, Community, Education, Free, Online, Hybrid}",
+    "price": "Free"
   },
   {
     "title": "Chautari Chess Tournament",
@@ -1241,14 +788,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat May 31 2025",
     "location": "Chess.com",
-    "tags": [
-      "Chess",
-      "Online",
-      "Gaming",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sat may 31 2025"
+    "tags": "{Chess, Online, Gaming, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "Building AI Agents Part I",
+    "url": "https://www.nepvents.com/events/cmazlfna300028xuyuph7skb5",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat May 31 2025",
+    "location": "Google Meet",
+    "tags": "{Ai, Tech, Education, Free, Online}",
+    "price": "Free"
   },
   {
     "title": "Exploring App Development Webinar",
@@ -1256,67 +806,35 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat May 31 2025",
     "location": "Google Meet",
-    "tags": [
-      "Tech",
-      "Mobile Development",
-      "Online",
-      "Community",
-      "Education"
-    ],
-    "price": "Free",
-    "mode": "sat may 31 2025"
+    "tags": "{Tech, Mobile Development, Online, Community, Education}",
+    "price": "Free"
   },
   {
-    "title": "Quantum गफ – Talk EP. 01",
+    "title": "Worlds Largest Hackathon",
+    "url": "https://www.nepvents.com/events/cmbev2tjw00026huy5x36q0ob",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Fri May 30 2025-Tue Jul 01 2025",
+    "location": "Online",
+    "tags": "{Ai, Tech, Startup, Entrepreneurship, Online, Global, Hybrid}",
+    "price": "Free"
+  },
+  {
+    "title": "Quantum   Talk EP. 01",
     "url": "https://www.nepvents.com/events/cmb8v4o450000aauyxjl1x1v4",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri May 30 2025",
     "location": "Microsoft Teams",
-    "tags": [
-      "Tech",
-      "Online",
-      "Education",
-      "Engineering",
-      "Community",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "fri may 30 2025"
+    "tags": "{Tech, Online, Education, Engineering, Community, Free}",
+    "price": "Free"
   },
   {
     "title": "NAAMII Open House",
     "url": "https://www.nepvents.com/events/cmb6ifhpb000a7iuy4y6btz04",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri May 30 2025",
-    "location": "Alliance Française de Katmandou",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Community",
-      "Networking",
-      "Local",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "fri may 30 2025"
-  },
-  {
-    "title": "World’s Largest Hackathon",
-    "url": "https://www.nepvents.com/events/cmbev2tjw00026huy5x36q0ob",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Fri May 30 2025-Tue Jul 01 2025",
-    "location": "Online",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Startup",
-      "Entrepreneurship",
-      "Online",
-      "Global",
-      "Hybrid"
-    ],
-    "price": "Free",
-    "mode": "fri may 30 2025-tue jul 01 2025"
+    "location": "Alliance Franaise de Katmandou",
+    "tags": "{Ai, Tech, Community, Networking, Local, Free}",
+    "price": "Free"
   },
   {
     "title": "Web Development Workshop",
@@ -1324,14 +842,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu May 29 2025-Wed Jun 04 2025",
     "location": "Purwanchal Campus, Room No. 213",
-    "tags": [
-      "Web",
-      "Tech",
-      "Education",
-      "Community"
-    ],
-    "price": "Rs 100 To 200",
-    "mode": "thu may 29 2025-wed jun 04 2025"
+    "tags": "{Web, Tech, Education, Community}",
+    "price": "Rs 100 To 200"
+  },
+  {
+    "title": "Intro To Web  WordPress",
+    "url": "https://www.nepvents.com/events/cmb3u45wn00047iuyq654tr9l",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Wed May 28 2025",
+    "location": "CIT Hall, WRC, Pokhara",
+    "tags": "{Web, Tech, Community, Education, Free, Local}",
+    "price": "Free"
   },
   {
     "title": "Graphic Design Workshop",
@@ -1339,66 +860,35 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed May 28 2025-Fri May 30 2025",
     "location": "Skill Shikshya, Sankhamul, Kathmandu",
-    "tags": [
-      "Graphic Design",
-      "Tech",
-      "Education",
-      "Free",
-      "Art",
-      "Local"
-    ],
-    "price": "Free",
-    "mode": "wed may 28 2025-fri may 30 2025"
+    "tags": "{Graphic Design, Tech, Education, Free, Art, Local}",
+    "price": "Free"
   },
   {
-    "title": "Intro To Web & WordPress",
-    "url": "https://www.nepvents.com/events/cmb3u45wn00047iuyq654tr9l",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Wed May 28 2025",
-    "location": "CIT Hall, WRC, Pokhara",
-    "tags": [
-      "Web",
-      "Tech",
-      "Community",
-      "Education",
-      "Free",
-      "Local"
-    ],
-    "price": "Free",
-    "mode": "wed may 28 2025"
-  },
-  {
-    "title": "Workshop on UI/UX Designing",
+    "title": "Workshop on UIUX Designing",
     "url": "https://www.nepvents.com/events/cmb3r91k800027iuyezlrzt26",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed May 28 2025-Sun Jun 01 2025",
     "location": "Google Meet",
-    "tags": [
-      "Tech",
-      "Graphic Design",
-      "Education",
-      "Art",
-      "Free",
-      "Online",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "wed may 28 2025-sun jun 01 2025"
+    "tags": "{Tech, Graphic Design, Education, Art, Free, Online, Community}",
+    "price": "Free"
   },
   {
-    "title": "2-DAYS WORKSHOP ON Quality Assurance (QA)",
+    "title": "2-DAYS WORKSHOP ON Quality Assurance QA",
     "url": "https://www.nepvents.com/events/cmazfj49r00008xuy6ndbo3x9",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue May 27 2025-Wed May 28 2025",
     "location": "Sagarmatha College of Science and Technology",
-    "tags": [
-      "Education",
-      "Devops",
-      "Tech",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "tue may 27 2025-wed may 28 2025"
+    "tags": "{Education, Devops, Tech, Community}",
+    "price": "Free"
+  },
+  {
+    "title": "BRAIN BEHIND BOTS HOW AGENTIC AI WORKS",
+    "url": "https://www.nepvents.com/events/cmaufmhpf00066juszhali0mp",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat May 24 2025",
+    "location": "Google Meet",
+    "tags": "{Ai, Tech, Online, Free, Education, Community}",
+    "price": "Free"
   },
   {
     "title": "3D DESIGN FREE WEBINAR",
@@ -1406,47 +896,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat May 24 2025",
     "location": "Google Meet",
-    "tags": [
-      "Graphic Design",
-      "Online",
-      "Free",
-      "Tech",
-      "Education"
-    ],
-    "price": "Free",
-    "mode": "sat may 24 2025"
+    "tags": "{Graphic Design, Online, Free, Tech, Education}",
+    "price": "Free"
   },
   {
-    "title": "BRAIN BEHIND BOTS: HOW AGENTIC AI WORKS?",
-    "url": "https://www.nepvents.com/events/cmaufmhpf00066juszhali0mp",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sat May 24 2025",
-    "location": "Google Meet",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Online",
-      "Free",
-      "Education",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "sat may 24 2025"
-  },
-  {
-    "title": "BLUETEAM SQUAD: DEFENDERS WANTED",
+    "title": "BLUETEAM SQUAD DEFENDERS WANTED",
     "url": "https://www.nepvents.com/events/cmaugqn0a00086jus89o6xs7u",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed May 21 2025-Sat May 24 2025",
     "location": "LA GRANDEE International College, Simalahaur-12, Pokhara",
-    "tags": [
-      "Cybersecurity",
-      "Tech",
-      "Community",
-      "Local"
-    ],
-    "price": "Rs 100 - Rs 180",
-    "mode": "wed may 21 2025-sat may 24 2025"
+    "tags": "{Cybersecurity, Tech, Community, Local}",
+    "price": "Rs 100 - Rs 180"
   },
   {
     "title": "The Flutter Foundry",
@@ -1454,15 +914,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue May 20 2025-Tue Jun 17 2025",
     "location": "Discord",
-    "tags": [
-      "Mobile Development",
-      "Online",
-      "Education",
-      "Community",
-      "Tech"
-    ],
-    "price": "Rs 499 Or 999",
-    "mode": "tue may 20 2025-tue jun 17 2025"
+    "tags": "{Mobile Development, Online, Education, Community, Tech}",
+    "price": "Rs 499 Or 999"
   },
   {
     "title": "Smart City Hackathon",
@@ -1470,16 +923,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Mon May 19 2025-Sat Jun 28 2025",
     "location": "Online",
-    "tags": [
-      "Tech",
-      "Community",
-      "Online",
-      "Global",
-      "Sustainability",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "mon may 19 2025-sat jun 28 2025"
+    "tags": "{Tech, Community, Online, Global, Sustainability, Free}",
+    "price": "Free"
   },
   {
     "title": "Build with AI 2025",
@@ -1487,16 +932,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun May 18 2025",
     "location": "Webpoint Technology Pvt. Ltd., Subarna Shamsher Marg, Kathmandu",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Community",
-      "Local",
-      "Education",
-      "Networking"
-    ],
-    "price": "Rs 700",
-    "mode": "sun may 18 2025"
+    "tags": "{Ai, Tech, Community, Local, Education, Networking}",
+    "price": "Rs 700"
   },
   {
     "title": "Neural Nexus",
@@ -1504,32 +941,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun May 18 2025-Wed Jun 18 2025",
     "location": "Online",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Health",
-      "Online",
-      "Global",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sun may 18 2025-wed jun 18 2025"
+    "tags": "{Ai, Tech, Health, Online, Global, Free}",
+    "price": "Free"
   },
   {
-    "title": "Unlocking Cybersecurity: A Guide to Digital Safety",
+    "title": "Unlocking Cybersecurity A Guide to Digital Safety",
     "url": "https://www.nepvents.com/events/cmanarrpe00007ouszu2mgn6u",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun May 18 2025-Tue May 20 2025",
     "location": "Google Meet",
-    "tags": [
-      "Cybersecurity",
-      "Tech",
-      "Online",
-      "Education",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "sun may 18 2025-tue may 20 2025"
+    "tags": "{Cybersecurity, Tech, Online, Education, Community}",
+    "price": "Free"
   },
   {
     "title": "Getting Started with Python",
@@ -1537,30 +959,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun May 18 2025-Sat May 24 2025",
     "location": "Google meet",
-    "tags": [
-      "Tech",
-      "Education",
-      "Online",
-      "Ai"
-    ],
-    "price": "Rs 250",
-    "mode": "sun may 18 2025-sat may 24 2025"
-  },
-  {
-    "title": "One Shot: Learn Typescript From Zero to Hero",
-    "url": "https://www.nepvents.com/events/cmanyqczz00087kuyesyjsabz",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sat May 17 2025",
-    "location": "Online",
-    "tags": [
-      "Tech",
-      "Web",
-      "Online",
-      "Free",
-      "Education"
-    ],
-    "price": "Free",
-    "mode": "sat may 17 2025"
+    "tags": "{Tech, Education, Online, Ai}",
+    "price": "Rs 250"
   },
   {
     "title": "Navigating the Cloud and Communication",
@@ -1568,65 +968,62 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat May 17 2025",
     "location": "Online",
-    "tags": [
-      "Tech",
-      "Devops",
-      "Education",
-      "Community",
-      "Free",
-      "Networking"
-    ],
-    "price": "Free",
-    "mode": "sat may 17 2025"
+    "tags": "{Tech, Devops, Education, Community, Free, Networking}",
+    "price": "Free"
   },
   {
-    "title": "STEMFluence: Think, Tinker, Thrive",
+    "title": "STEMFluence Think, Tinker, Thrive",
     "url": "https://www.nepvents.com/events/cmaq76mrx0004bpuynyoer83p",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat May 17 2025-Sun May 18 2025",
     "location": "Pathshala Nepal Foundation, Baneshwor, Kathmandu",
-    "tags": [
-      "Engineering",
-      "Robotics",
-      "Education",
-      "Tech",
-      "Local",
-      "Volunteering"
-    ],
-    "price": "Free",
-    "mode": "sat may 17 2025-sun may 18 2025"
+    "tags": "{Engineering, Robotics, Education, Tech, Local, Volunteering}",
+    "price": "Free"
   },
   {
-    "title": "5 Days FREE Bootcamp on DevOps & Cloud Fundamentals",
+    "title": "One Shot Learn Typescript From Zero to Hero",
+    "url": "https://www.nepvents.com/events/cmanyqczz00087kuyesyjsabz",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat May 17 2025",
+    "location": "Online",
+    "tags": "{Tech, Web, Online, Free, Education}",
+    "price": "Free"
+  },
+  {
+    "title": "5 Days FREE Bootcamp on DevOps  Cloud Fundamentals",
     "url": "https://www.nepvents.com/events/cmanooqzm00007kuys0i6i0bo",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu May 15 2025-Tue May 20 2025",
     "location": "Zoom",
-    "tags": [
-      "Devops",
-      "Tech",
-      "Free",
-      "Online",
-      "Education"
-    ],
-    "price": "Free",
-    "mode": "thu may 15 2025-tue may 20 2025"
+    "tags": "{Devops, Tech, Free, Online, Education}",
+    "price": "Free"
   },
   {
-    "title": "Cybersecurity 101: Essentials to Advanced",
+    "title": "Blockchain Gaming",
+    "url": "https://www.nepvents.com/events/cmakuc7ls00009bushty7qhhl",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Wed May 14 2025",
+    "location": "Online",
+    "tags": "{Blockchain, Gaming, Tech, Online, Free, Networking, Business}",
+    "price": "Free"
+  },
+  {
+    "title": "Cybersecurity 101 Essentials to Advanced",
     "url": "https://www.nepvents.com/events/cmacoihrg000w7yus6kg1nqra",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed May 14 2025-Wed May 28 2025",
     "location": "Google Meet",
-    "tags": [
-      "Cybersecurity",
-      "Tech",
-      "Education",
-      "Community",
-      "Global"
-    ],
-    "price": "Rs 199 To Rs 399",
-    "mode": "wed may 14 2025-wed may 28 2025"
+    "tags": "{Cybersecurity, Tech, Education, Community, Global}",
+    "price": "Rs 199 To Rs 399"
+  },
+  {
+    "title": "All Nepal Civil Engineering Model Competition",
+    "url": "https://www.nepvents.com/events/cma9cg4cx000i7yusqsult0dd",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Tue May 13 2025-Wed May 14 2025",
+    "location": "KU Fountain, Dhulikhel",
+    "tags": "{Engineering, Sustainability, Environment, Tech, Education, Community, Local}",
+    "price": "Rs 500 - Rs 2000Team"
   },
   {
     "title": "3 Days Free Web Dev Workshop",
@@ -1634,15 +1031,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Mon May 12 2025-Wed May 14 2025",
     "location": "Skill Shikshya, Sankhamul, Kathmandu",
-    "tags": [
-      "Web",
-      "Tech",
-      "Education",
-      "Free",
-      "Local"
-    ],
-    "price": "Free",
-    "mode": "mon may 12 2025-wed may 14 2025"
+    "tags": "{Web, Tech, Education, Free, Local}",
+    "price": "Free"
+  },
+  {
+    "title": "Civic Tech Hackathon",
+    "url": "https://www.nepvents.com/events/cmal1d1bw00049busl5r6mpui",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Mon May 12 2025-Sat May 31 2025",
+    "location": "Online",
+    "tags": "{Tech, Ai, Online, Global, Community, Web}",
+    "price": "Free"
   },
   {
     "title": "Agent Development Kit Hackathon with Google Cloud",
@@ -1650,50 +1049,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Mon May 12 2025-Tue Jun 24 2025",
     "location": "Online",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Online",
-      "Global",
-      "Engineering",
-      "Web"
-    ],
-    "price": "Free",
-    "mode": "mon may 12 2025-tue jun 24 2025"
-  },
-  {
-    "title": "Paper Bridge Competition",
-    "url": "https://www.nepvents.com/events/cma2k85by0000wjw4m1tzo4qp",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sun May 11 2025",
-    "location": "KU Fountain, Dhulikhel",
-    "tags": [
-      "Engineering",
-      "Community",
-      "Local",
-      "Crafts",
-      "Sustainability",
-      "Environment"
-    ],
-    "price": "Rs 300/Team",
-    "mode": "sun may 11 2025"
-  },
-  {
-    "title": "AWS Fundamentals Workshop: Hands-On Cloud Computing",
-    "url": "https://www.nepvents.com/events/cmae9yqdw00167yus5uwjvyvl",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sun May 11 2025",
-    "location": "Kathmandu Model College, Bagbazar",
-    "tags": [
-      "Tech",
-      "Education",
-      "Devops",
-      "Community",
-      "Networking",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sun may 11 2025"
+    "tags": "{Ai, Tech, Online, Global, Engineering, Web}",
+    "price": "Free"
   },
   {
     "title": "CADATHON",
@@ -1701,16 +1058,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun May 11 2025",
     "location": "KU Multipurpose Hall",
-    "tags": [
-      "Engineering",
-      "Tech",
-      "Graphic Design",
-      "Education",
-      "Community",
-      "Physical"
-    ],
-    "price": "Rs 3,500",
-    "mode": "sun may 11 2025"
+    "tags": "{Engineering, Tech, Graphic Design, Education, Community, Physical}",
+    "price": "Rs 3,500"
   },
   {
     "title": "Shake Table Competition",
@@ -1718,17 +1067,44 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun May 11 2025-Tue May 13 2025",
     "location": "Fountain, Kathmandu University, Dhulikhel",
-    "tags": [
-      "Engineering",
-      "Crafts",
-      "Local",
-      "Community",
-      "Education",
-      "Sustainability",
-      "Environment"
-    ],
-    "price": "Rs 500/Team",
-    "mode": "sun may 11 2025-tue may 13 2025"
+    "tags": "{Engineering, Crafts, Local, Community, Education, Sustainability, Environment}",
+    "price": "Rs 500Team"
+  },
+  {
+    "title": "AWS Fundamentals Workshop Hands-On Cloud Computing",
+    "url": "https://www.nepvents.com/events/cmae9yqdw00167yus5uwjvyvl",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun May 11 2025",
+    "location": "Kathmandu Model College, Bagbazar",
+    "tags": "{Tech, Education, Devops, Community, Networking, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "Paper Bridge Competition",
+    "url": "https://www.nepvents.com/events/cma2k85by0000wjw4m1tzo4qp",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun May 11 2025",
+    "location": "KU Fountain, Dhulikhel",
+    "tags": "{Engineering, Community, Local, Crafts, Sustainability, Environment}",
+    "price": "Rs 300Team"
+  },
+  {
+    "title": "Research Paper Presentation Effect of Policy Variables on the Process of Money Supply",
+    "url": "https://www.nepvents.com/events/cmaeb5nmg00187yusyk2ouq7b",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat May 10 2025",
+    "location": "Zoom",
+    "tags": "{Business, Education, Online, Free, Community}",
+    "price": "Free"
+  },
+  {
+    "title": "Quantum Computing in an Intuitive Way",
+    "url": "https://www.nepvents.com/events/cmae75ec000147yusynvvogzt",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat May 10 2025",
+    "location": "Google Meet",
+    "tags": "{Tech, Ai, Online, Education, Community}",
+    "price": "Free"
   },
   {
     "title": "Global Azure 2025 Kathmandu",
@@ -1736,33 +1112,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat May 10 2025",
     "location": "Microsoft Teams",
-    "tags": [
-      "Tech",
-      "Devops",
-      "Community",
-      "Local",
-      "Online",
-      "Global",
-      "Ai"
-    ],
-    "price": "Free",
-    "mode": "sat may 10 2025"
-  },
-  {
-    "title": "🔮 Quantum Computing in an Intuitive Way",
-    "url": "https://www.nepvents.com/events/cmae75ec000147yusynvvogzt",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sat May 10 2025",
-    "location": "Google Meet",
-    "tags": [
-      "Tech",
-      "Ai",
-      "Online",
-      "Education",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "sat may 10 2025"
+    "tags": "{Tech, Devops, Community, Local, Online, Global, Ai}",
+    "price": "Free"
   },
   {
     "title": "IEEE Inspire 2025",
@@ -1770,16 +1121,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat May 10 2025",
     "location": "Leapfrog Technology, Charkhal Rd, Kathmandu",
-    "tags": [
-      "Tech",
-      "Community",
-      "Local",
-      "Networking",
-      "Online",
-      "Hybrid"
-    ],
-    "price": "Free",
-    "mode": "sat may 10 2025"
+    "tags": "{Tech, Community, Local, Networking, Online, Hybrid}",
+    "price": "Free"
   },
   {
     "title": "NEPAL HACKERONE LIVE HACKING MEETUP",
@@ -1787,15 +1130,26 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat May 10 2025-Sat May 17 2025",
     "location": "Kathmandu",
-    "tags": [
-      "Cybersecurity",
-      "Tech",
-      "Community",
-      "Networking",
-      "Hybrid"
-    ],
-    "price": "Free",
-    "mode": "sat may 10 2025-sat may 17 2025"
+    "tags": "{Cybersecurity, Tech, Community, Networking, Hybrid}",
+    "price": "Free"
+  },
+  {
+    "title": "SANKALPA25 SCHOLAR TALK",
+    "url": "https://www.nepvents.com/events/cm9tsuoxe000sd4usy89zy8yf",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Wed May 07 2025",
+    "location": "Mini Auditorium, Kathmandu University",
+    "tags": "{Tech, Sustainability, Environment, Education, Community, Local, Physical}",
+    "price": "Free"
+  },
+  {
+    "title": "SEO 101 The Basics",
+    "url": "https://www.nepvents.com/events/cma9c6945000g7yusntdo57w5",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Wed May 07 2025-Fri May 16 2025",
+    "location": "Google Meet",
+    "tags": "{Tech, Marketing, Education, Online, Ai}",
+    "price": "Rs 200 To Rs 400"
   },
   {
     "title": "Inter School Quiz Competition",
@@ -1803,48 +1157,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed May 07 2025",
     "location": "Kathmandu University, Multipurpose Hall",
-    "tags": [
-      "Education",
-      "Local",
-      "Community",
-      "Tech"
-    ],
-    "price": "Rs. 1200 Per Team",
-    "mode": "wed may 07 2025"
-  },
-  {
-    "title": "SEO 101: The Basics",
-    "url": "https://www.nepvents.com/events/cma9c6945000g7yusntdo57w5",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Wed May 07 2025-Fri May 16 2025",
-    "location": "Google Meet",
-    "tags": [
-      "Tech",
-      "Marketing",
-      "Education",
-      "Online",
-      "Ai"
-    ],
-    "price": "Rs 200 To Rs 400",
-    "mode": "wed may 07 2025-fri may 16 2025"
-  },
-  {
-    "title": "SANKALPA'25 SCHOLAR TALK",
-    "url": "https://www.nepvents.com/events/cm9tsuoxe000sd4usy89zy8yf",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Wed May 07 2025",
-    "location": "Mini Auditorium, Kathmandu University",
-    "tags": [
-      "Tech",
-      "Sustainability",
-      "Environment",
-      "Education",
-      "Community",
-      "Local",
-      "Physical"
-    ],
-    "price": "Free",
-    "mode": "wed may 07 2025"
+    "tags": "{Education, Local, Community, Tech}",
+    "price": "Rs. 1200 Per Team"
   },
   {
     "title": "AI in Action",
@@ -1852,48 +1166,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue May 06 2025-Wed Jun 18 2025",
     "location": "Online",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Devops",
-      "Data Analysis",
-      "Engineering",
-      "Online",
-      "Global",
-      "Web"
-    ],
-    "price": "Free",
-    "mode": "tue may 06 2025-wed jun 18 2025"
+    "tags": "{Ai, Tech, Devops, Data Analysis, Engineering, Online, Global, Web}",
+    "price": "Free"
   },
   {
-    "title": "3-Day Free UI/UX Design Workshop",
+    "title": "3-Day Free UIUX Design Workshop",
     "url": "https://www.nepvents.com/events/cm9wbs4zk0016d4us26sxzrab",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Mon May 05 2025-Wed May 07 2025",
     "location": "Skill Shikshya, Sankhamul, Kathmandu",
-    "tags": [
-      "Tech",
-      "Education",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "mon may 05 2025-wed may 07 2025"
-  },
-  {
-    "title": "Public Speaking Workshop",
-    "url": "https://www.nepvents.com/events/cma9dzygz000m7yus5uu9d2yg",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sun May 04 2025",
-    "location": "Kathmandu University, Dhulikhel",
-    "tags": [
-      "Community",
-      "Education",
-      "Networking",
-      "Local",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sun may 04 2025"
+    "tags": "{Tech, Education, Free}",
+    "price": "Free"
   },
   {
     "title": "ALL NEPAL SURVEY COMPETITION",
@@ -1901,52 +1184,35 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun May 04 2025",
     "location": "KU Central Campus, Dhulikhel",
-    "tags": [
-      "Engineering",
-      "Local",
-      "Tech",
-      "Community",
-      "Education",
-      "Environment"
-    ],
-    "price": "Rs. 1500/Team",
-    "mode": "sun may 04 2025"
+    "tags": "{Engineering, Local, Tech, Community, Education, Environment}",
+    "price": "Rs. 1500Team"
   },
   {
-    "title": "LinkedIn for Medicine: Ease, Engage, Excel",
+    "title": "Public Speaking Workshop",
+    "url": "https://www.nepvents.com/events/cma9dzygz000m7yus5uu9d2yg",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun May 04 2025",
+    "location": "Kathmandu University, Dhulikhel",
+    "tags": "{Community, Education, Networking, Local, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "LinkedIn for Medicine Ease, Engage, Excel",
     "url": "https://www.nepvents.com/events/cma6t7bo1000a7yusbidj29ae",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat May 03 2025",
     "location": "Zoom",
-    "tags": [
-      "Tech",
-      "Health",
-      "Education",
-      "Business",
-      "Networking",
-      "Marketing",
-      "Online",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sat may 03 2025"
+    "tags": "{Tech, Health, Education, Business, Networking, Marketing, Online, Free}",
+    "price": "Free"
   },
   {
-    "title": "Global IME Bank’s AI/ML Hackathon 2025",
+    "title": "Global IME Banks AIML Hackathon 2025",
     "url": "https://www.nepvents.com/events/cm7rmwm1v000eabur0r850nxq",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu May 01 2025",
     "location": "Kathmandu, Nepal",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Business",
-      "Online",
-      "Data Analysis",
-      "Engineering"
-    ],
-    "price": "Free",
-    "mode": "thu may 01 2025"
+    "tags": "{Ai, Tech, Business, Online, Data Analysis, Engineering}",
+    "price": "Free"
   },
   {
     "title": "LIVE ART COMPETITION",
@@ -1954,16 +1220,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed Apr 30 2025",
     "location": "Basantapur Durbar Square",
-    "tags": [
-      "Art",
-      "Culture",
-      "Local",
-      "Free",
-      "Community",
-      "Environment"
-    ],
-    "price": "Rs. 150",
-    "mode": "wed apr 30 2025"
+    "tags": "{Art, Culture, Local, Free, Community, Environment}",
+    "price": "Rs. 150"
   },
   {
     "title": "COMPETITIVE STRATEGY FROM SEARCH",
@@ -1971,33 +1229,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Apr 29 2025",
     "location": "Online",
-    "tags": [
-      "Marketing",
-      "Business",
-      "Tech",
-      "Networking",
-      "Online",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "tue apr 29 2025"
+    "tags": "{Marketing, Business, Tech, Networking, Online, Free}",
+    "price": "Free"
   },
   {
-    "title": "Nepal Hacks @ SecurityPal: AI Unleashed",
+    "title": "Nepal Hacks  SecurityPal AI Unleashed",
     "url": "https://www.nepvents.com/events/cm8et4byv000mbmurx1oiwf5a",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Apr 29 2025-Thu May 01 2025",
     "location": "SecurityPal Nepal Office, Kathmandu",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Cybersecurity",
-      "Community",
-      "Free",
-      "Local"
-    ],
-    "price": "Free",
-    "mode": "tue apr 29 2025-thu may 01 2025"
+    "tags": "{Ai, Tech, Cybersecurity, Community, Free, Local}",
+    "price": "Free"
   },
   {
     "title": "Fusemachines - AI Fellowship 2025",
@@ -2005,70 +1247,98 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Mon Apr 28 2025",
     "location": "Online",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Education",
-      "Online",
-      "Global",
-      "Free",
-      "Engineering"
-    ],
-    "price": "Free",
-    "mode": "mon apr 28 2025"
+    "tags": "{Ai, Tech, Education, Online, Global, Free, Engineering}",
+    "price": "Free"
   },
   {
-    "title": "CTRL + SHIFT + Google",
-    "url": "https://www.nepvents.com/events/cm9wc9zg2001ad4usqiwio7r3",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sat Apr 26 2025",
-    "location": "Hatiya Line, R.D, Itahari",
-    "tags": [
-      "Tech",
-      "Community",
-      "Local",
-      "Education",
-      "Networking",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sat apr 26 2025"
-  },
-  {
-    "title": "Idea to Interface – A Beginner’s Guide to UI/UX Design",
+    "title": "Idea to Interface  A Beginners Guide to UIUX Design",
     "url": "https://www.nepvents.com/events/cm9ttxgsh0010d4usaewzj1og",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Apr 26 2025",
     "location": "Online",
-    "tags": [
-      "Graphic Design",
-      "Art",
-      "Marketing",
-      "Tech",
-      "Free",
-      "Online",
-      "Education"
-    ],
-    "price": "Free",
-    "mode": "sat apr 26 2025"
+    "tags": "{Graphic Design, Art, Marketing, Tech, Free, Online, Education}",
+    "price": "Free"
   },
   {
-    "title": "Software Development & Career Guidance",
+    "title": "Firebase Studio  Gemini AI Vibe Coding Session",
+    "url": "https://www.nepvents.com/events/cm9wddaei001gd4uslc2360yw",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat Apr 26 2025",
+    "location": "Reliance College, Saraswatinagar, Chabahil, Kathmandu",
+    "tags": "{Ai, Web, Tech, Community, Local}",
+    "price": "Free"
+  },
+  {
+    "title": "Smarter Hiring Decisions with Google Gemini",
+    "url": "https://www.nepvents.com/events/cm9wd6wy3001ed4us00agcrvx",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat Apr 26 2025",
+    "location": "Reliance College, Chabahil, Kathmandu",
+    "tags": "{Ai, Tech, Community, Local, Networking, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "Software Development  Career Guidance",
     "url": "https://www.nepvents.com/events/cm9wd04c5001cd4usxg8oyvpg",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Apr 26 2025",
     "location": "Google Meet",
-    "tags": [
-      "Tech",
-      "Devops",
-      "Community",
-      "Education",
-      "Networking",
-      "Online",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sat apr 26 2025"
+    "tags": "{Tech, Devops, Community, Education, Networking, Online, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "CTRL  SHIFT  Google",
+    "url": "https://www.nepvents.com/events/cm9wc9zg2001ad4usqiwio7r3",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat Apr 26 2025",
+    "location": "Hatiya Line, R.D, Itahari",
+    "tags": "{Tech, Community, Local, Education, Networking, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "Digital Footprints That Lead To Opportunity",
+    "url": "https://www.nepvents.com/events/cm9r8mzt8000kd4us7dc9autm",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat Apr 26 2025",
+    "location": "Google Meet",
+    "tags": "{Tech, Community, Online, Networking, Free, Education}",
+    "price": "Free"
+  },
+  {
+    "title": "IEEE Seminar Building Academic Impact through Research and Publication",
+    "url": "https://www.nepvents.com/events/cm9ttd8vg000wd4usbwqln56w",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Fri Apr 25 2025",
+    "location": "Siddhartha Cottage, Dhobighat, Lalitpur",
+    "tags": "{Tech, Education, Networking, Community}",
+    "price": "Rs 200 - Rs 1000"
+  },
+  {
+    "title": "Building the Next Breakout Blockchain Startup From Nepal",
+    "url": "https://www.nepvents.com/events/cm9o7c39i000ed4usvklrrmsv",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Wed Apr 23 2025",
+    "location": "Online",
+    "tags": "{Blockchain, Tech, Web, Community, Startup, Online, Global, Education}",
+    "price": "Free"
+  },
+  {
+    "title": "10-Day AI  ML Workshop",
+    "url": "https://www.nepvents.com/events/cm9lgfabd0008d4uskc21ejfk",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Wed Apr 23 2025-Fri May 02 2025",
+    "location": "Online",
+    "tags": "{Ai, Tech, Online, Education}",
+    "price": "Free"
+  },
+  {
+    "title": "Sui HackerHouse Hackathon",
+    "url": "https://www.nepvents.com/events/cm8gtoxyd0014bmur1p2z5stm",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Mon Apr 21 2025-Fri Apr 25 2025",
+    "location": "Techflow Space, Chhauni, Kathmandu",
+    "tags": "{Ai, Blockchain, Tech, Community, Local}",
+    "price": "Free"
   },
   {
     "title": "Photography Contest",
@@ -2076,45 +1346,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Mon Apr 21 2025-Sat May 10 2025",
     "location": "Kathmandu University",
-    "tags": [
-      "Art",
-      "Culture",
-      "Local",
-      "Community"
-    ],
-    "price": "Rs. 100 Per Photo",
-    "mode": "mon apr 21 2025-sat may 10 2025"
-  },
-  {
-    "title": "AI for Beginners",
-    "url": "https://www.nepvents.com/events/cm9d5h3tq0008bqusgydo5gf3",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sun Apr 20 2025",
-    "location": "Google Meet",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Online",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "sun apr 20 2025"
-  },
-  {
-    "title": "DAJ Community Session",
-    "url": "https://www.nepvents.com/events/cm9r88e4i000id4usa675fznm",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sun Apr 20 2025",
-    "location": "Google Meet",
-    "tags": [
-      "Tech",
-      "Gaming",
-      "Online",
-      "Community",
-      "Entertainment"
-    ],
-    "price": "Free",
-    "mode": "sun apr 20 2025"
+    "tags": "{Art, Culture, Local, Community}",
+    "price": "Rs. 100 Per Photo"
   },
   {
     "title": "5-Days Practical Graphics Designing Training",
@@ -2122,33 +1355,26 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Apr 20 2025-Thu Apr 24 2025",
     "location": "Online",
-    "tags": [
-      "Graphic Design",
-      "Education",
-      "Art",
-      "Community",
-      "Online"
-    ],
-    "price": "Rs 300",
-    "mode": "sun apr 20 2025-thu apr 24 2025"
+    "tags": "{Graphic Design, Education, Art, Community, Online}",
+    "price": "Rs 300"
   },
   {
-    "title": "DevOps Kathmandu Connect 2025",
-    "url": "https://www.nepvents.com/events/cm7hwpqk3000ed6urlbss41zs",
+    "title": "AI for Beginners",
+    "url": "https://www.nepvents.com/events/cm9d5h3tq0008bqusgydo5gf3",
     "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sat Apr 19 2025",
-    "location": "Kathmandu, Nepal",
-    "tags": [
-      "Tech",
-      "Devops",
-      "Community",
-      "Local",
-      "Networking",
-      "Ai",
-      "Engineering"
-    ],
-    "price": "Rs 800+",
-    "mode": "sat apr 19 2025"
+    "date": "Sun Apr 20 2025",
+    "location": "Google Meet",
+    "tags": "{Ai, Tech, Online, Community}",
+    "price": "Free"
+  },
+  {
+    "title": "DAJ Community Session",
+    "url": "https://www.nepvents.com/events/cm9r88e4i000id4usa675fznm",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun Apr 20 2025",
+    "location": "Google Meet",
+    "tags": "{Tech, Gaming, Online, Community, Entertainment}",
+    "price": "Free"
   },
   {
     "title": "Crafting a CV That Stands Out",
@@ -2156,15 +1382,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Apr 19 2025",
     "location": "Google Meet",
-    "tags": [
-      "Education",
-      "Networking",
-      "Free",
-      "Tech",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "sat apr 19 2025"
+    "tags": "{Education, Networking, Free, Tech, Community}",
+    "price": "Free"
+  },
+  {
+    "title": "DevOps Kathmandu Connect 2025",
+    "url": "https://www.nepvents.com/events/cm7hwpqk3000ed6urlbss41zs",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat Apr 19 2025",
+    "location": "Kathmandu, Nepal",
+    "tags": "{Tech, Devops, Community, Local, Networking, Ai, Engineering}",
+    "price": "Rs 800"
   },
   {
     "title": "Perplexity Hackathon",
@@ -2172,32 +1400,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed Apr 16 2025-Thu May 29 2025",
     "location": "Online",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Global",
-      "Engineering",
-      "Community",
-      "Business",
-      "Online"
-    ],
-    "price": "Free",
-    "mode": "wed apr 16 2025-thu may 29 2025"
+    "tags": "{Ai, Tech, Global, Engineering, Community, Business, Online}",
+    "price": "Free"
   },
   {
-    "title": "Research Paper 101: From Research to Publication",
+    "title": "Research Paper 101 From Research to Publication",
     "url": "https://www.nepvents.com/events/cm8ymc7aj000eaduq4omw3xrb",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Apr 13 2025",
     "location": "Zoom",
-    "tags": [
-      "Education",
-      "Tech",
-      "Free",
-      "Online"
-    ],
-    "price": "Free",
-    "mode": "sun apr 13 2025"
+    "tags": "{Education, Tech, Free, Online}",
+    "price": "Free"
   },
   {
     "title": "Research Talk-12",
@@ -2205,32 +1418,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Apr 12 2025",
     "location": "Virtual",
-    "tags": [
-      "Education",
-      "Online",
-      "Community",
-      "Networking",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sat apr 12 2025"
-  },
-  {
-    "title": "Freelancing and Tech Trends: Unlock Career Opportunities",
-    "url": "https://www.nepvents.com/events/cm9ce24oz0006bqust88lgjms",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sat Apr 12 2025",
-    "location": "Texas International College, Mitrapark, Kathmandu",
-    "tags": [
-      "Tech",
-      "Community",
-      "Business",
-      "Networking",
-      "Free",
-      "Education"
-    ],
-    "price": "Free",
-    "mode": "sat apr 12 2025"
+    "tags": "{Education, Online, Community, Networking, Free}",
+    "price": "Free"
   },
   {
     "title": "AI FOR THE NEXT GEN",
@@ -2238,17 +1427,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Apr 12 2025",
     "location": "Hotel Pokhara Grande",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Community",
-      "Local",
-      "Business",
-      "Networking",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sat apr 12 2025"
+    "tags": "{Ai, Tech, Community, Local, Business, Networking, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "Freelancing and Tech Trends Unlock Career Opportunities",
+    "url": "https://www.nepvents.com/events/cm9ce24oz0006bqust88lgjms",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat Apr 12 2025",
+    "location": "Texas International College, Mitrapark, Kathmandu",
+    "tags": "{Tech, Community, Business, Networking, Free, Education}",
+    "price": "Free"
   },
   {
     "title": "AI x Web3 Hackathon",
@@ -2256,48 +1445,89 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Apr 11 2025-Sun Apr 13 2025",
     "location": "HimalAI Hacker House, Kirtipur",
-    "tags": [
-      "Ai",
-      "Blockchain",
-      "Networking",
-      "Tech",
-      "Local",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "fri apr 11 2025-sun apr 13 2025"
+    "tags": "{Ai, Blockchain, Networking, Tech, Local, Community}",
+    "price": "Free"
   },
   {
-    "title": "Mastering Data & Generative AI on AWS",
+    "title": "Mastering Data  Generative AI on AWS",
     "url": "https://www.nepvents.com/events/cm8zgzcu2000oaduqs5wfrjlu",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Apr 10 2025",
     "location": "Hyatt Centric, Soalteemode, Kathmandu",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Education",
-      "Engineering",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "thu apr 10 2025"
+    "tags": "{Ai, Tech, Education, Engineering, Community}",
+    "price": "Free"
   },
   {
-    "title": "Building AI Agents",
-    "url": "https://www.nepvents.com/events/cm911rhgn000saduqez8ucgv6",
+    "title": "Student Empowerment and Learning Program",
+    "url": "https://www.nepvents.com/events/cm8zdsb2e000iaduq93mukula",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Wed Apr 09 2025-Sat Apr 12 2025",
+    "location": "Mechi Multiple Campus, Bhadrapur",
+    "tags": "{Education, Tech, Community, Local, Networking, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "Bitcoin 2025 Official Hackathon",
+    "url": "https://www.nepvents.com/events/cm99vnmbk0002bqusrqx5pd3i",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Mon Apr 07 2025-Thu May 29 2025",
+    "location": "Online",
+    "tags": "{Blockchain, Tech, Online, Global, Community, Business, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "7-Day Digital Marketing Workshop",
+    "url": "https://www.nepvents.com/events/cm94edoum000waduql4ovfl41",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Mon Apr 07 2025-Sun Apr 13 2025",
+    "location": "Google Meet",
+    "tags": "{Marketing, Tech, Education, Online, Community}",
+    "price": "Rs. 300"
+  },
+  {
+    "title": "Global AI Bootcamp Kathmandu - 2025",
+    "url": "https://www.nepvents.com/events/cm860jia60002d2usmnpknbmo",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun Apr 06 2025",
+    "location": "Embark College, Pulchowk, Kathmandu",
+    "tags": "{Ai, Tech, Community, Local, Education, Networking, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "Cybersecurity Unlocked Your Path to a Secure Future",
+    "url": "https://www.nepvents.com/events/cm911awsn000qaduqr8wsy86s",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun Apr 06 2025",
+    "location": "Google Meet",
+    "tags": "{Cybersecurity, Free, Online, Education, Tech, Community, Networking}",
+    "price": "Free"
+  },
+  {
+    "title": "UIUX Designing 3-Day Practical Workshop",
+    "url": "https://www.nepvents.com/events/cm8zelmog000maduqprwkw1pr",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat Apr 05 2025-Mon Apr 07 2025",
+    "location": "Siddhanath Science Campus, Mahendranagar",
+    "tags": "{Graphic Design, Community, Art, Tech, Education}",
+    "price": "NPR 49"
+  },
+  {
+    "title": "Fulbright Masters Scholarship Virtual Info Session",
+    "url": "https://www.nepvents.com/events/cm8q7o95d000a6quy5spy5j0e",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Apr 04 2025",
-    "location": "Online",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Online",
-      "Community",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "fri apr 04 2025"
+    "location": "Zoom",
+    "tags": "{Education, Online, Global, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "Unlocking Digital Rights  Online Safety",
+    "url": "https://www.nepvents.com/events/cm8ze05wf000kaduqyv4c5me9",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Fri Apr 04 2025",
+    "location": "Google Meet",
+    "tags": "{Tech, Education, Cybersecurity, Community, Networking, Free, Online}",
+    "price": "Free"
   },
   {
     "title": "WordCamp Nepal 2025",
@@ -2305,30 +1535,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Apr 04 2025-Sat Apr 05 2025",
     "location": "Kundalini Durbar Banquet, Chandol, Kathmandu",
-    "tags": [
-      "Web",
-      "Tech",
-      "Community",
-      "Networking",
-      "Physical"
-    ],
-    "price": "Rs. 2000-5000",
-    "mode": "fri apr 04 2025-sat apr 05 2025"
+    "tags": "{Web, Tech, Community, Networking, Physical}",
+    "price": "Rs. 2000-5000"
   },
   {
-    "title": "Fulbright Master’s Scholarship Virtual Info Session",
-    "url": "https://www.nepvents.com/events/cm8q7o95d000a6quy5spy5j0e",
+    "title": "Building AI Agents",
+    "url": "https://www.nepvents.com/events/cm911rhgn000saduqez8ucgv6",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Apr 04 2025",
-    "location": "Zoom",
-    "tags": [
-      "Education",
-      "Online",
-      "Global",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "fri apr 04 2025"
+    "location": "Online",
+    "tags": "{Ai, Tech, Online, Community, Free}",
+    "price": "Free"
   },
   {
     "title": "3 Days QA Workshop",
@@ -2336,14 +1553,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed Apr 02 2025-Fri Apr 04 2025",
     "location": "Skill Shikshya, Sankhamul, Kathmandu",
-    "tags": [
-      "Tech",
-      "Education",
-      "Online",
-      "Local"
-    ],
-    "price": "Free",
-    "mode": "wed apr 02 2025-fri apr 04 2025"
+    "tags": "{Tech, Education, Online, Local}",
+    "price": "Free"
   },
   {
     "title": "Data Engineering in US Healthcare",
@@ -2351,15 +1562,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed Apr 02 2025",
     "location": "Google Meet",
-    "tags": [
-      "Tech",
-      "Health",
-      "Online",
-      "Global",
-      "Education"
-    ],
-    "price": "Free",
-    "mode": "wed apr 02 2025"
+    "tags": "{Tech, Health, Online, Global, Education}",
+    "price": "Free"
   },
   {
     "title": "Blockchain Fellowship IX",
@@ -2367,32 +1571,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Apr 01 2025-Mon Jun 30 2025",
     "location": "Sanepa-2 Lalitpur, Nepal",
-    "tags": [
-      "Blockchain",
-      "Tech",
-      "Education",
-      "Networking",
-      "Free",
-      "Hybrid",
-      "Online"
-    ],
-    "price": "Free",
-    "mode": "tue apr 01 2025-mon jun 30 2025"
+    "tags": "{Blockchain, Tech, Education, Networking, Free, Hybrid, Online}",
+    "price": "Free"
   },
   {
-    "title": "Babal Entrepreneurship & Investment Challenge 2025",
+    "title": "Babal Entrepreneurship  Investment Challenge 2025",
     "url": "https://www.nepvents.com/events/cm8fnjp8v000ubmurcfvlv8ar",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Apr 01 2025-Sat Jun 21 2025",
     "location": "Kathmandu Valley",
-    "tags": [
-      "Entrepreneurship",
-      "Startup",
-      "Networking",
-      "Business"
-    ],
-    "price": "Free",
-    "mode": "tue apr 01 2025-sat jun 21 2025"
+    "tags": "{Entrepreneurship, Startup, Networking, Business}",
+    "price": "Free"
   },
   {
     "title": "GDG Kathmandu Meetup March",
@@ -2400,48 +1589,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Mar 30 2025",
     "location": "Security Pal, Buddhi Sagar Marg",
-    "tags": [
-      "Tech",
-      "Community",
-      "Local",
-      "Networking",
-      "Business"
-    ],
-    "price": "Rs 350 Or 500",
-    "mode": "sun mar 30 2025"
-  },
-  {
-    "title": "5-Day Graphics Design Workshop",
-    "url": "https://www.nepvents.com/events/cm8ip0b5o001abmurhc02rs2k",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sun Mar 30 2025-Fri Apr 04 2025",
-    "location": "Mount Annapurna Campus, Parsyang",
-    "tags": [
-      "Graphic Design",
-      "Art",
-      "Community",
-      "Tech",
-      "Local"
-    ],
-    "price": "Rs. 80 Or Rs 150",
-    "mode": "sun mar 30 2025-fri apr 04 2025"
-  },
-  {
-    "title": "Reflections on College, Tech, and Career",
-    "url": "https://www.nepvents.com/events/cm8u30k7z0004aduqlliia8s5",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sun Mar 30 2025",
-    "location": "Google Meet",
-    "tags": [
-      "Tech",
-      "Education",
-      "Community",
-      "Networking",
-      "Free",
-      "Online"
-    ],
-    "price": "Free",
-    "mode": "sun mar 30 2025"
+    "tags": "{Tech, Community, Local, Networking, Business}",
+    "price": "Rs 350 Or 500"
   },
   {
     "title": "AlgoArena",
@@ -2449,17 +1598,26 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Mar 30 2025-Wed Apr 30 2025",
     "location": "Online",
-    "tags": [
-      "Tech",
-      "Ai",
-      "Web",
-      "Community",
-      "Online",
-      "Global",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sun mar 30 2025-wed apr 30 2025"
+    "tags": "{Tech, Ai, Web, Community, Online, Global, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "Reflections on College, Tech, and Career",
+    "url": "https://www.nepvents.com/events/cm8u30k7z0004aduqlliia8s5",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun Mar 30 2025",
+    "location": "Google Meet",
+    "tags": "{Tech, Education, Community, Networking, Free, Online}",
+    "price": "Free"
+  },
+  {
+    "title": "5-Day Graphics Design Workshop",
+    "url": "https://www.nepvents.com/events/cm8ip0b5o001abmurhc02rs2k",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun Mar 30 2025-Fri Apr 04 2025",
+    "location": "Mount Annapurna Campus, Parsyang",
+    "tags": "{Graphic Design, Art, Community, Tech, Local}",
+    "price": "Rs. 80 Or Rs 150"
   },
   {
     "title": "In Conversation with a Senior Site Reliability Engineer",
@@ -2467,16 +1625,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Mar 29 2025",
     "location": "Online",
-    "tags": [
-      "Tech",
-      "Devops",
-      "Community",
-      "Networking",
-      "Online",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sat mar 29 2025"
+    "tags": "{Tech, Devops, Community, Networking, Online, Free}",
+    "price": "Free"
   },
   {
     "title": "Power BI Workshop",
@@ -2484,15 +1634,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Mar 28 2025",
     "location": "Deerwalk Complex, Sifal, Kathmandu",
-    "tags": [
-      "Tech",
-      "Education",
-      "Business",
-      "Networking",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "fri mar 28 2025"
+    "tags": "{Tech, Education, Business, Networking, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "Tech Kura Kani Exploring LLMs and MCP",
+    "url": "https://www.nepvents.com/events/cm8fke6zz000sbmurikd2e07j",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Thu Mar 27 2025",
+    "location": "Naxal, Kathmandu",
+    "tags": "{Tech, Web, Ai, Community, Networking, Local}",
+    "price": "Free"
   },
   {
     "title": "Youth Hackfest 2025 Nepal",
@@ -2500,35 +1652,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Mar 27 2025-Mon Mar 31 2025",
     "location": "Kathmandu University, Dhulikhel",
-    "tags": [
-      "Tech",
-      "Ai",
-      "Health",
-      "Local",
-      "Community",
-      "Blockchain",
-      "Web",
-      "Networking"
-    ],
-    "price": "Rs 2500 Or 7500",
-    "mode": "thu mar 27 2025-mon mar 31 2025"
-  },
-  {
-    "title": "Tech Kura Kani: Exploring LLMs and MCP",
-    "url": "https://www.nepvents.com/events/cm8fke6zz000sbmurikd2e07j",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Thu Mar 27 2025",
-    "location": "Naxal, Kathmandu",
-    "tags": [
-      "Tech",
-      "Web",
-      "Ai",
-      "Community",
-      "Networking",
-      "Local"
-    ],
-    "price": "Free",
-    "mode": "thu mar 27 2025"
+    "tags": "{Tech, Ai, Health, Local, Community, Blockchain, Web, Networking}",
+    "price": "Rs 2500 Or 7500"
   },
   {
     "title": "Mastering Data Science in 2025",
@@ -2536,17 +1661,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Mar 27 2025",
     "location": "Zoom",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Education",
-      "Business",
-      "Networking",
-      "Free",
-      "Online"
-    ],
-    "price": "Free",
-    "mode": "thu mar 27 2025"
+    "tags": "{Ai, Tech, Education, Business, Networking, Free, Online}",
+    "price": "Free"
   },
   {
     "title": "AI and Blockchain 101",
@@ -2554,31 +1670,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed Mar 26 2025",
     "location": "Chhauni, Kathmandu",
-    "tags": [
-      "Ai",
-      "Blockchain",
-      "Tech",
-      "Community",
-      "Free",
-      "Education"
-    ],
-    "price": "Free",
-    "mode": "wed mar 26 2025"
-  },
-  {
-    "title": "Cyber Security Career Session",
-    "url": "https://www.nepvents.com/events/cm8lxesb000086quya1pu6b77",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Mon Mar 24 2025",
-    "location": "Google Meet",
-    "tags": [
-      "Tech",
-      "Online",
-      "Free",
-      "Education"
-    ],
-    "price": "Free",
-    "mode": "mon mar 24 2025"
+    "tags": "{Ai, Blockchain, Tech, Community, Free, Education}",
+    "price": "Free"
   },
   {
     "title": "Digital Marketing Workshop",
@@ -2586,16 +1679,26 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Mon Mar 24 2025-Thu Mar 27 2025",
     "location": "Google Meet",
-    "tags": [
-      "Marketing",
-      "Business",
-      "Tech",
-      "Online",
-      "Education",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "mon mar 24 2025-thu mar 27 2025"
+    "tags": "{Marketing, Business, Tech, Online, Education, Community}",
+    "price": "Free"
+  },
+  {
+    "title": "Cyber Security Career Session",
+    "url": "https://www.nepvents.com/events/cm8lxesb000086quya1pu6b77",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Mon Mar 24 2025",
+    "location": "Google Meet",
+    "tags": "{Tech, Online, Free, Education}",
+    "price": "Free"
+  },
+  {
+    "title": "Code, Commit, Collaborate A Hands-on GitHub Workshop",
+    "url": "https://www.nepvents.com/events/cm8eqtwvg000kbmurmitso6o2",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun Mar 23 2025",
+    "location": "PKMC, Bagbazaar, Kathmandu",
+    "tags": "{Tech, Devops, Community, Local, Education, Free}",
+    "price": "Free"
   },
   {
     "title": "AI x Blockchain Meet",
@@ -2603,47 +1706,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Mar 23 2025",
     "location": "Google Meet",
-    "tags": [
-      "Ai",
-      "Blockchain",
-      "Tech",
-      "Online",
-      "Networking",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "sun mar 23 2025"
+    "tags": "{Ai, Blockchain, Tech, Online, Networking, Community}",
+    "price": "Free"
   },
   {
-    "title": "Code, Commit, Collaborate: A Hands-on GitHub Workshop",
-    "url": "https://www.nepvents.com/events/cm8eqtwvg000kbmurmitso6o2",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sun Mar 23 2025",
-    "location": "PKMC, Bagbazaar, Kathmandu",
-    "tags": [
-      "Tech",
-      "Devops",
-      "Community",
-      "Local",
-      "Education",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sun mar 23 2025"
-  },
-  {
-    "title": "Exploring PhD/MS Opportunities in the USA",
+    "title": "Exploring PhDMS Opportunities in the USA",
     "url": "https://www.nepvents.com/events/cm8fa8vce000qbmur3f6ohtsa",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Mar 22 2025",
     "location": "Google Meet",
-    "tags": [
-      "Education",
-      "Online",
-      "Tech"
-    ],
-    "price": "Free",
-    "mode": "sat mar 22 2025"
+    "tags": "{Education, Online, Tech}",
+    "price": "Free"
   },
   {
     "title": "LinkedIn Optimization and Introduction to Medium",
@@ -2651,16 +1724,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Mar 22 2025",
     "location": "Google Meet",
-    "tags": [
-      "Tech",
-      "Networking",
-      "Marketing",
-      "Online",
-      "Free",
-      "Education"
-    ],
-    "price": "Free",
-    "mode": "sat mar 22 2025"
+    "tags": "{Tech, Networking, Marketing, Online, Free, Education}",
+    "price": "Free"
   },
   {
     "title": "MERN Stack Workshop",
@@ -2668,31 +1733,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Mon Mar 17 2025-Fri Mar 21 2025",
     "location": "Online",
-    "tags": [
-      "Web",
-      "Education",
-      "Tech",
-      "Community",
-      "Free",
-      "Online"
-    ],
-    "price": "Rs 250",
-    "mode": "mon mar 17 2025-fri mar 21 2025"
+    "tags": "{Web, Education, Tech, Community, Free, Online}",
+    "price": "Rs 250"
   },
   {
-    "title": "Cybersecurity & Penetration Testing Workshop",
+    "title": "Cybersecurity  Penetration Testing Workshop",
     "url": "https://www.nepvents.com/events/cm8313go2000m8yusca4f43sz",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Mon Mar 17 2025",
     "location": "Arambha College, Chitwan, Nepal",
-    "tags": [
-      "Cybersecurity",
-      "Education",
-      "Tech",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "mon mar 17 2025"
+    "tags": "{Cybersecurity, Education, Tech, Community}",
+    "price": "Free"
   },
   {
     "title": "Free Flutter Workshop",
@@ -2700,14 +1751,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Mon Mar 17 2025-Sun Mar 23 2025",
     "location": "Online",
-    "tags": [
-      "Mobile Development",
-      "Education",
-      "Tech",
-      "Online"
-    ],
-    "price": "Free",
-    "mode": "mon mar 17 2025-sun mar 23 2025"
+    "tags": "{Mobile Development, Education, Tech, Online}",
+    "price": "Free"
   },
   {
     "title": "Digital Marketing Bootcamp",
@@ -2715,32 +1760,26 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Mar 16 2025-Sat Mar 22 2025",
     "location": "Kharaayo HQ, Birtamode-5, Jhapa",
-    "tags": [
-      "Marketing",
-      "Tech",
-      "Education",
-      "Free",
-      "Local",
-      "Business"
-    ],
-    "price": "Free",
-    "mode": "sun mar 16 2025-sat mar 22 2025"
+    "tags": "{Marketing, Tech, Education, Free, Local, Business}",
+    "price": "Free"
   },
   {
-    "title": "Classroom to Career: Navigating Economics and Job Skills",
+    "title": "LinkedIn Workshop Optimize  Grow",
+    "url": "https://www.nepvents.com/events/cm88qsdv00008bmur3ohx14fz",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun Mar 16 2025",
+    "location": "Google Meet",
+    "tags": "{Tech, Community, Networking, Marketing, Online, Free, Education}",
+    "price": "Free"
+  },
+  {
+    "title": "Classroom to Career Navigating Economics and Job Skills",
     "url": "https://www.nepvents.com/events/cm87e952a0006bmurud4lxfmg",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Mar 16 2025",
-    "location": "Zoom (Online)",
-    "tags": [
-      "Education",
-      "Business",
-      "Networking",
-      "Online",
-      "Tech"
-    ],
-    "price": "Free",
-    "mode": "sun mar 16 2025"
+    "location": "Zoom Online",
+    "tags": "{Education, Business, Networking, Online, Tech}",
+    "price": "Free"
   },
   {
     "title": "3 Days Digital Marketing Workshop",
@@ -2748,81 +1787,35 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Mar 16 2025-Tue Mar 18 2025",
     "location": "Google Meet",
-    "tags": [
-      "Marketing",
-      "Online",
-      "Free",
-      "Tech",
-      "Education",
-      "Business"
-    ],
-    "price": "Free",
-    "mode": "sun mar 16 2025-tue mar 18 2025"
+    "tags": "{Marketing, Online, Free, Tech, Education, Business}",
+    "price": "Free"
   },
   {
-    "title": "LinkedIn Workshop: Optimize & Grow",
-    "url": "https://www.nepvents.com/events/cm88qsdv00008bmur3ohx14fz",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sun Mar 16 2025",
-    "location": "Google Meet",
-    "tags": [
-      "Tech",
-      "Community",
-      "Networking",
-      "Marketing",
-      "Online",
-      "Free",
-      "Education"
-    ],
-    "price": "Free",
-    "mode": "sun mar 16 2025"
-  },
-  {
-    "title": "Free 8-Days Python & FastAPI Workshop",
+    "title": "Free 8-Days Python  FastAPI Workshop",
     "url": "https://www.nepvents.com/events/cm7xigyiy000e8yusvgrj6o03",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Mar 15 2025-Sat Mar 22 2025",
     "location": "Online",
-    "tags": [
-      "Web",
-      "Education",
-      "Tech",
-      "Community",
-      "Free",
-      "Online"
-    ],
-    "price": "Free",
-    "mode": "sat mar 15 2025-sat mar 22 2025"
+    "tags": "{Web, Education, Tech, Community, Free, Online}",
+    "price": "Free"
   },
   {
-    "title": "Fulbright Master’s Scholarship Virtual Info Session",
+    "title": "Fulbright Masters Scholarship Virtual Info Session",
     "url": "https://www.nepvents.com/events/cm7ws0ysa00008yuszsos7hxe",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Mar 14 2025",
     "location": "Online",
-    "tags": [
-      "Education",
-      "Online",
-      "Community",
-      "Global"
-    ],
-    "price": "Free",
-    "mode": "fri mar 14 2025"
+    "tags": "{Education, Online, Community, Global}",
+    "price": "Free"
   },
   {
     "title": "Holi-Fest 2025",
     "url": "https://www.nepvents.com/events/cm7nkffsa0000aburvki7pfpf",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Mar 13 2025",
-    "location": "Palette Cafe & Bar, Sanepa Chowk.",
-    "tags": [
-      "Culture",
-      "Entertainment",
-      "Free",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "thu mar 13 2025"
+    "location": "Palette Cafe  Bar, Sanepa Chowk.",
+    "tags": "{Culture, Entertainment, Free, Community}",
+    "price": "Free"
   },
   {
     "title": "7-day React Native Workshop",
@@ -2830,31 +1823,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed Mar 12 2025-Tue Mar 18 2025",
     "location": "Online",
-    "tags": [
-      "Tech",
-      "Online",
-      "Education",
-      "Free",
-      "Devops"
-    ],
-    "price": "Free",
-    "mode": "wed mar 12 2025-tue mar 18 2025"
+    "tags": "{Tech, Online, Education, Free, Devops}",
+    "price": "Free"
   },
   {
-    "title": "Session on Statistics & Data Science Opportunities",
+    "title": "Session on Statistics  Data Science Opportunities",
     "url": "https://www.nepvents.com/events/cm831c1fp000o8yusodo9safm",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Mar 11 2025",
     "location": "Google Meet",
-    "tags": [
-      "Data Analysis",
-      "Education",
-      "Networking",
-      "Online",
-      "Tech"
-    ],
-    "price": "Free",
-    "mode": "tue mar 11 2025"
+    "tags": "{Data Analysis, Education, Networking, Online, Tech}",
+    "price": "Free"
   },
   {
     "title": "Free Digital Marketing Workshop",
@@ -2862,33 +1841,35 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Mon Mar 10 2025-Wed Mar 12 2025",
     "location": "Skill Shikshya, Sankhamul",
-    "tags": [
-      "Marketing",
-      "Tech",
-      "Free",
-      "Education",
-      "Business",
-      "Networking"
-    ],
-    "price": "Free",
-    "mode": "mon mar 10 2025-wed mar 12 2025"
+    "tags": "{Marketing, Tech, Free, Education, Business, Networking}",
+    "price": "Free"
   },
   {
-    "title": "AWS Women Summit Nepal – 2025",
-    "url": "https://www.nepvents.com/events/cm7j8lff60004eaurb62az9xc",
+    "title": "3D Web Design Bootcamp",
+    "url": "https://www.nepvents.com/events/cm873g1m90002bmure8202eus",
     "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sat Mar 08 2025",
-    "location": "KMC, Bagbazaar, Kathmandu",
-    "tags": [
-      "Tech",
-      "Community",
-      "Local",
-      "Education",
-      "Networking",
-      "Devops"
-    ],
-    "price": "Rs 250 (Students), Rs 500 (Others)",
-    "mode": "sat mar 08 2025"
+    "date": "Sun Mar 09 2025-Sat Mar 15 2025",
+    "location": "Kharaayo HQ, Birtamode-5, Jhapa",
+    "tags": "{Web, Graphic Design, Tech, Community, Education}",
+    "price": "Free"
+  },
+  {
+    "title": "3-Day Cybersecurity Bootcamp",
+    "url": "https://www.nepvents.com/events/cm7xhw529000a8yusobw8sdyb",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun Mar 09 2025-Tue Mar 11 2025",
+    "location": "Online",
+    "tags": "{Cybersecurity, Education, Tech, Online, Community}",
+    "price": "Free"
+  },
+  {
+    "title": "DePIN Cash Landing - Kathmandu",
+    "url": "https://www.nepvents.com/events/cm7x0h9gu00028yusmbcffcpm",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun Mar 09 2025",
+    "location": "Kirtipur, Kathmandu",
+    "tags": "{Blockchain, Community, Tech, Networking}",
+    "price": "Free"
   },
   {
     "title": "DWIT Job Fair 2025",
@@ -2896,67 +1877,53 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Mar 08 2025",
     "location": "DWIT Sifal, Kathmandu",
-    "tags": [
-      "Tech",
-      "Networking",
-      "Startup",
-      "Business",
-      "Education",
-      "Community",
-      "Local",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sat mar 08 2025"
+    "tags": "{Tech, Networking, Startup, Business, Education, Community, Local, Free}",
+    "price": "Free"
   },
   {
-    "title": "HerCanvas: Women in Creation",
+    "title": "AWS Women Summit Nepal  2025",
+    "url": "https://www.nepvents.com/events/cm7j8lff60004eaurb62az9xc",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat Mar 08 2025",
+    "location": "KMC, Bagbazaar, Kathmandu",
+    "tags": "{Tech, Community, Local, Education, Networking, Devops}",
+    "price": "Rs 250 Students, Rs 500 Others"
+  },
+  {
+    "title": "Mastering AI Agents Power, Applications, and Innovation",
+    "url": "https://www.nepvents.com/events/cm7xi7hed000c8yusm97n4uek",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat Mar 08 2025",
+    "location": "Online",
+    "tags": "{Ai, Tech, Education, Community, Online, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "HerCanvas Women in Creation",
     "url": "https://www.nepvents.com/events/cm7uedz6a000oabur4ms6k1rs",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Mar 07 2025",
     "location": "PKMC, Bagbazaar, Kathmandu",
-    "tags": [
-      "Graphic Design",
-      "Art",
-      "Free",
-      "Tech",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "fri mar 07 2025"
+    "tags": "{Graphic Design, Art, Free, Tech, Community}",
+    "price": "Free"
   },
   {
     "title": "SXC SANDBOX 2.0",
     "url": "https://www.nepvents.com/events/cm723yml6000cjw2lfjnrhp2h",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Mar 07 2025-Sun Mar 09 2025",
-    "location": "St. Xavier’s College, Maitighar, Kathmandu",
-    "tags": [
-      "Tech",
-      "Local",
-      "Community",
-      "Networking",
-      "Startup",
-      "Entrepreneurship",
-      "Education"
-    ],
-    "price": "Rs. 6000, Rs. 5000 (Early Bird)",
-    "mode": "fri mar 07 2025-sun mar 09 2025"
+    "location": "St. Xaviers College, Maitighar, Kathmandu",
+    "tags": "{Tech, Local, Community, Networking, Startup, Entrepreneurship, Education}",
+    "price": "Rs. 6000, Rs. 5000 Early Bird"
   },
   {
-    "title": "How to Get into your Dream University?",
+    "title": "How to Get into your Dream University",
     "url": "https://www.nepvents.com/events/cm7tbvb1c000kaburf3vo01pl",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed Mar 05 2025",
-    "location": "Online ( Zoom )",
-    "tags": [
-      "Education",
-      "Tech",
-      "Global",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "wed mar 05 2025"
+    "location": "Online  Zoom",
+    "tags": "{Education, Tech, Global, Community}",
+    "price": "Free"
   },
   {
     "title": "SCDS TechFest Hackathon 2025",
@@ -2964,15 +1931,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed Mar 05 2025-Mon Mar 10 2025",
     "location": "Online",
-    "tags": [
-      "Ai",
-      "Online",
-      "Global",
-      "Tech",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "wed mar 05 2025-mon mar 10 2025"
+    "tags": "{Ai, Online, Global, Tech, Community}",
+    "price": "Free"
   },
   {
     "title": "7 day JavaScript Workshop",
@@ -2980,61 +1940,35 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed Mar 05 2025-Tue Mar 11 2025",
     "location": "Google Meet",
-    "tags": [
-      "Web",
-      "Tech",
-      "Education",
-      "Online",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "wed mar 05 2025-tue mar 11 2025"
+    "tags": "{Web, Tech, Education, Online, Free}",
+    "price": "Free"
   },
   {
-    "title": "Hands-on AWS Camp: Exploring EC2 & Linux CLI",
+    "title": "Hands-on AWS Camp Exploring EC2  Linux CLI",
     "url": "https://www.nepvents.com/events/cm7a7ebxz0006do2lib778xpq",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Mon Mar 03 2025",
-    "location": "St. Xavier's College, Maitighar, Kathmandu",
-    "tags": [
-      "Devops",
-      "Education",
-      "Web",
-      "Tech"
-    ],
-    "price": "Free",
-    "mode": "mon mar 03 2025"
+    "location": "St. Xaviers College, Maitighar, Kathmandu",
+    "tags": "{Devops, Education, Web, Tech}",
+    "price": "Free"
   },
   {
-    "title": "Coding समाधान",
+    "title": "Coding",
     "url": "https://www.nepvents.com/events/cm7p2mkna0002aburgtw8z1nm",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Mar 02 2025",
     "location": "Google Meet",
-    "tags": [
-      "Tech",
-      "Education",
-      "Online",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sun mar 02 2025"
+    "tags": "{Tech, Education, Online, Free}",
+    "price": "Free"
   },
   {
-    "title": "Virtual Graphic Design Training & Mentorship Program",
+    "title": "Virtual Graphic Design Training  Mentorship Program",
     "url": "https://www.nepvents.com/events/cm77th26b000wjw2lgqcuyvhb",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Mar 01 2025-Fri Mar 07 2025",
     "location": "Online",
-    "tags": [
-      "Graphic Design",
-      "Education",
-      "Community",
-      "Tech",
-      "Art"
-    ],
-    "price": "Free",
-    "mode": "sat mar 01 2025-fri mar 07 2025"
+    "tags": "{Graphic Design, Education, Community, Tech, Art}",
+    "price": "Free"
   },
   {
     "title": "CSITAN Hackfest",
@@ -3042,18 +1976,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Feb 28 2025-Sun Mar 02 2025",
     "location": "Saptagandaki Multiple Campus, Chitwan",
-    "tags": [
-      "Tech",
-      "Community",
-      "Ai",
-      "Web",
-      "Engineering",
-      "Robotics",
-      "Education",
-      "Networking"
-    ],
-    "price": "Rs. 3000/Team",
-    "mode": "fri feb 28 2025-sun mar 02 2025"
+    "tags": "{Tech, Community, Ai, Web, Engineering, Robotics, Education, Networking}",
+    "price": "Rs. 3000Team"
   },
   {
     "title": "Research Talk Shows -V",
@@ -3061,44 +1985,26 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Feb 27 2025",
     "location": "ICTC Hall, Pulchowk Campus",
-    "tags": [
-      "Education",
-      "Tech",
-      "Engineering"
-    ],
-    "price": "Free",
-    "mode": "thu feb 27 2025"
+    "tags": "{Education, Tech, Engineering}",
+    "price": "Free"
   },
   {
-    "title": "WOMEN IN LEAD: VOICES THAT MATTER",
+    "title": "WOMEN IN LEAD VOICES THAT MATTER",
     "url": "https://www.nepvents.com/events/cm7k1pr4m0008eaurm2uo1bwc",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed Feb 26 2025",
     "location": "D-Hall, Pulchowk Campus",
-    "tags": [
-      "Community",
-      "Education",
-      "Networking",
-      "Local"
-    ],
-    "price": "Free",
-    "mode": "wed feb 26 2025"
+    "tags": "{Community, Education, Networking, Local}",
+    "price": "Free"
   },
   {
     "title": "C Programming Crash Course",
     "url": "https://www.nepvents.com/events/cm7fy62uw0000d6urxy5f9obh",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Feb 25 2025-Fri Feb 28 2025",
-    "location": "Virtual (Zoom)",
-    "tags": [
-      "Tech",
-      "Education",
-      "Online",
-      "Free",
-      "Engineering"
-    ],
-    "price": "Free",
-    "mode": "tue feb 25 2025-fri feb 28 2025"
+    "location": "Virtual Zoom",
+    "tags": "{Tech, Education, Online, Free, Engineering}",
+    "price": "Free"
   },
   {
     "title": "Workshop on Prompt Engineering",
@@ -3106,15 +2012,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Feb 25 2025",
     "location": "F-Hall, Pulchowk Campus",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Education",
-      "Free",
-      "Local"
-    ],
-    "price": "Free",
-    "mode": "tue feb 25 2025"
+    "tags": "{Ai, Tech, Education, Free, Local}",
+    "price": "Free"
   },
   {
     "title": "Graphic Design Workshop",
@@ -3122,17 +2021,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Feb 25 2025",
     "location": "Skill Shikshya, Sankhamul, Kathmandu",
-    "tags": [
-      "Tech",
-      "Free",
-      "Local",
-      "Art",
-      "Graphic Design",
-      "Web",
-      "Hybrid"
-    ],
-    "price": "Free",
-    "mode": "tue feb 25 2025"
+    "tags": "{Tech, Free, Local, Art, Graphic Design, Web, Hybrid}",
+    "price": "Free"
   },
   {
     "title": "Infotech Table Tennis Tournament",
@@ -3140,30 +2030,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Mon Feb 24 2025",
     "location": "Patan Multiple Campus",
-    "tags": [
-      "Gaming",
-      "Entertainment",
-      "Community"
-    ],
-    "price": "Rs 100 (Free For Female Participants)",
-    "mode": "mon feb 24 2025"
-  },
-  {
-    "title": "Infotech Badminton Tournament",
-    "url": "https://www.nepvents.com/events/cm7h18v9y000ad6urxqv5qiiw",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Mon Feb 24 2025",
-    "location": "Patan Multiple Campus",
-    "tags": [
-      "Badminton",
-      "Community",
-      "Tech",
-      "Gaming",
-      "Entertainment",
-      "Physical"
-    ],
-    "price": "Rs 100 (Free For Females)",
-    "mode": "mon feb 24 2025"
+    "tags": "{Gaming, Entertainment, Community}",
+    "price": "Rs 100 Free For Female Participants"
   },
   {
     "title": "Infotech Chess Tournament",
@@ -3171,29 +2039,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Mon Feb 24 2025",
     "location": "Patan Multiple Campus",
-    "tags": [
-      "Chess",
-      "Gaming",
-      "Entertainment",
-      "Community"
-    ],
-    "price": "Rs 100",
-    "mode": "mon feb 24 2025"
+    "tags": "{Chess, Gaming, Entertainment, Community}",
+    "price": "Rs 100"
   },
   {
-    "title": "LOCUS Research Symposium 2025",
-    "url": "https://www.nepvents.com/events/cm7fs5t4v0000hyw44fc09vwe",
+    "title": "Infotech Badminton Tournament",
+    "url": "https://www.nepvents.com/events/cm7h18v9y000ad6urxqv5qiiw",
     "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sun Feb 23 2025",
-    "location": "ICTC Conference Hall, Pulchowk Campus",
-    "tags": [
-      "Education",
-      "Tech",
-      "Networking",
-      "Physical"
-    ],
-    "price": "Free",
-    "mode": "sun feb 23 2025"
+    "date": "Mon Feb 24 2025",
+    "location": "Patan Multiple Campus",
+    "tags": "{Badminton, Community, Tech, Gaming, Entertainment, Physical}",
+    "price": "Rs 100 Free For Females"
   },
   {
     "title": "Global AI Chapter Kathmandu 2025",
@@ -3201,50 +2057,26 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Feb 23 2025",
     "location": "Ncell Icon, Lainchaur, Kathmandu",
-    "tags": [
-      "Ai",
-      "Blockchain",
-      "Community",
-      "Local",
-      "Tech",
-      "Networking",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sun feb 23 2025"
+    "tags": "{Ai, Blockchain, Community, Local, Tech, Networking, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "LOCUS Research Symposium 2025",
+    "url": "https://www.nepvents.com/events/cm7fs5t4v0000hyw44fc09vwe",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun Feb 23 2025",
+    "location": "ICTC Conference Hall, Pulchowk Campus",
+    "tags": "{Education, Tech, Networking, Physical}",
+    "price": "Free"
   },
   {
     "title": "Global Power Platform Bootcamp 2025",
     "url": "https://www.nepvents.com/events/cm6rru62h000cd72lz7v0jk2s",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Feb 22 2025",
-    "location": "Microsoft Teams (Virtual)",
-    "tags": [
-      "Tech",
-      "Community",
-      "Global",
-      "Online",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sat feb 22 2025"
-  },
-  {
-    "title": "AWS GenAI Camp",
-    "url": "https://www.nepvents.com/events/cm7a5atu60004do2lvxdn33ax",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sat Feb 22 2025",
-    "location": "Patan Multiple Campus, Lalitpur",
-    "tags": [
-      "Ai",
-      "Web",
-      "Tech",
-      "Community",
-      "Local",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sat feb 22 2025"
+    "location": "Microsoft Teams Virtual",
+    "tags": "{Tech, Community, Global, Online, Free}",
+    "price": "Free"
   },
   {
     "title": "Exploring MLSA, GitHub Campus Expert, and Huawei Seeds For The Future",
@@ -3252,33 +2084,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Feb 22 2025",
     "location": "Google Meet",
-    "tags": [
-      "Tech",
-      "Education",
-      "Networking",
-      "Online",
-      "Web",
-      "Ai",
-      "Volunteering"
-    ],
-    "price": "Free",
-    "mode": "sat feb 22 2025"
+    "tags": "{Tech, Education, Networking, Online, Web, Ai, Volunteering}",
+    "price": "Free"
   },
   {
-    "title": "1v1 Robo-Soccer Championship",
-    "url": "https://www.nepvents.com/events/cm77mpzou000sjw2l2b5z2c0r",
+    "title": "AWS GenAI Camp",
+    "url": "https://www.nepvents.com/events/cm7a5atu60004do2lvxdn33ax",
     "image": "https://www.nepvents.com/completed.svg",
-    "date": "Thu Feb 20 2025",
-    "location": "Pulchowk Campus Ground",
-    "tags": [
-      "Engineering",
-      "Robotics",
-      "Football",
-      "Tech",
-      "Entertainment"
-    ],
-    "price": "Rs 2000/Team",
-    "mode": "thu feb 20 2025"
+    "date": "Sat Feb 22 2025",
+    "location": "Patan Multiple Campus, Lalitpur",
+    "tags": "{Ai, Web, Tech, Community, Local, Free}",
+    "price": "Free"
   },
   {
     "title": "Nepal Techno-Fest 2025- Musical Fest",
@@ -3286,14 +2102,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Feb 20 2025",
     "location": "IOE Pulchowk Campus Ground",
-    "tags": [
-      "Music",
-      "Free",
-      "Entertainment",
-      "Local"
-    ],
-    "price": "Free",
-    "mode": "thu feb 20 2025"
+    "tags": "{Music, Free, Entertainment, Local}",
+    "price": "Free"
+  },
+  {
+    "title": "1v1 Robo-Soccer Championship",
+    "url": "https://www.nepvents.com/events/cm77mpzou000sjw2l2b5z2c0r",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Thu Feb 20 2025",
+    "location": "Pulchowk Campus Ground",
+    "tags": "{Engineering, Robotics, Football, Tech, Entertainment}",
+    "price": "Rs 2000Team"
   },
   {
     "title": "Azure AI Developer Hackathon",
@@ -3301,15 +2120,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Feb 18 2025-Fri Mar 28 2025",
     "location": "Online",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Devops",
-      "Online",
-      "Global"
-    ],
-    "price": "Free",
-    "mode": "tue feb 18 2025-fri mar 28 2025"
+    "tags": "{Ai, Tech, Devops, Online, Global}",
+    "price": "Free"
   },
   {
     "title": "Python Bootcamp 3.0",
@@ -3317,16 +2129,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Feb 18 2025-Sat Feb 22 2025",
     "location": "Google Meet",
-    "tags": [
-      "Tech",
-      "Education",
-      "Online",
-      "Ai",
-      "Data Analysis",
-      "Community"
-    ],
-    "price": "Rs 100",
-    "mode": "tue feb 18 2025-sat feb 22 2025"
+    "tags": "{Tech, Education, Online, Ai, Data Analysis, Community}",
+    "price": "Rs 100"
   },
   {
     "title": "Research Talk Shows - IV",
@@ -3334,104 +2138,44 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Mon Feb 17 2025-Tue Feb 18 2025",
     "location": "ICTC Conference Hall, Pulchowk Campus",
-    "tags": [
-      "Tech",
-      "Education",
-      "Community",
-      "Local",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "mon feb 17 2025-tue feb 18 2025"
+    "tags": "{Tech, Education, Community, Local, Free}",
+    "price": "Free"
   },
   {
     "title": "NRCC Panel Discussion 2025",
     "url": "https://www.nepvents.com/events/cm6ucdnc5000gd72lr5d7g7ls",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Feb 16 2025",
-    "location": "St. Xavier’s College, Maitighar, Kathmandu",
-    "tags": [
-      "Tech",
-      "Community",
-      "Local",
-      "Education",
-      "Sustainability",
-      "Business",
-      "Networking",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sun feb 16 2025"
+    "location": "St. Xaviers College, Maitighar, Kathmandu",
+    "tags": "{Tech, Community, Local, Education, Sustainability, Business, Networking, Free}",
+    "price": "Free"
   },
   {
-    "title": "AWS UG Women in Tech Meetup & GenAI Camp",
+    "title": "AWS UG Women in Tech Meetup  GenAI Camp",
     "url": "https://www.nepvents.com/events/cm6z873wo0002jw2lizbcgtoq",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Feb 16 2025",
     "location": "WRC, Pokhara",
-    "tags": [
-      "Tech",
-      "Ai",
-      "Community",
-      "Local",
-      "Devops",
-      "Web",
-      "Networking",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sun feb 16 2025"
+    "tags": "{Tech, Ai, Community, Local, Devops, Web, Networking, Free}",
+    "price": "Free"
   },
   {
-    "title": "Networking & Elevating with LinkedIn",
+    "title": "Networking  Elevating with LinkedIn",
     "url": "https://www.nepvents.com/events/cm75of8z6000gjw2l6uko60gi",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Feb 16 2025",
     "location": "Google Meet",
-    "tags": [
-      "Tech",
-      "Community",
-      "Networking",
-      "Online",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sun feb 16 2025"
+    "tags": "{Tech, Community, Networking, Online, Free}",
+    "price": "Free"
   },
   {
-    "title": "VOX ASTRA ($300k Prize Pool)",
+    "title": "VOX ASTRA 300k Prize Pool",
     "url": "https://www.nepvents.com/events/cm5v0ydsw0000hy50xjqz1bem",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Feb 15 2025-Sun Feb 23 2025",
     "location": "Online",
-    "tags": [
-      "Tech",
-      "Community",
-      "Online",
-      "Health",
-      "Local",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sat feb 15 2025-sun feb 23 2025"
-  },
-  {
-    "title": "Nepal Cloud Azure Camp",
-    "url": "https://www.nepvents.com/events/cm68wr9930000buv02bgkrf7q",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sat Feb 15 2025",
-    "location": "Microsoft Teams",
-    "tags": [
-      "Web",
-      "Tech",
-      "Devops",
-      "Community",
-      "Networking",
-      "Free",
-      "Online"
-    ],
-    "price": "Free",
-    "mode": "sat feb 15 2025"
+    "tags": "{Tech, Community, Online, Health, Local, Free}",
+    "price": "Free"
   },
   {
     "title": "Hackathon 2025",
@@ -3439,34 +2183,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Feb 15 2025-Sun Feb 16 2025",
     "location": "Kathford International College",
-    "tags": [
-      "Tech",
-      "Local",
-      "Community",
-      "Networking",
-      "Web",
-      "Blockchain",
-      "Ai",
-      "Engineering"
-    ],
-    "price": "NPR 7,000 Per Team",
-    "mode": "sat feb 15 2025-sun feb 16 2025"
+    "tags": "{Tech, Local, Community, Networking, Web, Blockchain, Ai, Engineering}",
+    "price": "NPR 7,000 Per Team"
   },
   {
-    "title": "Global AI Agents League",
-    "url": "https://www.nepvents.com/events/cm77kxqrp000qjw2lgc3496df",
+    "title": "Nepal Cloud Azure Camp",
+    "url": "https://www.nepvents.com/events/cm68wr9930000buv02bgkrf7q",
     "image": "https://www.nepvents.com/completed.svg",
-    "date": "Fri Feb 14 2025-Wed Apr 09 2025",
-    "location": "Online",
-    "tags": [
-      "Ai",
-      "Blockchain",
-      "Tech",
-      "Online",
-      "Global"
-    ],
-    "price": "Free",
-    "mode": "fri feb 14 2025-wed apr 09 2025"
+    "date": "Sat Feb 15 2025",
+    "location": "Microsoft Teams",
+    "tags": "{Web, Tech, Devops, Community, Networking, Free, Online}",
+    "price": "Free"
   },
   {
     "title": "AWS GenAI Meetup 2025",
@@ -3474,16 +2201,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Feb 14 2025",
     "location": "Genese Solution, Bakhundole",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Community",
-      "Local",
-      "Networking",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "fri feb 14 2025"
+    "tags": "{Ai, Tech, Community, Local, Networking, Free}",
+    "price": "Free"
+  },
+  {
+    "title": "Global AI Agents League",
+    "url": "https://www.nepvents.com/events/cm77kxqrp000qjw2lgc3496df",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Fri Feb 14 2025-Wed Apr 09 2025",
+    "location": "Online",
+    "tags": "{Ai, Blockchain, Tech, Online, Global}",
+    "price": "Free"
   },
   {
     "title": "National School Team Chess Tournament 2081",
@@ -3491,12 +2219,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Feb 13 2025-Sat Feb 15 2025",
     "location": "Khwopring English School, Bhaktapur",
-    "tags": [
-      "Physical",
-      "Chess"
-    ],
-    "price": "Rs 1000/Team",
-    "mode": "thu feb 13 2025-sat feb 15 2025"
+    "tags": "{Physical, Chess}",
+    "price": "Rs 1000Team"
   },
   {
     "title": "Spardha 3.0 Futsal Competition",
@@ -3504,63 +2228,44 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed Feb 12 2025",
     "location": "To be decided",
-    "tags": [
-      "Football",
-      "Physical",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "wed feb 12 2025"
+    "tags": "{Football, Physical, Community}",
+    "price": "Free"
   },
   {
-    "title": "Building the Next-Gen Agentic App with GraphRAG & NVIDIA cuGraph",
+    "title": "Building the Next-Gen Agentic App with GraphRAG  NVIDIA cuGraph",
     "url": "https://www.nepvents.com/events/cm70fqoo90006jw2lvmdgn64p",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed Feb 12 2025-Sun Mar 09 2025",
     "location": "Online",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Online",
-      "Global",
-      "Free",
-      "Blockchain",
-      "Data Analysis",
-      "Engineering"
-    ],
-    "price": "Free",
-    "mode": "wed feb 12 2025-sun mar 09 2025"
+    "tags": "{Ai, Tech, Online, Global, Free, Blockchain, Data Analysis, Engineering}",
+    "price": "Free"
   },
   {
-    "title": "Spardha 3.0 Idea Pitching Competition💡",
+    "title": "Spardha 3.0 Idea Pitching Competition",
     "url": "https://www.nepvents.com/events/cm6kwxz4a0000opnr6xiqvkzr",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Feb 11 2025",
     "location": "To be decided",
-    "tags": [
-      "Business",
-      "Pitching",
-      "Networking",
-      "Entrepreneurship",
-      "Startup"
-    ],
-    "price": "Free",
-    "mode": "tue feb 11 2025"
+    "tags": "{Business, Pitching, Networking, Entrepreneurship, Startup}",
+    "price": "Free"
   },
   {
-    "title": "PLC & HMI Workshop",
+    "title": "PLC  HMI Workshop",
     "url": "https://www.nepvents.com/events/cm6vuc87w000id72l4rm894oa",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Feb 11 2025-Thu Feb 13 2025",
     "location": "Pulchowk Campus",
-    "tags": [
-      "Tech",
-      "Education",
-      "Engineering",
-      "Community"
-    ],
-    "price": "Rs 100 (Refundable)",
-    "mode": "tue feb 11 2025-thu feb 13 2025"
+    "tags": "{Tech, Education, Engineering, Community}",
+    "price": "Rs 100 Refundable"
+  },
+  {
+    "title": "Research Talk Shows - II",
+    "url": "https://www.nepvents.com/events/cm6wdj2q1000od72l6hwc475c",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Mon Feb 10 2025-Tue Feb 11 2025",
+    "location": "ICTC Conference Hall, Pulchowk Campus",
+    "tags": "{Tech, Education, Community, Local, Engineering}",
+    "price": "Free"
   },
   {
     "title": "Spardha 3.0 Hackathon Competition",
@@ -3568,102 +2273,89 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Mon Feb 10 2025-Tue Feb 11 2025",
     "location": "To be decided",
-    "tags": [
-      "Ai",
-      "Web",
-      "Tech",
-      "Blockchain",
-      "Engineering",
-      "Community",
-      "Pitching"
-    ],
-    "price": "Free",
-    "mode": "mon feb 10 2025-tue feb 11 2025"
+    "tags": "{Ai, Web, Tech, Blockchain, Engineering, Community, Pitching}",
+    "price": "Free"
   },
   {
-    "title": "Nova Hacks III - (Feature Article, $29K Non-Cash Prize)",
+    "title": "Spardha 3.0 Quiz Competition",
+    "url": "https://www.nepvents.com/events/cm6kxf61g000013yhuj8wq3vv",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Mon Feb 10 2025",
+    "location": "To be decided",
+    "tags": "{Education, Community, Networking, Physical}",
+    "price": "Free"
+  },
+  {
+    "title": "Resume Building Workshop",
+    "url": "https://www.nepvents.com/events/cm6pauody0004d72lixtve0ws",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun Feb 09 2025",
+    "location": "Google Meet",
+    "tags": "{Tech, Education, Online, Free, Networking}",
+    "price": "Free"
+  },
+  {
+    "title": "Nova Hacks III - Feature Article, 29K Non-Cash Prize",
     "url": "https://www.nepvents.com/events/cm6xl19ng0004d42ldrzx21ab",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Feb 09 2025-Sat Mar 08 2025",
     "location": "Online",
-    "tags": [
-      "Tech",
-      "Environment",
-      "Sustainability",
-      "Online",
-      "Global",
-      "Community",
-      "Education"
-    ],
-    "price": "Free",
-    "mode": "sun feb 09 2025-sat mar 08 2025"
+    "tags": "{Tech, Environment, Sustainability, Online, Global, Community, Education}",
+    "price": "Free"
   },
   {
-    "title": "Brain Meet Bytes: A Gen AI Talent Hunt",
+    "title": "Empowering Youth in IT Python Workshop",
+    "url": "https://www.nepvents.com/events/cm6gibmig0004cf2kmgp9afli",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun Feb 09 2025-Sat Feb 15 2025",
+    "location": "Online",
+    "tags": "{Tech, Education, Online}",
+    "price": "Affordable"
+  },
+  {
+    "title": "CodeFlow",
+    "url": "https://www.nepvents.com/events/cm6xkuow10002d42l8a6qkmdg",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun Feb 09 2025-Fri Feb 14 2025",
+    "location": "Online",
+    "tags": "{Web, Tech, Online, Global, Ai, Graphic Design, Engineering}",
+    "price": "Free"
+  },
+  {
+    "title": "Design Workshop 2025",
+    "url": "https://www.nepvents.com/events/cm6qj0jgn0008d72lj649vt4a",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun Feb 09 2025-Thu Feb 13 2025",
+    "location": "DoECE, Pulchowk Campus",
+    "tags": "{Tech, Education, Free, Graphic Design, Community, Networking}",
+    "price": "Free"
+  },
+  {
+    "title": "CodeYatra 2025",
+    "url": "https://www.nepvents.com/events/cm6l44zwa0000bd02s0su8qs1",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sun Feb 09 2025-Tue Feb 11 2025",
+    "location": "Himalayan College of Engineering",
+    "tags": "{Ai, Web, Tech, Mobile Development, Engineering, Robotics, Community}",
+    "price": "Rs 5000Team"
+  },
+  {
+    "title": "Brain Meet Bytes A Gen AI Talent Hunt",
     "url": "https://www.nepvents.com/events/cm6n99qco0000g3d0xtj8fgbe",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Feb 07 2025",
     "location": "Seattle, USA",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Business",
-      "Networking",
-      "Startup",
-      "Pitching",
-      "Hybrid",
-      "Online",
-      "Global"
-    ],
-    "price": "Free",
-    "mode": "fri feb 07 2025"
+    "tags": "{Ai, Tech, Business, Networking, Startup, Pitching, Hybrid, Online, Global}",
+    "price": "Free"
   },
   {
-    "title": "Git & Github Workshop",
+    "title": "Git  Github Workshop",
     "url": "https://www.nepvents.com/events/cm6rqiw4h000ad72lmdyy3bb5",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Feb 06 2025",
     "location": "Sagarmatha College of Science and Technology",
-    "tags": [
-      "Tech",
-      "Devops",
-      "Community",
-      "Education",
-      "Free",
-      "Online"
-    ],
-    "price": "Free",
-    "mode": "thu feb 06 2025"
-  },
-  {
-    "title": "Research Talk Shows - I",
-    "url": "https://www.nepvents.com/events/cm6oqjnfa0000d72lgg6xytjl",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Tue Feb 04 2025-Wed Feb 05 2025",
-    "location": "ICTC Conference Hall, Pulchowk Campus",
-    "tags": [
-      "Tech",
-      "Education",
-      "Local",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "tue feb 04 2025-wed feb 05 2025"
-  },
-  {
-    "title": "Digital Jam",
-    "url": "https://www.nepvents.com/events/cm6ruwwfk000ed72l7vlz8h19",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Tue Feb 04 2025-Fri Feb 28 2025",
-    "location": "Online",
-    "tags": [
-      "Tech",
-      "Online",
-      "Global",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "tue feb 04 2025-fri feb 28 2025"
+    "tags": "{Tech, Devops, Community, Education, Free, Online}",
+    "price": "Free"
   },
   {
     "title": "Web Scraping 101",
@@ -3671,15 +2363,26 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Feb 04 2025-Wed Feb 05 2025",
     "location": "DOECE 302, Pulchowk Campus",
-    "tags": [
-      "Web",
-      "Tech",
-      "Free",
-      "Ai",
-      "Networking"
-    ],
-    "price": "Free",
-    "mode": "tue feb 04 2025-wed feb 05 2025"
+    "tags": "{Web, Tech, Free, Ai, Networking}",
+    "price": "Free"
+  },
+  {
+    "title": "Digital Jam",
+    "url": "https://www.nepvents.com/events/cm6ruwwfk000ed72l7vlz8h19",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Tue Feb 04 2025-Fri Feb 28 2025",
+    "location": "Online",
+    "tags": "{Tech, Online, Global, Community}",
+    "price": "Free"
+  },
+  {
+    "title": "Research Talk Shows - I",
+    "url": "https://www.nepvents.com/events/cm6oqjnfa0000d72lgg6xytjl",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Tue Feb 04 2025-Wed Feb 05 2025",
+    "location": "ICTC Conference Hall, Pulchowk Campus",
+    "tags": "{Tech, Education, Local, Free}",
+    "price": "Free"
   },
   {
     "title": "Research Paper Reading Session",
@@ -3687,16 +2390,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Mon Feb 03 2025",
     "location": "Online",
-    "tags": [
-      "Tech",
-      "Environment",
-      "Sustainability",
-      "Online",
-      "Free",
-      "Education"
-    ],
-    "price": "Free",
-    "mode": "mon feb 03 2025"
+    "tags": "{Tech, Environment, Sustainability, Online, Free, Education}",
+    "price": "Free"
   },
   {
     "title": "AWS GenAI Camp",
@@ -3704,18 +2399,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Feb 02 2025",
     "location": "Himalaya College of Engineering, Lalitpur",
-    "tags": [
-      "Ai",
-      "Web",
-      "Tech",
-      "Devops",
-      "Community",
-      "Local",
-      "Education",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sun feb 02 2025"
+    "tags": "{Ai, Web, Tech, Devops, Community, Local, Education, Free}",
+    "price": "Free"
   },
   {
     "title": "Data Science Bootcamp Orientation",
@@ -3723,51 +2408,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Feb 01 2025",
     "location": "Kanti Path, Kathmandu",
-    "tags": [
-      "Education",
-      "Tech",
-      "Business",
-      "Networking",
-      "Online",
-      "Hybrid"
-    ],
-    "price": "Free",
-    "mode": "sat feb 01 2025"
-  },
-  {
-    "title": "MLX Hackathon",
-    "url": "https://www.nepvents.com/events/cm6m55l41000scf2kq4v6pew4",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sat Feb 01 2025-Wed Feb 26 2025",
-    "location": "Online",
-    "tags": [
-      "Ai",
-      "Global",
-      "Online",
-      "Tech",
-      "Engineering"
-    ],
-    "price": "Free",
-    "mode": "sat feb 01 2025-wed feb 26 2025"
-  },
-  {
-    "title": "FutureForge",
-    "url": "https://www.nepvents.com/events/cm6nkrtww000ycf2krdxyzwod",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sat Feb 01 2025-Tue Feb 25 2025",
-    "location": "Online",
-    "tags": [
-      "Health",
-      "Education",
-      "Global",
-      "Tech",
-      "Ai",
-      "Sustainability",
-      "Community",
-      "Online"
-    ],
-    "price": "Free",
-    "mode": "sat feb 01 2025-tue feb 25 2025"
+    "tags": "{Education, Tech, Business, Networking, Online, Hybrid}",
+    "price": "Free"
   },
   {
     "title": "Research Workshop, IEEE Pulchowk Campus",
@@ -3775,29 +2417,26 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Feb 01 2025-Sun Feb 02 2025",
     "location": "Virtual",
-    "tags": [
-      "Education",
-      "Online",
-      "Tech",
-      "Community",
-      "Networking"
-    ],
-    "price": "Free",
-    "mode": "sat feb 01 2025-sun feb 02 2025"
+    "tags": "{Education, Online, Tech, Community, Networking}",
+    "price": "Free"
   },
   {
-    "title": "ROBO-THON",
-    "url": "https://www.nepvents.com/events/cm69sygfa0000111h7a7596i9",
+    "title": "MLX Hackathon",
+    "url": "https://www.nepvents.com/events/cm6m55l41000scf2kq4v6pew4",
     "image": "https://www.nepvents.com/completed.svg",
-    "date": "Fri Jan 31 2025-Sun Feb 02 2025",
-    "location": "IOE, Purwanchal Campus",
-    "tags": [
-      "Engineering",
-      "Robotics",
-      "Tech"
-    ],
-    "price": "Rs 2500/Team",
-    "mode": "fri jan 31 2025-sun feb 02 2025"
+    "date": "Sat Feb 01 2025-Wed Feb 26 2025",
+    "location": "Online",
+    "tags": "{Ai, Global, Online, Tech, Engineering}",
+    "price": "Free"
+  },
+  {
+    "title": "FutureForge",
+    "url": "https://www.nepvents.com/events/cm6nkrtww000ycf2krdxyzwod",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Sat Feb 01 2025-Tue Feb 25 2025",
+    "location": "Online",
+    "tags": "{Health, Education, Global, Tech, Ai, Sustainability, Community, Online}",
+    "price": "Free"
   },
   {
     "title": "Grand Hackathon DELTA 2025",
@@ -3805,31 +2444,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Jan 31 2025-Sun Feb 02 2025",
     "location": "IOE, Purwanchal Campus",
-    "tags": [
-      "Tech",
-      "Ai",
-      "Web",
-      "Engineering",
-      "Robotics",
-      "Community"
-    ],
-    "price": "Rs 2500-3500/Team",
-    "mode": "fri jan 31 2025-sun feb 02 2025"
+    "tags": "{Tech, Ai, Web, Engineering, Robotics, Community}",
+    "price": "Rs 2500-3500Team"
   },
   {
-    "title": "NTBNS Art Competition 2081",
-    "url": "https://www.nepvents.com/events/cm6gkamp30008cf2kdu0q52am",
+    "title": "ROBO-THON",
+    "url": "https://www.nepvents.com/events/cm69sygfa0000111h7a7596i9",
     "image": "https://www.nepvents.com/completed.svg",
-    "date": "Wed Jan 29 2025",
-    "location": "Sagarmatha Engineering College, Sanepa, Lalitpur",
-    "tags": [
-      "Art",
-      "Community",
-      "Local",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "wed jan 29 2025"
+    "date": "Fri Jan 31 2025-Sun Feb 02 2025",
+    "location": "IOE, Purwanchal Campus",
+    "tags": "{Engineering, Robotics, Tech}",
+    "price": "Rs 2500Team"
   },
   {
     "title": "Yathartha Dataverse 2025",
@@ -3837,15 +2462,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed Jan 29 2025",
     "location": "IOE Thapathali Campus",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Local",
-      "Community",
-      "Networking"
-    ],
-    "price": "NPR 100 Per Team",
-    "mode": "wed jan 29 2025"
+    "tags": "{Ai, Tech, Local, Community, Networking}",
+    "price": "NPR 100 Per Team"
   },
   {
     "title": "NTBNS Quiz Competition 2081",
@@ -3853,15 +2471,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Wed Jan 29 2025",
     "location": "Sagarmatha Engineering College, Sanepa, Lalitpur",
-    "tags": [
-      "Tech",
-      "Education",
-      "Local",
-      "Free",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "wed jan 29 2025"
+    "tags": "{Tech, Education, Local, Free, Community}",
+    "price": "Free"
+  },
+  {
+    "title": "NTBNS Art Competition 2081",
+    "url": "https://www.nepvents.com/events/cm6gkamp30008cf2kdu0q52am",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Wed Jan 29 2025",
+    "location": "Sagarmatha Engineering College, Sanepa, Lalitpur",
+    "tags": "{Art, Community, Local, Free}",
+    "price": "Free"
   },
   {
     "title": "Clash of Code",
@@ -3869,16 +2489,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Jan 28 2025",
     "location": "IOE Thapathali Campus, Thapathali",
-    "tags": [
-      "Ai",
-      "Web",
-      "Tech",
-      "Engineering",
-      "Community",
-      "Networking"
-    ],
-    "price": "Rs 100",
-    "mode": "tue jan 28 2025"
+    "tags": "{Ai, Web, Tech, Engineering, Community, Networking}",
+    "price": "Rs 100"
   },
   {
     "title": "Airavat Innovates",
@@ -3886,31 +2498,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Jan 26 2025-Tue Jan 28 2025",
     "location": "Online",
-    "tags": [
-      "Ai",
-      "Web",
-      "Tech",
-      "Global",
-      "Online",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "sun jan 26 2025-tue jan 28 2025"
-  },
-  {
-    "title": "Maths Olympiad",
-    "url": "https://www.nepvents.com/events/cm69f1cb900004yvq2yh2sex2",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Sat Jan 25 2025",
-    "location": "K.K. International School, Dharan",
-    "tags": [
-      "Education",
-      "Physical",
-      "Local",
-      "Community"
-    ],
-    "price": "Rs 100/Team",
-    "mode": "sat jan 25 2025"
+    "tags": "{Ai, Web, Tech, Global, Online, Community}",
+    "price": "Free"
   },
   {
     "title": "Build Your Own AI Chat Bot",
@@ -3918,32 +2507,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Jan 25 2025-Fri Mar 14 2025",
     "location": "Online",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Online",
-      "Global",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sat jan 25 2025-fri mar 14 2025"
+    "tags": "{Ai, Tech, Online, Global, Free}",
+    "price": "Free"
   },
   {
-    "title": "Tech Students Meetup",
-    "url": "https://www.nepvents.com/events/cm695pw080000yrsczmitmeyj",
+    "title": "Maths Olympiad",
+    "url": "https://www.nepvents.com/events/cm69f1cb900004yvq2yh2sex2",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Jan 25 2025",
-    "location": "Uniglobe College, New Baneshwor",
-    "tags": [
-      "Tech",
-      "Web",
-      "Devops",
-      "Ai",
-      "Engineering",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "sat jan 25 2025"
+    "location": "K.K. International School, Dharan",
+    "tags": "{Education, Physical, Local, Community}",
+    "price": "Rs 100Team"
   },
   {
     "title": "Full Stack Development Bootcamp",
@@ -3951,36 +2525,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Jan 25 2025",
     "location": "Above Mandala Book Point, Kanti Path, Kathmandu",
-    "tags": [
-      "Web",
-      "Tech",
-      "Community",
-      "Education",
-      "Free",
-      "Hybrid"
-    ],
-    "price": "Free",
-    "mode": "sat jan 25 2025"
+    "tags": "{Web, Tech, Community, Education, Free, Hybrid}",
+    "price": "Free"
   },
   {
-    "title": "LOCUS 2025",
-    "url": "https://www.nepvents.com/events/cm697ry7i000011s2c0fbktiv",
+    "title": "Tech Students Meetup",
+    "url": "https://www.nepvents.com/events/cm695pw080000yrsczmitmeyj",
     "image": "https://www.nepvents.com/completed.svg",
-    "date": "Fri Jan 24 2025-Sun Jan 26 2025",
-    "location": "Pulchowk Campus, Lalitpur",
-    "tags": [
-      "Ai",
-      "Web",
-      "Tech",
-      "Mobile Development",
-      "Engineering",
-      "Community",
-      "Volunteering",
-      "Networking",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "fri jan 24 2025-sun jan 26 2025"
+    "date": "Sat Jan 25 2025",
+    "location": "Uniglobe College, New Baneshwor",
+    "tags": "{Tech, Web, Devops, Ai, Engineering, Community}",
+    "price": "Free"
   },
   {
     "title": "Financial Literacy Class",
@@ -3988,31 +2543,17 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Jan 24 2025",
     "location": "Sun Securities Pvt. Ltd",
-    "tags": [
-      "Community",
-      "Education",
-      "Business",
-      "Entrepreneurship",
-      "Pitching",
-      "Marketing"
-    ],
-    "price": "Free",
-    "mode": "fri jan 24 2025"
+    "tags": "{Community, Education, Business, Entrepreneurship, Pitching, Marketing}",
+    "price": "Free"
   },
   {
-    "title": "ReactJS Bootcamp",
-    "url": "https://www.nepvents.com/events/cm5y3g6uz0002g6894ucinitv",
+    "title": "LOCUS 2025",
+    "url": "https://www.nepvents.com/events/cm697ry7i000011s2c0fbktiv",
     "image": "https://www.nepvents.com/completed.svg",
-    "date": "Thu Jan 23 2025-Sat Jan 25 2025",
-    "location": "Online (Zoom)",
-    "tags": [
-      "Web",
-      "Tech",
-      "Online",
-      "Education"
-    ],
-    "price": "Free",
-    "mode": "thu jan 23 2025-sat jan 25 2025"
+    "date": "Fri Jan 24 2025-Sun Jan 26 2025",
+    "location": "Pulchowk Campus, Lalitpur",
+    "tags": "{Ai, Web, Tech, Mobile Development, Engineering, Community, Volunteering, Networking, Free}",
+    "price": "Free"
   },
   {
     "title": "Live Session with Geshan Manandhar",
@@ -4020,30 +2561,26 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Jan 23 2025",
     "location": "Google Meet",
-    "tags": [
-      "Web",
-      "Tech",
-      "Devops",
-      "Engineering"
-    ],
-    "price": "Free",
-    "mode": "thu jan 23 2025"
+    "tags": "{Web, Tech, Devops, Engineering}",
+    "price": "Free"
   },
   {
-    "title": "Master AI with LLMs & RAG Workshop",
+    "title": "ReactJS Bootcamp",
+    "url": "https://www.nepvents.com/events/cm5y3g6uz0002g6894ucinitv",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Thu Jan 23 2025-Sat Jan 25 2025",
+    "location": "Online Zoom",
+    "tags": "{Web, Tech, Online, Education}",
+    "price": "Free"
+  },
+  {
+    "title": "Master AI with LLMs  RAG Workshop",
     "url": "https://www.nepvents.com/events/cm63jmz0k0002nzlwmu5z9wc2",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Mon Jan 20 2025-Wed Jan 22 2025",
     "location": "Online",
-    "tags": [
-      "Ai",
-      "Online",
-      "Tech",
-      "Community",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "mon jan 20 2025-wed jan 22 2025"
+    "tags": "{Ai, Online, Tech, Community, Free}",
+    "price": "Free"
   },
   {
     "title": "Vault and Terraform for Absolute Beginners",
@@ -4051,14 +2588,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Jan 18 2025",
     "location": "Sagarmatha College of Science and Technology, Sanepa, Lalitpur",
-    "tags": [
-      "Tech",
-      "Devops",
-      "Education",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "sat jan 18 2025"
+    "tags": "{Tech, Devops, Education, Free}",
+    "price": "Free"
   },
   {
     "title": "Umee gRPC Hackathon",
@@ -4066,14 +2597,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sat Jan 18 2025-Mon Jan 20 2025",
     "location": "Online",
-    "tags": [
-      "Tech",
-      "Devops",
-      "Online",
-      "Global"
-    ],
-    "price": "Free",
-    "mode": "sat jan 18 2025-mon jan 20 2025"
+    "tags": "{Tech, Devops, Online, Global}",
+    "price": "Free"
   },
   {
     "title": "IngeniumSTEM Winter Hacks 1.0",
@@ -4081,16 +2606,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Jan 17 2025-Sun Mar 30 2025",
     "location": "Online",
-    "tags": [
-      "Ai",
-      "Web",
-      "Tech",
-      "Education",
-      "Sustainability",
-      "Online"
-    ],
-    "price": "Free",
-    "mode": "fri jan 17 2025-sun mar 30 2025"
+    "tags": "{Ai, Web, Tech, Education, Sustainability, Online}",
+    "price": "Free"
   },
   {
     "title": "i-Hack",
@@ -4098,49 +2615,53 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri Jan 17 2025-Thu Jan 23 2025",
     "location": "Online",
-    "tags": [
-      "Education",
-      "Tech",
-      "Online",
-      "Ai",
-      "Global",
-      "Free"
-    ],
-    "price": "Free",
-    "mode": "fri jan 17 2025-thu jan 23 2025"
+    "tags": "{Education, Tech, Online, Ai, Global, Free}",
+    "price": "Free"
   },
   {
-    "title": "Talk Series II: Team Building & Collaboration",
+    "title": "Talk Series II Team Building  Collaboration",
     "url": "https://www.nepvents.com/events/cm5wsnpoa0002z044jl39dy1u",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Jan 16 2025",
     "location": "Embark College, Pulchowk, Lalitpur",
-    "tags": [
-      "Community",
-      "Business",
-      "Networking",
-      "Startup",
-      "Free",
-      "Marketing",
-      "Pitching",
-      "Entrepreneurship"
-    ],
-    "price": "Free",
-    "mode": "thu jan 16 2025"
+    "tags": "{Community, Business, Networking, Startup, Free, Marketing, Pitching, Entrepreneurship}",
+    "price": "Free"
   },
   {
-    "title": "Global Hack Week: Beginners",
+    "title": "Integration for AIGenAI Hackathon",
+    "url": "https://www.nepvents.com/events/cm5xuo0g30000in2lhxc4raix",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Wed Jan 15 2025-Mon Feb 03 2025",
+    "location": "Online",
+    "tags": "{Ai, Tech, Online, Global}",
+    "price": "Free"
+  },
+  {
+    "title": "Workshop on AI  ML",
+    "url": "https://www.nepvents.com/events/cm63o07x600025w707yfhpwg3",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Wed Jan 15 2025-Sat Jan 18 2025",
+    "location": "Pulchowk Campus, Embark College",
+    "tags": "{Ai, Tech, Free, Physical}",
+    "price": "Free"
+  },
+  {
+    "title": "Nosu AI Hackathon 11,300 prizes",
+    "url": "https://www.nepvents.com/events/cm5tjjc62000ahyv8trm1rc6k",
+    "image": "https://www.nepvents.com/completed.svg",
+    "date": "Fri Jan 10 2025-Thu Jan 16 2025",
+    "location": "Online",
+    "tags": "{Ai, Tech, Online, Hybrid}",
+    "price": "Free"
+  },
+  {
+    "title": "Global Hack Week Beginners",
     "url": "https://www.nepvents.com/events/cm5tjjphx000ehyv86mkeisic",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Jan 09 2025",
     "location": "Online",
-    "tags": [
-      "Tech",
-      "Community",
-      "Online"
-    ],
-    "price": "Free",
-    "mode": "thu jan 09 2025"
+    "tags": "{Tech, Community, Online}",
+    "price": "Free"
   },
   {
     "title": "Iris Hacks II",
@@ -4148,16 +2669,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Thu Jan 09 2025-Mon Jan 13 2025",
     "location": "Online",
-    "tags": [
-      "Ai",
-      "Web",
-      "Tech",
-      "Education",
-      "Online",
-      "Global"
-    ],
-    "price": "Free",
-    "mode": "thu jan 09 2025-mon jan 13 2025"
+    "tags": "{Ai, Web, Tech, Education, Online, Global}",
+    "price": "Free"
   },
   {
     "title": "Electroneum Hackathon 2025",
@@ -4165,14 +2678,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Jan 07 2025-Fri Mar 07 2025",
     "location": "Online",
-    "tags": [
-      "Blockchain",
-      "Tech",
-      "Online",
-      "Global"
-    ],
-    "price": "Free",
-    "mode": "tue jan 07 2025-fri mar 07 2025"
+    "tags": "{Blockchain, Tech, Online, Global}",
+    "price": "Free"
   },
   {
     "title": "ENERGY HACKATHON 8.0",
@@ -4180,15 +2687,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Mon Jan 06 2025-Sat Jan 11 2025",
     "location": "Nepal Energy Innovation Center, Kathmandu",
-    "tags": [
-      "Tech",
-      "Engineering",
-      "Community",
-      "Environment",
-      "Sustainability"
-    ],
-    "price": "Free",
-    "mode": "mon jan 06 2025-sat jan 11 2025"
+    "tags": "{Tech, Engineering, Community, Environment, Sustainability}",
+    "price": "Free"
   },
   {
     "title": "NextAI Hack",
@@ -4196,51 +2696,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Dec 31 2024-Sun Mar 02 2025",
     "location": "Online",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Online",
-      "Community",
-      "Global"
-    ],
-    "price": "Free",
-    "mode": "tue dec 31 2024-sun mar 02 2025"
-  },
-  {
-    "title": "SXC HR Conclave & Career Expo 2024",
-    "url": "https://www.nepvents.com/events/cm7gblllf0004d6ur24at2bcf",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Mon Dec 16 2024-Tue Dec 17 2024",
-    "location": "St. Xavier's College, Maitighar, Kathmandu",
-    "tags": [
-      "Tech",
-      "Community",
-      "Business",
-      "Networking",
-      "Marketing",
-      "Startup",
-      "Education",
-      "Free",
-      "Local"
-    ],
-    "price": "Free",
-    "mode": "mon dec 16 2024-tue dec 17 2024"
-  },
-  {
-    "title": "Learning Utsav",
-    "url": "https://www.nepvents.com/events/cm5e7u7140005hpzl7hprai0p",
-    "image": "https://www.nepvents.com/completed.svg",
-    "date": "Wed Oct 02 2024-Sat Nov 02 2024",
-    "location": "Virtual",
-    "tags": [
-      "Free",
-      "Online",
-      "Tech",
-      "Ai",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "wed oct 02 2024-sat nov 02 2024"
+    "tags": "{Ai, Tech, Online, Community, Global}",
+    "price": "Free"
   },
   {
     "title": "Leapfrog Frogtober Fest 2024",
@@ -4248,16 +2705,8 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Oct 01 2024-Thu Oct 31 2024",
     "location": "St Xavier, Maitighar, Kathmandu",
-    "tags": [
-      "Free",
-      "Online",
-      "Tech",
-      "Ai",
-      "Community",
-      "Web"
-    ],
-    "price": "Free",
-    "mode": "tue oct 01 2024-thu oct 31 2024"
+    "tags": "{Free, Online, Tech, Ai, Community, Web}",
+    "price": "Free"
   },
   {
     "title": "Prompt Engineering Workshop",
@@ -4265,49 +2714,25 @@
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Sun Jul 07 2024",
     "location": "Google Meet",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Engineering",
-      "Online",
-      "Free",
-      "Education",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "sun jul 07 2024"
+    "tags": "{Ai, Tech, Engineering, Online, Free, Education, Community}",
+    "price": "Free"
   },
   {
-    "title": "Free AI/ML Webinar",
+    "title": "Free AIML Webinar",
     "url": "https://www.nepvents.com/events/cmb56eibi00087iuyuagcw466",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Fri May 31 2024",
     "location": "Google Meet",
-    "tags": [
-      "Ai",
-      "Tech",
-      "Education",
-      "Free",
-      "Online",
-      "Community"
-    ],
-    "price": "Free",
-    "mode": "fri may 31 2024"
+    "tags": "{Ai, Tech, Education, Free, Online, Community}",
+    "price": "Free"
   },
   {
-    "title": "Python Workshop: The Gateway to Web Development & AI",
+    "title": "Python Workshop The Gateway to Web Development  AI",
     "url": "https://www.nepvents.com/events/cm9lfd7a60006d4uslq943igd",
     "image": "https://www.nepvents.com/completed.svg",
     "date": "Tue Apr 23 2024-Fri Apr 25 2025",
     "location": "Skill Shikshya, Sankhamul, Kathmandu",
-    "tags": [
-      "Tech",
-      "Ai",
-      "Education",
-      "Free",
-      "Local"
-    ],
-    "price": "Free",
-    "mode": "tue apr 23 2024-fri apr 25 2025"
+    "tags": "{Tech, Ai, Education, Free, Local}",
+    "price": "Free"
   }
 ]

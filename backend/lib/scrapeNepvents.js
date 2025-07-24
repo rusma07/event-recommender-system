@@ -1,5 +1,11 @@
 import puppeteer from 'puppeteer';
+import { createObjectCsvWriter } from 'csv-writer';
 import { writeFileSync } from 'fs';
+
+// Helper function to remove unwanted characters
+function cleanText(text) {
+  return text.replace(/[^\w\s,.-]/g, '').trim(); // Removes special characters but keeps readable text
+}
 
 async function autoScroll(page) {
   await page.evaluate(async () => {
@@ -41,29 +47,46 @@ async function scrapeNepventsAll() {
     await autoScroll(page);
 
     return await page.$$eval('article', cards => {
+      const cleanText = (text) =>
+        text.replace(/[^\w\s,.-]/g, '').trim();
+
       return cards.map(card => {
-        const title = card.querySelector('section a > div')?.innerText.trim() || '';
+        const titleRaw = card.querySelector('section a > div')?.innerText || '';
+        const title = cleanText(titleRaw);
+
         const url = card.querySelector('section a')?.href || '';
         const image = card.querySelector('img')?.src || '';
 
         const dateEl = card.querySelector(
           'section > div.flex.flex-row.w-100.gap-1.md\\:gap-3.items-center.text-sm.md\\:text-base.text-nowrap'
         );
-        const date = dateEl?.innerText.trim().replace(/\n/g, ' ') || '';
+        const dateRaw = dateEl?.innerText || '';
+        const date = cleanText(dateRaw);
 
-        const locationEl = card.querySelector('section > div:nth-child(2)');
-        const location = locationEl?.innerText.trim() || '';
+        const locationRaw = card.querySelector('section > div:nth-child(2)')?.innerText || '';
+        const location = cleanText(locationRaw);
 
         const tagEls = card.querySelectorAll('section > div.overflow-hidden > div span');
-        const tags = Array.from(tagEls).map(tag => tag.innerText.trim()).filter(Boolean);
+        const tags = Array.from(tagEls)
+          .map(tag => cleanText(tag.innerText))
+          .filter(Boolean);
+        const formattedTags = `{${
+          tags.join(', ')
+        }}`; // Wrap in curly braces
 
         const priceEl = card.querySelector('section > div:nth-child(5)');
-        const price = priceEl?.innerText.trim() || '';
+        const priceRaw = priceEl?.innerText || '';
+        const price = cleanText(priceRaw);
 
-        const modeEl = locationEl?.nextElementSibling;
-        const mode = modeEl?.innerText.trim().toLowerCase() || '';
-
-        return { title, url, image, date, location, tags, price, mode };
+        return {
+          title,
+          url,
+          image,
+          date,
+          location,
+          tags: formattedTags,
+          price
+        };
       });
     });
   };
@@ -85,12 +108,32 @@ async function scrapeNepventsAll() {
     pageNum++;
   }
 
+  // Remove duplicates based on event URL
   const unique = Object.values(
     allEvents.reduce((map, event) => ({ ...map, [event.url]: event }), {})
   );
 
+  // Write to CSV
+  const csvWriter = createObjectCsvWriter({
+    path: 'events.csv',
+    header: [
+      { id: 'title', title: 'Title' },
+      { id: 'url', title: 'URL' },
+      { id: 'image', title: 'Image' },
+      { id: 'date', title: 'Date' },
+      { id: 'location', title: 'Location' },
+      { id: 'tags', title: 'Tags' },
+      { id: 'price', title: 'Price' }
+    ]
+  });
+
+  await csvWriter.writeRecords(unique);
+  console.log(`✅ Saved ${unique.length} events to events.csv`);
+
+  // Write to JSON
   writeFileSync('events.json', JSON.stringify(unique, null, 2));
   console.log(`✅ Saved ${unique.length} events to events.json`);
+
   await browser.close();
 }
 

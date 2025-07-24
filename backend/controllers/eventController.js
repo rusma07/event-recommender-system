@@ -1,7 +1,7 @@
-const Event = require('../models/Event');
+import Event, { find, findById } from '../models/Event';
 
 // Create new event
-exports.createEvent = async (req, res) => {
+export async function createEvent(req, res) {
   try {
     const { title, description, date, location } = req.body;
 
@@ -22,24 +22,24 @@ exports.createEvent = async (req, res) => {
     console.error(err);
     res.status(500).json({ message: 'Server error' });
   }
-};
+}
 
 // Get all events
-exports.getAllEvents = async (req, res) => {
+export async function getAllEvents(req, res) {
   try {
-    const events = await Event.find().sort({ date: 1 }); // Sort by date ascending
+    const events = await find().sort({ date: 1 }); // Sort by date ascending
     res.json(events);
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: 'Server error' });
   }
-};
+}
 
 // Get event by ID
-exports.getEventById = async (req, res) => {
+export async function getEventById(req, res) {
   try {
     const eventId = req.params.id;
-    const event = await Event.findById(eventId);
+    const event = await findById(eventId);
     if (!event) {
       return res.status(404).json({ message: 'Event not found' });
     }
@@ -48,15 +48,15 @@ exports.getEventById = async (req, res) => {
     console.error(err);
     res.status(500).json({ message: 'Server error' });
   }
-};
+}
 
 // Update event
-exports.updateEvent = async (req, res) => {
+export async function updateEvent(req, res) {
   try {
     const eventId = req.params.id;
     const { title, description, date, location } = req.body;
 
-    const event = await Event.findById(eventId);
+    const event = await findById(eventId);
     if (!event) {
       return res.status(404).json({ message: 'Event not found' });
     }
@@ -74,13 +74,13 @@ exports.updateEvent = async (req, res) => {
     console.error(err);
     res.status(500).json({ message: 'Server error' });
   }
-};
+}
 
 // Delete event
-exports.deleteEvent = async (req, res) => {
+export async function deleteEvent(req, res) {
   try {
     const eventId = req.params.id;
-    const event = await Event.findById(eventId);
+    const event = await findById(eventId);
     if (!event) {
       return res.status(404).json({ message: 'Event not found' });
     }
@@ -91,4 +91,4 @@ exports.deleteEvent = async (req, res) => {
     console.error(err);
     res.status(500).json({ message: 'Server error' });
   }
-};
+}
