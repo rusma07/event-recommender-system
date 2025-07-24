@@ -1,0 +1,119 @@
+[
+  {
+    "title": "Code with Kiro Hackathon",
+    "url": "https://kiro.devpost.com/?ref_feature=challenge&ref_medium=discover",
+    "image": "//d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/003/505/605/datas/medium_square.png",
+    "prize": "$100,000",
+    "location": "Online",
+    "participants": "",
+    "host": "Kiro",
+    "date": "Jul 14 - Aug 25, 2025",
+    "tags": [
+      "Machine Learning/AIOpen EndedBeginner Friendly"
+    ]
+  },
+  {
+    "title": "Google Maps Platform Awards",
+    "url": "https://googlemapsplatformawards.devpost.com/?ref_feature=challenge&ref_medium=discover",
+    "image": "//d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/003/410/620/datas/medium_square.png",
+    "prize": "3",
+    "location": "Online",
+    "participants": "",
+    "host": "Google",
+    "date": "May 20 - Jul 31, 2025",
+    "tags": [
+      "WebLow/No CodeMobile"
+    ]
+  },
+  {
+    "title": "Africa Deep Tech Challenge 2025",
+    "url": "https://adtc-2025.devpost.com/?ref_feature=challenge&ref_medium=discover",
+    "image": "//d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/003/419/749/datas/medium_square.png",
+    "prize": "$20,000",
+    "location": "Online",
+    "participants": "",
+    "host": "Africa Deep Tech Foundation",
+    "date": "May 14 - Jul 31, 2025",
+    "tags": [
+      "BlockchainIoTMachine Learning/AI"
+    ]
+  },
+  {
+    "title": "Qloo LLM Hackathon",
+    "url": "https://qloo-hackathon.devpost.com/?ref_feature=challenge&ref_medium=discover",
+    "image": "//d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/003/484/381/datas/medium_square.jpg",
+    "prize": "$25,000",
+    "location": "Online",
+    "participants": "",
+    "host": "Qloo",
+    "date": "Jul 01 - Aug 01, 2025",
+    "tags": [
+      "Machine Learning/AI"
+    ]
+  },
+  {
+    "title": "AI for Good Hackathon",
+    "url": "https://ai-for-good.devpost.com/?ref_feature=challenge&ref_medium=discover",
+    "image": "//d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/003/516/837/datas/medium_square.jpeg",
+    "prize": "₹ 275,000",
+    "location": "Hyderabad, India",
+    "participants": "",
+    "host": "Blend360",
+    "date": "Jun 30 - Aug 04, 2025",
+    "tags": [
+      "HealthMachine Learning/AISocial Good"
+    ]
+  },
+  {
+    "title": "PANDA Hacks 2025",
+    "url": "https://panda-hacks.devpost.com/?ref_feature=challenge&ref_medium=discover",
+    "image": "//d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/003/397/769/datas/medium_square.png",
+    "prize": "1",
+    "location": "Online",
+    "participants": "",
+    "host": "PANDA Organization",
+    "date": "Jun 01 - Aug 02, 2025",
+    "tags": [
+      "Low/No CodeMachine Learning/AIEducation"
+    ]
+  },
+  {
+    "title": "IEEE OC Computer Society AI Dev Hack 2025",
+    "url": "https://ieee-ai-dev-hack-2025.devpost.com/?ref_feature=challenge&ref_medium=discover",
+    "image": "//d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/003/463/749/datas/medium_square.png",
+    "prize": "$1,750",
+    "location": "Online",
+    "participants": "",
+    "host": "IEEE Orange County Computer Society",
+    "date": "Jun 24 - Sep 07, 2025",
+    "tags": [
+      "Beginner FriendlyBlockchainMachine Learning/AI"
+    ]
+  },
+  {
+    "title": "FusionHacks 2",
+    "url": "https://fusionhacks-2.devpost.com/?ref_feature=challenge&ref_medium=discover",
+    "image": "//d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/003/471/407/datas/medium_square.png",
+    "prize": "$300",
+    "location": "Online",
+    "participants": "",
+    "host": "FusionHacks",
+    "date": "Jun 15 - Aug 02, 2025",
+    "tags": [
+      "Beginner FriendlyMachine Learning/AIOpen Ended"
+    ]
+  },
+  {
+    "title": "GIRLCODE HACKATHON 2025",
+    "url": "https://girlcode-hackathon-2025.devpost.com/?ref_feature=challenge&ref_medium=discover",
+    "image": "//d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/003/604/094/datas/medium_square.png",
+    "prize": "$5,500",
+    "location": "GirlCode Headquarters",
+    "participants": "",
+    "host": "GirlCode",
+    "date": "Jul 03 - Aug 22, 2025",
+    "tags": [
+      "CybersecurityFintechMachine Learning/AI"
+    ]
+  }
+]

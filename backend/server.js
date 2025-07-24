@@ -1,17 +1,10 @@
-import e from "express";
-import { connectDB } from "./config/db.js";
-import { configDotenv } from "dotenv";
- configDotenv();
-const app= e();
-app.get("/",(req,res)=> {
-    // res.send("server is ready ")
-})
-console.log(process.env.MONGO_URI);
+import app from './app.js';
 
-app.listen(5000,()=>{
-    connectDB();
-    console.log("Server started at http://localhost:5000");
-})
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 
 // og7pT9fciqspfQsH
-// project database password = khgQkynbAyOgooKi
+// project mongodb database password = khgQkynbAyOgooKi
