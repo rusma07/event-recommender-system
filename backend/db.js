@@ -1,14 +1,21 @@
-const express = require('express');
-const dotenv = require('dotenv');
-const connectDB = require('./config/db');
+// server/db.js
+import dotenv from 'dotenv';
+import pkg from 'pg';
+const { Pool } = pkg;
 
-dotenv.config();         // Load .env variables
-connectDB();             // Connect to MongoDB
+dotenv.config();                     // loads DATABASE_URL, etc.
 
-const app = express();
-app.use(express.json());
-
-// Your routes here...
-app.listen(5000, () => {
-  console.log('Server running on port 5000');
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl:
+    process.env.NODE_ENV === 'production'
+      ? { rejectUnauthorized: false }
+      : false,
 });
+
+// ✅ Test DB connection on startup
+pool.connect()
+  .then(() => console.log('✅ PostgreSQL connected successfully'))
+  .catch((err) => console.error('❌ PostgreSQL connection error:', err.message));
+
+export default pool;
