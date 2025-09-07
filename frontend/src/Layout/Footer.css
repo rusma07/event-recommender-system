@@ -1,0 +1,36 @@
+.footer {
+  padding: 1.5rem 2rem;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  border-top: 1px solid #ddd;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-logo img {
+  width: 40px;
+  height: auto;
+}
+
+.social-links a {
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  color: #077cf1;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #1c32fc;
+}
+

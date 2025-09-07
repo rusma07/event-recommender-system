@@ -1,12 +1,16 @@
-const mongoose = require('mongoose');
+// backend/models/UserEventInteraction.js
+import { DataTypes } from "sequelize";
+import sequelize from "../db.js";
+import User from "./User.js";
+import Event from "./Event.js";
 
-const userEventInteractionSchema = new mongoose.Schema({
-  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-  event: { type: mongoose.Schema.Types.ObjectId, ref: 'Event', required: true },
-  rating: { type: Number, min: 1, max: 5 },  // Optional, for explicit feedback
-  liked: { type: Boolean },                   // Optional, for implicit feedback
-  attended: { type: Boolean },                // Optional, example interaction
-  createdAt: { type: Date, default: Date.now }
+const UserEventInteraction = sequelize.define("UserEventInteraction", {
+  id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+  interaction_type: { type: DataTypes.STRING, allowNull: false } // e.g. view, register, tag_click
 });
 
-module.exports = mongoose.model('UserEventInteraction', userEventInteractionSchema);
+// Define relationships
+User.belongsToMany(Event, { through: UserEventInteraction });
+Event.belongsToMany(User, { through: UserEventInteraction });
+
+module.exports = UserEventInteraction;

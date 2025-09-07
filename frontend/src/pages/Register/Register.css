@@ -1,0 +1,138 @@
+/* Container for Sign Up */
+.signup-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bfcaf7;
+    padding: 20px;
+}
+
+/* Card box */
+.signup-box {
+    background-color: #fff;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+/* Heading and subtext */
+.signup-box h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.signup-subtext {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Form elements */
+form {
+    text-align: left;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+.password-input input {
+    width: 100%;
+    padding: 12px 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    margin-bottom: 20px;
+    font-size: 14px;
+    background-color: transparent;
+}
+
+/* Password field with toggle icon */
+.password-input {
+    position: relative;
+}
+
+.password-input span {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    cursor: pointer;
+    color: #555;
+}
+
+/* Buttons */
+.signup-btn {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 12px;
+    border-radius: 24px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.signup-alt-btn {
+    width: 100%;
+    background-color: #f1f1f1;
+    color: black;
+    padding: 12px;
+    border-radius: 24px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+/* Links */
+.signup-box a {
+    color: #6e5555;
+    text-decoration: none;
+}
+
+
+.signup-alt-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsive for tablet */
+@media (max-width: 768px) {
+    .signup-box {
+        padding: 35px 25px;
+    }
+}
+
+/* Responsive for mobile */
+@media (max-width: 385px) {
+    .signup-box {
+        padding: 30px 20px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    .password-input input {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+
+    .signup-btn,
+    .signup-alt-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

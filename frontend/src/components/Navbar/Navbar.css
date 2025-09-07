@@ -1,0 +1,307 @@
+/* Navbar container */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  /* Fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+  /* Adjust padding for 60px height */
+  background-color: #1a1a1a;
+  color: white;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  border-bottom: 2px solid #fcf9f7;
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  gap: 8px;
+  height: 60px;
+  background-color: #3d3f4753;
+  padding: 4px 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 6px;
+  font-size: 14px;
+  width: 300px;
+  /* Slightly increased width */
+}
+
+.search-bar input::placeholder {
+  color: #94a3b8;
+}
+
+.search-bar button {
+  background-color: #13578f;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #0ea5e9;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+/* User dropdown container */
+.navbar-user {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown box */
+.navbar-user .user-dropdown {
+  position: absolute;
+  top: 36px; /* below the icon */
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  min-width: 180px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: dropdownFade 0.2s forwards;
+}
+
+/* Dropdown fade-in animation */
+@keyframes dropdownFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* User name at top */
+.user-dropdown p {
+  margin: 0 15px 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+/* Buttons inside dropdown */
+.user-dropdown button {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Hover effect for buttons */
+.user-dropdown button:hover {
+  background-color: #f5f5f5;
+  color: #007bff;
+  border-radius: 5px;
+}
+
+/* Optional: icon spacing */
+.navbar-user svg {
+  margin-right: 6px;
+  color: #555;
+}
+.navbar-user {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown box */
+.navbar-user .user-dropdown {
+  position: absolute;
+  top: 36px; /* below the icon */
+  right: 0; /* align right edge with icon */
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  min-width: 180px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: dropdownFade 0.2s forwards;
+}
+
+/* Pointy arrow */
+.navbar-user .user-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -8px; /* above dropdown */
+  right: 12px; /* adjust to point to icon */
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid #fff;
+}
+
+/* Dropdown fade-in animation */
+@keyframes dropdownFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* User name at top */
+.user-dropdown p {
+  margin: 0 15px 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+/* Buttons inside dropdown */
+.user-dropdown button {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Hover effect for buttons */
+.user-dropdown button:hover {
+  background-color: #f5f5f5;
+  color: #007bff;
+  border-radius: 5px;
+}
+
+/* Optional: icon spacing */
+.navbar-user svg {
+  margin-right: 6px;
+  color: #555;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    /* Adjust to match navbar height */
+    right: 1rem;
+    background-color: #1e1e2f;
+    flex-direction: column;
+    width: 220px;
+    /* Slightly wider for mobile */
+    padding: 1rem;
+    border-radius: 10px;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+
+
+
+
+  /* Default mobile search bar styles remain */
+  .search-bar {
+    width: 100%;
+    margin: 1rem 0;
+    justify-content: space-between;
+  }
+
+  /* Hide search bar for login and about pages on mobile */
+  body.login-page .search-bar,
+  body.about-page .search-bar,
+  body.register-page .search-bar {
+    display: none;
+  }
+
+
+}
+
+/* Body padding to avoid overlap */
+body {
+  padding-top: 60px;
+  /* Matches navbar height */
+}

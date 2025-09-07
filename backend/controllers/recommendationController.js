@@ -1,41 +1,32 @@
-import { find } from '../models/UserEventInteraction';
-import { find as _find } from '../models/Event';
+// backend/controllers/userController.js
+import User from "../models/User.js";
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 
-// Get recommendations for a user based on similar users' liked events
-export async function getCollaborativeRecommendations(req, res) {
+export const registerUser = async (req, res) => {
   try {
-    const userId = req.user.userId;
+    const { name, email, password } = req.body;
+    const hashed = await bcrypt.hash(password, 10);
 
-    // 1. Find events liked by the user
-    const userLikes = await find({ user: userId, liked: true }).select('event');
-    const likedEventIds = userLikes.map(i => i.event.toString());
-
-    // 2. Find other users who liked the same events
-    const otherUsers = await find({
-      event: { $in: likedEventIds },
-      user: { $ne: userId },
-      liked: true
-    }).select('user');
-
-    const otherUserIds = [...new Set(otherUsers.map(i => i.user.toString()))];
-
-    // 3. Find events liked by these other users, excluding events already liked by current user
-    const recommendations = await find({
-      user: { $in: otherUserIds },
-      liked: true,
-      event: { $nin: likedEventIds }
-    }).select('event');
-
-    // Get unique recommended event IDs
-    const recommendedEventIds = [...new Set(recommendations.map(r => r.event.toString()))];
-
-    // 4. Fetch event details
-    const recommendedEvents = await _find({ _id: { $in: recommendedEventIds } }).limit(10);
-
-    res.json(recommendedEvents);
-
+    const user = await User.create({ name, email, password: hashed });
+    res.status(201).json({ message: "User registered", user });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Server error' });
+    res.status(500).json({ error: error.message });
   }
-}
+};
+
+export const loginUser = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const user = await User.findOne({ where: { email } });
+    if (!user) return res.status(404).json({ message: "User not found" });
+
+    const match = await bcrypt.compare(password, user.password);
+    if (!match) return res.status(401).json({ message: "Invalid credentials" });
+
+    const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: "1d" });
+    res.json({ token, user });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
