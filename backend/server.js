@@ -18,11 +18,11 @@ app.use(express.json());
 app.use("/api/users", userRoutes);
 app.use("/api/events", eventRoutes);
 app.use("/api/recommendations", recommendationRoutes);
-
+app.use("/api/interactions", );
 const PORT = process.env.PORT || 5000;
 
 // Sync DB and start server
-sequelize.sync({ alter: true }) // alter updates schema if needed
+sequelize.sync({ alter: false }) // alter updates schema if needed
   .then(() => {
     console.log("✅ Database synced");
     app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));

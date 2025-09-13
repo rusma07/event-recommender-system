@@ -3,9 +3,8 @@ import axios from "axios";
 
 export const getRecommendations = async (userId, topK = 15) => {
   try {
-    const response = await axios.post("http://localhost:8000/recommend", {
-      user_id: userId,
-      top_k: topK
+    const response = await axios.get(`http://localhost:8000/recommendations/${userId}`, {
+      params: { top_k: topK } // sends ?top_k=15
     });
     return response.data.recommendations;
   } catch (error) {

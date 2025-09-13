@@ -1,58 +1,65 @@
-import pandas as pd # type: ignore
-import json
-from sklearn.feature_extraction.text import CountVectorizer # type: ignore
-from sklearn.metrics.pairwise import cosine_similarity # type: ignore
-import pickle
 import os
+import csv
+import math
+import json
 
-# Base directory of this script file
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+EVENTS_PATH = os.path.join(BASE_DIR, "data", "events.csv")
+MODEL_PATH = os.path.join(BASE_DIR, "models", "similarity_model.json")
 
-# File paths relative to the script location
-EVENTS_CSV_PATH = os.path.join(BASE_DIR, "data", "events.csv")
-INTERACTIONS_PATH = os.path.join(BASE_DIR, "data", "user_event.json")
-MODEL_PATH = os.path.join(BASE_DIR, "models", "similarity_model.pkl")
+def tokenize(text):
+    return [word.lower().strip() for word in text.split() if word.strip()]
 
+def build_similarity_model():
+    # Load CSV manually
+    events = []
+    with open(EVENTS_PATH, newline='', encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for i, row in enumerate(reader, start=1):
+            row["id"] = i
+            # Use tags if available, else fallback to title+category
+            text = row.get("tags") or (row.get("category", "") + " " + row.get("title", ""))
+            row["tokens"] = tokenize(text)
+            events.append(row)
 
-def load_data():
-    # Load events from CSV
-    events_df = pd.read_csv(EVENTS_CSV_PATH)
+    # Build vocabulary
+    vocab = {}
+    for ev in events:
+        for word in ev["tokens"]:
+            if word not in vocab:
+                vocab[word] = len(vocab)
 
-    # Add unique ID column starting from 1
-    events_df.insert(0, 'id', range(1, len(events_df) + 1))
-
-    # Convert tags from semicolon-separated string to space-separated lowercase string for vectorization
-    events_df['tag_string'] = events_df['tags'].apply(lambda x: ' '.join(x.split(';')).lower())
-
-    # Load interactions from JSON file
-    with open(INTERACTIONS_PATH, 'r') as f:
-        interactions = json.load(f)
-    interactions_df = pd.DataFrame(interactions)
-
-    return events_df, interactions_df
-
-
-def build_similarity_model(events_df):
-    # Vectorize the tag strings
-    vectorizer = CountVectorizer()
-    tag_vectors = vectorizer.fit_transform(events_df['tag_string'])
+    # Convert each event into vector
+    vectors = []
+    for ev in events:
+        vec = [0] * len(vocab)
+        for word in ev["tokens"]:
+            vec[vocab[word]] += 1
+        vectors.append(vec)
 
     # Compute cosine similarity
-    similarity_matrix = cosine_similarity(tag_vectors)
+    def cosine_similarity(v1, v2):
+        dot = sum(a*b for a, b in zip(v1, v2))
+        norm1 = math.sqrt(sum(a*a for a in v1))
+        norm2 = math.sqrt(sum(b*b for b in v2))
+        return dot / (norm1 * norm2) if norm1 and norm2 else 0.0
 
-    # Ensure model directory exists
+    similarity_matrix = []
+    for i in range(len(vectors)):
+        row = []
+        for j in range(len(vectors)):
+            row.append(cosine_similarity(vectors[i], vectors[j]))
+        similarity_matrix.append(row)
+
+    # Save as JSON (instead of pickle)
     os.makedirs(os.path.dirname(MODEL_PATH), exist_ok=True)
-
-    # Save similarity matrix and event index
-    with open(MODEL_PATH, 'wb') as f:
-        pickle.dump({
-            'similarity_matrix': similarity_matrix,
-            'event_ids': events_df['id'].tolist()
+    with open(MODEL_PATH, "w", encoding="utf-8") as f:
+        json.dump({
+            "event_ids": [ev["id"] for ev in events],
+            "similarity_matrix": similarity_matrix
         }, f)
 
-    print("✅ Similarity model saved to", MODEL_PATH)
-
+    print("✅ Pure Python model built and saved at:", MODEL_PATH)
 
 if __name__ == "__main__":
-    events_df, interactions_df = load_data()
-    build_similarity_model(events_df)
+    build_similarity_model()
