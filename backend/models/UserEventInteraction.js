@@ -6,11 +6,11 @@ import Event from "./Event.js";
 
 const UserEventInteraction = sequelize.define("UserEventInteraction", {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-  interaction_type: { type: DataTypes.STRING, allowNull: false } // e.g. view, register, tag_click
+  interaction_type: { type: DataTypes.STRING, allowNull: false }, // e.g. view, register, tag_click
 });
 
 // Define relationships
 User.belongsToMany(Event, { through: UserEventInteraction });
 Event.belongsToMany(User, { through: UserEventInteraction });
 
-module.exports = UserEventInteraction;
+export default UserEventInteraction; // ✅ instead of module.exports

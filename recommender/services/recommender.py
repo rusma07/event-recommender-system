@@ -166,8 +166,9 @@ def recommend_events(user_id: int, top_k: int = 15, max_per_cluster: int = 5):
     interacted_df = user_interactions[user_interactions["interaction_type"].isin(valid_types)]
 
     # New-user fallback
-    if interacted_df.empty:
+    if len(interacted_df) < 3:
         return recommend_new_user(events_df, top_k)
+
 
     # Assign weights
     interaction_weights = {"view": 1, "tag_click": 2, "register": 5}

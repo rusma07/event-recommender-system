@@ -18,11 +18,11 @@ const AppRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route
         path="/login"
-        element={user ? <Navigate to="/dashboard" /> : <Login />}
+        element={user ? <Navigate to="/event" /> : <Login />}
       />
       <Route path="/signup" element={<Register />} />
       <Route
-        path="/dashboard"
+        path="/event"
         element={
           localStorage.getItem("token") && user ? (
             <Dashboard userId={user.id} />

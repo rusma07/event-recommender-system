@@ -1,18 +1,28 @@
 // backend/db.js
 import { Sequelize } from "sequelize";
-import dotenv from "dotenv";
+import pg from "pg";
 
-dotenv.config();
+const { Pool } = pg;
 
+// Sequelize instance
 const sequelize = new Sequelize(
-  process.env.DB_NAME,
-  process.env.DB_USER,
-  process.env.DB_PASSWORD,
+  process.env.DB_NAME || "eventdb",
+  process.env.DB_USER || "postgres",
+  process.env.DB_PASS || "postgres",
   {
-    host: process.env.DB_HOST,
+    host: process.env.DB_HOST || "localhost",
     dialect: "postgres",
-    logging: false // set to true if you want SQL logs
   }
 );
 
-export default sequelize;
+// pg Pool instance
+const pool = new Pool({
+  user: process.env.DB_USER || "postgres",
+  host: process.env.DB_HOST || "localhost",
+  database: process.env.DB_NAME || "eventdb",
+  password: process.env.DB_PASS || "postgres",
+  port: process.env.DB_PORT || 5432,
+});
+
+export { pool };        // ✅ so you can import { pool }
+export default sequelize; // ✅ still works with Sequelize models

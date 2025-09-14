@@ -7,7 +7,7 @@ import sequelize from "./db.js"; // note the .js extension
 import userRoutes from "./routes/userRoutes.js";
 import eventRoutes from "./routes/eventRoutes.js";
 import recommendationRoutes from "./routes/recommendationRoutes.js";
-
+import interactionRoutes from "./routes/interactionRoutes.js";
 dotenv.config();
 const app = express();
 
@@ -18,7 +18,7 @@ app.use(express.json());
 app.use("/api/users", userRoutes);
 app.use("/api/events", eventRoutes);
 app.use("/api/recommendations", recommendationRoutes);
-app.use("/api/interactions", );
+app.use("/api/interactions", interactionRoutes);
 const PORT = process.env.PORT || 5000;
 
 // Sync DB and start server
