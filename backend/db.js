@@ -1,4 +1,3 @@
-// backend/db.js
 import { Sequelize } from "sequelize";
 import pg from "pg";
 
@@ -24,5 +23,5 @@ const pool = new Pool({
   port: process.env.DB_PORT || 5432,
 });
 
-export { pool };        // ✅ so you can import { pool }
-export default sequelize; // ✅ still works with Sequelize models
+export { pool };       
+export default sequelize; 

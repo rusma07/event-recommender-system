@@ -1,14 +1,15 @@
-import React, { useState, useEffect, useContext } from 'react';
-import './Login.css';
-import { FiEye, FiEyeOff, FiGlobe } from 'react-icons/fi';
-import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import React, { useState, useEffect, useContext } from "react";
+import "./Login.css";
+import { FiEye, FiEyeOff, FiGlobe } from "react-icons/fi";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { toast } from "react-toastify";
 
-import { AuthContext } from '../../context/AuthContext';
+import { AuthContext } from "../../context/AuthContext";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [formData, setFormData] = useState({ email: '', password: '' });
+  const [formData, setFormData] = useState({ email: "", password: "" });
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -16,8 +17,8 @@ const Login = () => {
   const { user, setUser } = useContext(AuthContext);
 
   useEffect(() => {
-    document.body.classList.add('login-page');
-    return () => document.body.classList.remove('login-page');
+    document.body.classList.add("login-page");
+    return () => document.body.classList.remove("login-page");
   }, []);
 
   const togglePassword = () => setShowPassword(!showPassword);
@@ -31,23 +32,25 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/api/users/login', {
+      const BACKEND_URL = import.meta.env.VITE_API_BACKEND_URL;
+      const response = await axios.post(`${BACKEND_URL}/users/login`, {
         email: formData.email,
-        password: formData.password
+        password: formData.password,
       });
 
       // Save JWT token and user info in localStorage
-      localStorage.setItem('token', response.data.token);
-      localStorage.setItem('user', JSON.stringify(response.data.user));
+      localStorage.setItem("token", response.data.token);
+      localStorage.setItem("user", JSON.stringify(response.data.user));
 
-      // ✅ Update context so Navbar shows username immediately
+      // Update context so Navbar shows username immediately
       setUser(response.data.user);
 
-      alert(`Welcome, ${response.data.user.name}`);
-      navigate('/dashboard'); // redirect after login
+      toast.success(`Login Successful!! 
+        Welcome, ${response.data.user.name}`);
+      navigate("/dashboard"); // redirect after login
     } catch (error) {
       console.error(error);
-      alert(error.response?.data?.message || 'Login failed');
+      toast.error(error.response?.data?.message || "Login failed");
     } finally {
       setLoading(false);
     }
@@ -56,9 +59,6 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className="login-box">
-        <h2>Welcome!</h2>
-        <p className="login-subtext">Please enter your details</p>
-
         <form onSubmit={handleLogin}>
           <label>Email</label>
           <input
@@ -73,7 +73,7 @@ const Login = () => {
           <label>Password</label>
           <div className="password-input">
             <input
-              type={showPassword ? 'text' : 'password'}
+              type={showPassword ? "text" : "password"}
               name="password"
               placeholder="Enter your password"
               value={formData.password}
@@ -87,16 +87,26 @@ const Login = () => {
 
           <div className="login-options">
             <label>
-              <input type="checkbox" /> Remember me.
+              <input
+                type="checkbox"
+                name="rememberMe"
+                checked={formData.rememberMe}
+                onChange={(e) =>
+                  setFormData({ ...formData, rememberMe: e.target.checked })
+                }
+              />{" "}
+              Remember me.
             </label>
-            <Link to="/forgot-password" className="forgot-link">Forgot Password?</Link>
+            <Link to="/forgot-password" className="forgot-link">
+              Forgot Password?
+            </Link>
           </div>
 
           <button type="submit" className="login-btn" disabled={loading}>
-            {loading ? 'Logging in...' : 'Log In'}
+            {loading ? "Logging in..." : "Log In"}
           </button>
 
-          <p style={{ textAlign: 'center' }}>Don't have an account?</p>
+          <p style={{ textAlign: "center" }}>Don't have an account?</p>
           <Link to="/signup" className="login-alt-btn">
             <FiGlobe /> Sign Up
           </Link>

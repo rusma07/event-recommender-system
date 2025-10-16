@@ -1,6 +1,6 @@
 from fastapi import FastAPI # type: ignore
 from fastapi.middleware.cors import CORSMiddleware # type: ignore
-from api.recommend_api import router
+from api.events_api import router as events_router
 
 app = FastAPI()  # ✅ This must exist
 
@@ -13,4 +13,4 @@ app.add_middleware(
 )
 
 # Include router
-app.include_router(router)
+app.include_router(events_router)

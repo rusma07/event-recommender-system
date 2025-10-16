@@ -4,6 +4,7 @@ import { FiEye, FiEyeOff, FiGlobe } from 'react-icons/fi';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
+import { toast } from 'react-toastify';
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -26,22 +27,23 @@ const Register = () => {
     e.preventDefault();
 
     if (formData.password !== formData.confirmPassword) {
-      alert("Passwords do not match!");
+      toast.info("Passwords do not match!");
       return;
     }
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/api/users/register', {
+      const BACKEND_URL = import.meta.env.VITE_API_BACKEND_URL;
+      const response = await axios.post(`${BACKEND_URL}/users/register`, {
         name: formData.username,
         email: formData.email,
         password: formData.password
       });
 
-      alert(response.data.message); 
+      toast.success(response.data.message); 
       navigate('/login'); 
     } catch (error) {
       console.error(error);
-      alert(error.response?.data?.message || 'Registration failed');
+      toast.error(error.response?.data?.message || 'Registration failed');
     }
   };
 

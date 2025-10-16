@@ -1,9 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useRef, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import {
   getRecommendations,
+  searchEvents,
   logInteraction,
 } from "../../services/recommend_api";
+import EventCard from "../../components/EventCard";
+import {
+  setEvents,
+  setLoading,
+  setSearch,
+  setSelectedTags,
+  setCurrentPage,
+} from "../../store/eventSlice";
 
 const TAGS = [
   "AI",
@@ -44,98 +54,111 @@ const TAGS = [
 ];
 
 export const Dashboard = ({ userId }) => {
-  const [events, setEvents] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [search, setSearch] = useState("");
-  const [selectedTags, setSelectedTags] = useState([]);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { events, loading, search, selectedTags, currentPage, eventsPerPage } =
+    useSelector((state) => state.dashboard);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const loggedEventsRef = useRef(new Set());
+  const queryParam = searchParams.get("query") || "";
 
+  // =============================
+  // 🔹 Fetch Recommendations or Search Results
+  // =============================
   useEffect(() => {
     const fetchEvents = async () => {
-      const recommendations = await getRecommendations(userId, 50);
-      setEvents(recommendations);
-      setLoading(false);
-    };
-    fetchEvents();
-  }, [userId]);
+      dispatch(setLoading(true));
 
+      let data = [];
+
+      if (queryParam.trim() !== "") {
+        // When query present in URL -> use it for backend search
+        data = await searchEvents(queryParam);
+        dispatch(setSearch(queryParam));
+      } else {
+        // Default recommendations
+        data = await getRecommendations(userId, 50);
+        dispatch(setSearch(""));
+      }
+
+      dispatch(setEvents(data));
+      dispatch(setLoading(false));
+    };
+
+    const delay = setTimeout(fetchEvents, 400);
+    return () => clearTimeout(delay);
+  }, [queryParam, userId, dispatch]);
+
+  // =============================
+  // 🔹 View Event Handler
+  // =============================
   const handleViewEvent = async (event) => {
-    await logInteraction(userId, event.event_id, "view");
+    if (!loggedEventsRef.current.has(event.event_id)) {
+      await logInteraction(userId, event.event_id, "view");
+      loggedEventsRef.current.add(event.event_id);
+    }
     navigate(`/event/${event.event_id}`);
   };
 
+  // =============================
+  // 🔹 Tag Toggle (local filter)
+  // =============================
   const toggleTag = (tag) => {
-    setSelectedTags((prev) =>
-      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
-    );
+    const newTags = selectedTags.includes(tag)
+      ? selectedTags.filter((t) => t !== tag)
+      : [...selectedTags, tag];
+    dispatch(setSelectedTags(newTags));
+    dispatch(setCurrentPage(1));
   };
 
-  const filteredEvents = events.filter((e) => {
-    const matchesSearch = e.title.toLowerCase().includes(search.toLowerCase());
-    const matchesTags =
-      selectedTags.length === 0 ||
-      e.tags.some((tag) => selectedTags.includes(tag));
-    return matchesSearch && matchesTags;
-  });
+  // =============================
+  // 🔹 Pagination Logic
+  // =============================
+  const totalPages = Math.max(Math.ceil(events.length / eventsPerPage), 1);
+  const indexOfLast = currentPage * eventsPerPage;
+  const indexOfFirst = indexOfLast - eventsPerPage;
+  const currentEvents = events.slice(indexOfFirst, indexOfLast);
 
-  if (loading)
+  if (loading) {
     return (
-      <div style={{ textAlign: "center", marginTop: "50px" }}>
-        Loading recommendations...
-      </div>
+      <div className="text-center py-10 text-gray-500">Loading events...</div>
     );
+  }
 
   return (
-    <div
-      style={{
-        padding: "20px",
-        display: "flex",
-        flexDirection: "column",
-        gap: "20px",
-      }}
-    >
+    <div className="p-6 bg-gradient-to-br from-gray-50 to-indigo-100 flex flex-col gap-6 min-h-screen pb-10">
+      {/* Search */}
       <input
         type="text"
-        placeholder="Search events..."
         value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        style={{
-          padding: "10px",
-          fontSize: "1rem",
-          borderRadius: "6px",
-          border: "1px solid #ccc",
+        onChange={(e) => {
+          const newQuery = e.target.value;
+          dispatch(setSearch(newQuery));
+          if (newQuery) {
+            setSearchParams({ query: newQuery });
+          } else {
+            setSearchParams({});
+          }
         }}
+        placeholder="Search events..."
+        className="p-3 text-base rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
       />
 
-      <div style={{ display: "flex", gap: "20px" }}>
-        {/* Left panel: Tags */}
-        <div
-          style={{
-            flex: "0 0 200px",
-            borderRight: "1px solid #ddd",
-            paddingRight: "10px",
-          }}
-        >
-          <h4>Filter by Tags</h4>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "6px",
-              maxHeight: "70vh",
-              overflowY: "auto",
-            }}
-          >
+      <div className="flex gap-6 flex-1">
+        {/* Tags Filter */}
+        <div className="flex-shrink-0 w-52 border-r border-gray-200 pr-2 max-h-[85vh] overflow-y-auto hide-scrollbar">
+          <h4 className="font-semibold mb-2">Filter by Tags</h4>
+          <div className="flex flex-col gap-1">
             {TAGS.map((tag) => (
               <label
                 key={tag}
-                style={{ cursor: "pointer", fontSize: "0.9rem" }}
+                className="text-sm cursor-pointer flex items-center"
               >
                 <input
                   type="checkbox"
                   checked={selectedTags.includes(tag)}
                   onChange={() => toggleTag(tag)}
-                  style={{ marginRight: "6px" }}
+                  className="mr-1"
                 />
                 {tag}
               </label>
@@ -143,74 +166,52 @@ export const Dashboard = ({ userId }) => {
           </div>
         </div>
 
-        {/* Right panel: Events */}
-        <div
-          style={{
-            flex: 1,
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "20px",
-          }}
-        >
-          {filteredEvents.length === 0 && <div>No events found.</div>}
-          {filteredEvents.map((e, idx) => (
-            <div
-              key={idx}
-              style={{
-                border: "1px solid #ddd",
-                borderRadius: "12px",
-                padding: "16px",
-                boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
-                transition: "transform 0.2s, box-shadow 0.2s",
-                backgroundColor: "#fff",
-              }}
-            >
-              <img
-                src={e.image}
-                alt={e.title}
-                style={{
-                  width: "100%",
-                  borderRadius: "8px",
-                  marginBottom: "12px",
-                  objectFit: "cover",
-                  maxHeight: "180px",
-                }}
-              />
-              <h3 style={{ margin: "0 0 8px", fontSize: "1.1rem" }}>
-                {e.title}
-              </h3>
-              <p style={{ margin: "4px 0", fontSize: "0.9rem", color: "#555" }}>
-                {e.start_date} - {e.end_date || "TBD"}
-              </p>
-              <p style={{ margin: "4px 0", fontSize: "0.9rem", color: "#555" }}>
-                {e.location}
-              </p>
-              <p
-                style={{ margin: "4px 0", fontSize: "0.85rem", color: "#777" }}
-              >
-                Tags: {e.tags.join(", ")}
-              </p>
-              <p style={{ margin: "4px 0", fontWeight: "bold" }}>{e.price}</p>
-
-              {/* View button */}
-              <button
-                onClick={() => handleViewEvent(e)}
-                style={{
-                  marginTop: "10px",
-                  padding: "8px 14px",
-                  backgroundColor: "#4f46e5",
-                  color: "#fff",
-                  border: "none",
-                  borderRadius: "6px",
-                  cursor: "pointer",
-                  fontSize: "0.9rem",
-                }}
-              >
-                View Event
-              </button>
-            </div>
+        {/* Events List */}
+        <div className="flex-1 flex flex-col gap-6 overflow-y-auto max-h-[85vh] pr-2 hide-scrollbar">
+          {currentEvents.length === 0 && (
+            <div className="text-center text-gray-500">No events found.</div>
+          )}
+          {currentEvents.map((event) => (
+            <EventCard
+              key={event.event_id}
+              event={event}
+              onView={handleViewEvent}
+            />
           ))}
         </div>
+      </div>
+
+      {/* Pagination */}
+      <div className="flex justify-center gap-4 mt-4 items-center font-bold text-base">
+        <button
+          onClick={() => dispatch(setCurrentPage(Math.max(currentPage - 1, 1)))}
+          disabled={currentPage === 1}
+          className={`px-3 py-1 rounded border border-indigo-600 font-bold ${
+            currentPage === 1
+              ? "bg-indigo-400 cursor-not-allowed text-white"
+              : "bg-indigo-600 text-white hover:bg-indigo-700"
+          }`}
+        >
+          «
+        </button>
+        <span>
+          Page {events.length === 0 ? 0 : currentPage} of{" "}
+          {events.length === 0 ? 0 : totalPages}
+        </span>
+
+        <button
+          onClick={() =>
+            dispatch(setCurrentPage(Math.min(currentPage + 1, totalPages)))
+          }
+          disabled={currentPage === totalPages}
+          className={`px-3 py-1 rounded border border-indigo-600 font-bold ${
+            currentPage === totalPages
+              ? "bg-indigo-400 cursor-not-allowed text-white"
+              : "bg-indigo-600 text-white hover:bg-indigo-700"
+          }`}
+        >
+          »
+        </button>
       </div>
     </div>
   );

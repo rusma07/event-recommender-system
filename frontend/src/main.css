@@ -1,4 +1,9 @@
 /* Reset some default styles */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
@@ -50,6 +55,10 @@ h1, h2, h3, h4, h5 {
   font-weight: 600;
 }
 
+/* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 
 
 /* Responsive text sizing */
@@ -63,4 +72,12 @@ h1, h2, h3, h4, h5 {
   .hero {
     padding: 2rem 1rem;
   }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

@@ -7,7 +7,7 @@ import { AuthContext } from '../../context/AuthContext';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
-  const [userDropdown, setUserDropdown] = useState(false); // toggle dropdown
+  const [userDropdown, setUserDropdown] = useState(false);
   const navigate = useNavigate();
 
   const { user, logout } = useContext(AuthContext);
@@ -18,7 +18,7 @@ const Navbar = () => {
     navigate('/login');
   };
 
-  // Scroll-based active section
+  // Active section on scroll
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['home', 'dashboard', 'aboutus'];
@@ -39,16 +39,18 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo">Eventhub</div>
+      <div className="logo">Tech <br /><span>Events</span></div>
 
+      {/* Hamburger for mobile */}
       <button
         className="hamburger"
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Toggle menu"
       >
-        <FaBars size={24} color="white" />
+        <FaBars size={24} />
       </button>
 
+      {/* Links */}
       <ul className={menuOpen ? 'nav-links open' : 'nav-links'}>
         <li>
           <NavLink to="/" className={activeSection === 'home' ? 'active' : ''}>
@@ -56,7 +58,7 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/dashboard" className={activeSection === 'dashboard' ? 'active' : ''}>
+          <NavLink to="/event" className={activeSection === 'event' ? 'active' : ''}>
             Events
           </NavLink>
         </li>
@@ -67,13 +69,12 @@ const Navbar = () => {
         </li>
 
         {user ? (
-          <li className="navbar-user" style={{ position: 'relative' }}>
+          <li className="navbar-user">
             <FaUserCircle
-              size={24}
-              style={{ cursor: 'pointer' }}
+              size={26}
+              className="user-icon"
               onClick={() => setUserDropdown(!userDropdown)}
             />
-
             {userDropdown && (
               <div className="user-dropdown">
                 <p><strong>{user.name}</strong></p>
