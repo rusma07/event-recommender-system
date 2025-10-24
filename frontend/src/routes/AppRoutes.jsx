@@ -9,6 +9,7 @@ import useAuth from "../hooks/useAuth";
 import Register from "../pages/Register/Register.jsx";
 import Edit from "../pages/EditProfile/Edit.jsx";
 import { ViewEvents } from "../pages/VeiwEvents/ViewEvents.jsx";
+import ResetPassword from "../pages/ResetPassword.jsx";
 
 const AppRoutes = () => {
   const { user } = useAuth() || {};
@@ -40,6 +41,7 @@ const AppRoutes = () => {
 
       <Route path="/profile" element={<Edit />}></Route>
       <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/reset-password/:token" element={<ResetPassword />} />
       <Route path="/aboutus" element={<AboutUs />} />
     </Routes>
   );
