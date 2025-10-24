@@ -4,7 +4,6 @@ import { FiEye, FiEyeOff, FiGlobe } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
-
 import { AuthContext } from "../../context/AuthContext";
 
 const Login = () => {
