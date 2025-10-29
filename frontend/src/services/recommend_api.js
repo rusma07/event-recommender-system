@@ -56,14 +56,33 @@ export const getEventById = async (eventId) => {
 // =============================
 // 🔹 Search Events (Backend Search)
 // =============================
-export const searchEvents = async (query) => {
-  if (!query || query.trim() === "") return [];
+export const searchEvents = async (userId, query) => {
+  if (!query) return [];
   try {
-    const res = await fetch(`${BASE_URL}/search?query=${encodeURIComponent(query)}`);
+    const res = await fetch(`${BACKEND_URL}/events/search?query=${encodeURIComponent(query)}`);
+    if (!res.ok) throw new Error("Search failed");
     const data = await res.json();
-    return data;
+
+    if (userId) {
+      await logInteraction(userId, null, "search", { query });
+    }
+
+    return data.events || data; // make sure backend returns { events: [...] }
   } catch (err) {
-    console.error("Search API error:", err);
+    console.error("Search error:", err);
+    return [];
+  }
+};
+
+
+export const getEventsByUserTags = async (userId) => {
+  if (!userId) return [];
+  try {
+    const res = await fetch(`${BACKEND_URL}/events/${userId}/tags`);
+    const data = await res.json();
+    return data.events || [];
+  } catch (err) {
+    console.error("Error fetching events by user tags:", err);
     return [];
   }
 };

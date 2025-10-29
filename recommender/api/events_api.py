@@ -78,27 +78,6 @@ class RecommendationResponse(BaseModel):
 # Routes
 # ------------------------------
 
-# 🔍 Search events
-@router.get("/api/events/search")
-def search_events(query: str = Query("", min_length=0)):
-    conn = get_connection()
-    df = pd.read_sql('SELECT * FROM public."Event";', conn)
-    conn.close()
-
-    df["tags"] = df["tags"].apply(
-        lambda x: x if isinstance(x, list)
-        else [t.strip() for t in x.strip("{}").split(",")] if x else []
-    )
-
-    q = query.lower()
-    filtered = df[
-        df["title"].str.lower().str.contains(q, na=False)
-        | df["location"].str.lower().str.contains(q, na=False)
-        | df["tags"].apply(lambda tags: any(q in t.lower() for t in tags))
-    ]
-
-    return filtered.to_dict(orient="records")
-
 # 👁️ Get single event by ID
 @router.get("/api/events/{event_id}")
 def get_event_by_id(event_id: int):

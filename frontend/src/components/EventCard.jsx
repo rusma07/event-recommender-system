@@ -5,11 +5,11 @@ const LocationIcon = () => <span className="mr-1">📍</span>;
 const TagsIcon = () => <span className="mr-1">🏷️</span>;
 const PriceIcon = () => <span className="mr-1">💲</span>;
 
-
+// ✅ Format date properly, no "TBD" display
 const formatDate = (dateString) => {
-  if (!dateString || dateString === "TBD" || dateString === "Postponed") return "TBD";
+  if (!dateString || dateString === "TBD" || dateString === "Postponed") return "";
   const date = new Date(dateString);
-  if (isNaN(date)) return dateString;
+  if (isNaN(date)) return "";
   return new Intl.DateTimeFormat("en-US", {
     weekday: "short",
     month: "short",
@@ -20,7 +20,13 @@ const formatDate = (dateString) => {
 
 const EventCard = ({ event, onView }) => {
   const formattedStart = formatDate(event.start_date);
-  const formattedEnd = event.end_date ? formatDate(event.end_date) : "TBD";
+  const formattedEnd = formatDate(event.end_date);
+
+  // ✅ Show single date or date range, no TBDs
+  const dateDisplay =
+    formattedStart && formattedEnd
+      ? `${formattedStart} – ${formattedEnd}`
+      : formattedStart || formattedEnd || "";
 
   return (
     <div
@@ -47,12 +53,12 @@ const EventCard = ({ event, onView }) => {
           </h3>
 
           <div className="space-y-3 text-gray-700 text-lg leading-relaxed">
-            <p className="flex items-center gap-2">
-              <CalendarIcon />
-              <span className="font-medium">
-                {formattedStart} – {formattedEnd}
-              </span>
-            </p>
+            {dateDisplay && (
+              <p className="flex items-center gap-2">
+                <CalendarIcon />
+                <span className="font-medium">{dateDisplay}</span>
+              </p>
+            )}
 
             <p className="flex items-center gap-2">
               <LocationIcon />

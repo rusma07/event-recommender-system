@@ -55,9 +55,6 @@ const Register = () => {
   return (
     <div className="signup-container">
       <div className="signup-box">
-        <h2>Create Account</h2>
-        <p className="signup-subtext">Please fill in your details</p>
-
         <form onSubmit={handleRegister}>
           <label>Username</label>
           <input 
