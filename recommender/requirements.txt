@@ -1,6 +1,8 @@
 fastapi
 uvicorn
+pydantic
 pandas
-scikit-learn
-numpy
-psycopg2
+psycopg2-binary
+opensearch-py
+sentence-transformers
+python-dateutil

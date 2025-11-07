@@ -1,30 +1,58 @@
 # api/event_api.py
-
 from fastapi import APIRouter, Query, HTTPException
-from typing import List, Optional
+from typing import List, Optional, Dict
 from pydantic import BaseModel, field_validator
 from datetime import date
+import os
 import pandas as pd
 import psycopg2
 import traceback
 from difflib import SequenceMatcher
-from services.recommender import recommend_events
+
+# --- Search deps (OpenSearch + embeddings) ---
+from opensearchpy import OpenSearch  # type: ignore 
+from opensearchpy.exceptions import TransportError # type: ignore
+from sentence_transformers import SentenceTransformer # type: ignore
+
+# Config (readable via env; defaults OK for local)
+ES_URL = os.getenv("ES_URL", "http://localhost:9200")
+ES_INDEX = os.getenv("ES_INDEX", "events")
 
 # ------------------------------
 # Setup
 # ------------------------------
 router = APIRouter()
+ES = OpenSearch(ES_URL, timeout=10)
+
+# Lazy-load the embedding model once
+_model: Optional[SentenceTransformer] = None
+def get_model() -> SentenceTransformer:
+    global _model
+    if _model is None:
+        _model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+    return _model
 
 def get_connection():
     return psycopg2.connect(
-        host="localhost",
-        database="eventdb",
-        user="postgres",
-        password="postgres"
+        host=os.getenv("PGHOST", "localhost"),
+        database=os.getenv("PGDATABASE", "eventdb"),
+        user=os.getenv("PGUSER", "postgres"),
+        password=os.getenv("PGPASSWORD", "postgres"),
     )
 
-def similarity(a, b):
-    return SequenceMatcher(None, a.lower(), b.lower()).ratio()
+def similarity(a: str, b: str) -> float:
+    return SequenceMatcher(None, (a or "").lower(), (b or "").lower()).ratio()
+
+def _norm(hits) -> Dict[str, float]:
+    """Min–max normalize scores into {_id: score}."""
+    if not hits:
+        return {}
+    vals = [h.get("_score", 0.0) for h in hits]
+    lo, hi = min(vals), max(vals)
+    return {
+        h["_id"]: ((h.get("_score", 0.0) - lo) / (hi - lo) if hi > lo else 0.0)
+        for h in hits
+    }
 
 # ------------------------------
 # Pydantic Models
@@ -39,30 +67,28 @@ class EventRecommendation(BaseModel):
     tags: List[str] = []
     price: Optional[str] = "Free"
     url: Optional[str] = ""
-    similarity_score: Optional[float] = 0.0  # Added this field
+    similarity_score: Optional[float] = 0.0
 
     @field_validator("event_id", mode="before")
     def validate_event_id(cls, v):
-        """Ensure event_id is always an integer"""
         if v is None:
             return 0
         try:
-            return int(float(v))  # Handle both int and float types
+            return int(float(v))
         except (ValueError, TypeError):
             return 0
 
     @field_validator("tags", mode="before")
     def parse_tags(cls, v):
         if isinstance(v, list):
-            return [tag.strip() for tag in v if tag.strip()]
-        elif isinstance(v, str):
+            return [str(tag).strip() for tag in v if str(tag).strip()]
+        if isinstance(v, str):
             v = v.strip("{} ")
-            return [tag.strip() for tag in v.split(",") if tag.strip()]
+            return [t.strip() for t in v.split(",") if t.strip()]
         return []
 
     @field_validator("similarity_score", mode="before")
     def validate_similarity_score(cls, v):
-        """Ensure similarity_score is always a float"""
         if v is None:
             return 0.0
         try:
@@ -79,128 +105,230 @@ class RecommendationResponse(BaseModel):
 # ------------------------------
 
 # 👁️ Get single event by ID
-@router.get("/api/events/{event_id}")
+@router.get("/api/events/{event_id:int}")
 def get_event_by_id(event_id: int):
     conn = get_connection()
-    df = pd.read_sql(f'SELECT * FROM public."Event" WHERE event_id = {event_id};', conn)
-    conn.close()
+    try:
+        df = pd.read_sql(
+            'SELECT * FROM public."Event" WHERE event_id = %s;',
+            conn,
+            params=(event_id,),
+        )
+    finally:
+        conn.close()
 
     if df.empty:
         raise HTTPException(status_code=404, detail="Event not found")
 
     event = df.iloc[0].to_dict()
-
     tags_value = event.get("tags")
     if tags_value:
         if isinstance(tags_value, list):
             event["tags"] = tags_value
         else:
             event["tags"] = [
-                t.strip() for t in tags_value.strip("{}").split(",") if t.strip()
+                t.strip() for t in str(tags_value).strip("{}").split(",") if t.strip()
             ]
     else:
         event["tags"] = []
 
     return event
 
-# 🤖 Personalized recommendations with optional search query
-@router.get("/api/events/recommendations/{user_id}", response_model=RecommendationResponse)
-def get_recommendations(user_id: int, top_k: int = Query(15, ge=1, le=100), query: str = Query("", min_length=0)):
+# 🤖 Personalized recommendations with optional (local) search filter
+from services.recommender import recommend_events
+
+@router.get("/api/events/recommendations/{user_id:int}", response_model=RecommendationResponse)
+def get_recommendations(
+    user_id: int,
+    top_k: int = Query(15, ge=1, le=100),
+    query: str = Query("", min_length=0),
+):
     try:
-        print(f"🎯 API: Getting recommendations for user {user_id}, top_k={top_k}")
-        
-        # 1️⃣ Get recommended events from your recommender
-        recommendations = recommend_events(user_id=user_id, top_k=top_k)
-        
-        # Debug: Check what's returned
-        print(f"📊 API: Received {len(recommendations) if recommendations else 0} recommendations")
-        
-        if not recommendations:
-            print("⚠️ API: No recommendations received, returning empty list")
-            return RecommendationResponse(user_id=user_id, recommendations=[])
-        
-        # Ensure all items are dictionaries
+        recommendations = recommend_events(user_id=user_id, top_k=top_k) or []
+
+        # Normalize to dicts
         rec_dicts = []
         for rec in recommendations:
-            if isinstance(rec, dict):
-                rec_dicts.append(rec)
-            else:
-                # If it's a Pydantic model or other object, convert to dict
-                rec_dicts.append(rec.dict() if hasattr(rec, 'dict') else rec)
-        
-        print(f"✅ API: Processed {len(rec_dicts)} recommendation dictionaries")
-        
-        # 2️⃣ If query is provided, filter recommendations
+            rec_dicts.append(rec if isinstance(rec, dict) else (rec.dict() if hasattr(rec, "dict") else rec))
+
+        # Optional local filter
         if query:
-            print(f"🔍 API: Filtering with query: '{query}'")
             q = query.lower()
 
-            # Fetch events from DB to get full data (tags, location, title)
             conn = get_connection()
-            df = pd.read_sql('SELECT * FROM public."Event";', conn)
-            conn.close()
+            try:
+                df = pd.read_sql('SELECT * FROM public."Event";', conn)
+            finally:
+                conn.close()
 
-            # Parse tags safely
             def parse_tags(x):
                 if isinstance(x, list):
                     return x
-                elif isinstance(x, str):
+                if isinstance(x, str):
                     return [t.strip() for t in x.strip("{}").split(",") if t.strip()]
                 return []
 
-            df['tags'] = df['tags'].apply(parse_tags)
-            event_lookup = {row['event_id']: row for _, row in df.iterrows()}
+            if "tags" in df.columns:
+                df["tags"] = df["tags"].apply(parse_tags)
+            event_lookup = {int(row["event_id"]): row for _, row in df.iterrows()}
 
             filtered = []
             for rec in rec_dicts:
-                event_id = rec.get('event_id')
-                event = event_lookup.get(event_id)
-                if not event:
+                eid = int(rec.get("event_id", 0) or 0)
+                ev = event_lookup.get(eid)
+                if not ev:
                     continue
-                    
-                title = str(event.get('title') or "").lower()
-                location = str(event.get('location') or "").lower()
-                tags = [str(t).lower() for t in event['tags']]
 
-                # Compute similarity score
+                title = str(ev.get("title") or "").lower()
+                location = str(ev.get("location") or "").lower()
+                tags = [str(t).lower() for t in ev.get("tags", [])]
+
                 score = max(
                     similarity(title, q),
                     similarity(location, q),
-                    max((similarity(t, q) for t in tags), default=0)
+                    max((similarity(t, q) for t in tags), default=0.0),
                 )
                 if q in title or q in location or any(q in t for t in tags):
                     score += 0.2
 
                 if score > 0.3:
-                    filtered.append((score, rec))
+                    filtered.append((score, {**rec, "similarity_score": float(score)}))
 
-            # Sort by similarity descending
             filtered.sort(key=lambda x: x[0], reverse=True)
             rec_dicts = [r for _, r in filtered]
-            print(f"✅ API: After filtering, {len(rec_dicts)} recommendations remain")
 
-        # 3️⃣ Convert to Pydantic models with error handling
-        events = []
-        for i, rec in enumerate(rec_dicts):
-            try:
-                # Ensure all required fields are present
-                if 'title' not in rec:
-                    rec['title'] = f"Event {rec.get('event_id', 'Unknown')}"
-                
-                # Convert to Pydantic model
-                event_model = EventRecommendation(**rec)
-                events.append(event_model)
-            except Exception as e:
-                print(f"❌ API: Error converting recommendation {i}: {e}")
-                print(f"❌ API: Problematic data: {rec}")
-                continue
+        # Cast to models
+        events: List[EventRecommendation] = []
+        for rec in rec_dicts:
+            if "title" not in rec:
+                rec["title"] = f"Event {rec.get('event_id', 'Unknown')}"
+            events.append(EventRecommendation(**rec))
 
-        print(f"🎁 API: Successfully created {len(events)} EventRecommendation objects")
-        
         return RecommendationResponse(user_id=user_id, recommendations=events)
 
-    except Exception as e:
-        print(f"❌ API: Critical error: {e}")
+    except Exception:
         traceback.print_exc()
-        # Return empty recommendations instead of crashing
         return RecommendationResponse(user_id=user_id, recommendations=[])
+
+# 🔎 Hybrid search (BM25 + vector kNN)
+@router.get("/api/events/search")
+def hybrid_search(q: str = Query(..., min_length=1), size: int = Query(10, ge=1, le=50)):
+    """
+    Perform hybrid search (BM25 + vector cosine similarity) over event index.
+    Returns hydrated event data from Postgres preserving ES ranking.
+    """
+    # Ensure index exists / OpenSearch reachable
+    try:
+        if not ES.indices.exists(index=ES_INDEX):
+            raise HTTPException(status_code=503, detail=f"Index '{ES_INDEX}' not found")
+    except Exception as e:
+        raise HTTPException(status_code=503, detail=f"OpenSearch not reachable: {e}")
+
+    # -------------------------
+    # 1️⃣ BM25 text search
+    # -------------------------
+    fuzz = "1" if len(q) <= 4 else "AUTO:1,2"
+    bm_body = {
+        "size": min(50, max(size, 10)),
+        "query": {
+            "bool": {
+                "should": [
+                    {"match": {"title": {"query": q, "fuzziness": fuzz, "boost": 2.0}}},
+                    {"match": {"tags": {"query": q, "fuzziness": fuzz}}},
+                ],
+                "minimum_should_match": 1
+            }
+        },
+    }
+
+    try:
+        bm_hits = ES.search(index=ES_INDEX, body=bm_body)["hits"]["hits"]
+    except TransportError as e:
+        raise HTTPException(status_code=503, detail=f"BM25 query failed: {getattr(e, 'info', str(e))}")
+
+    # -------------------------
+    # 2️⃣ Vector (semantic) search
+    # -------------------------
+    kn_hits = []
+    try:
+        model = get_model()
+        qvec = model.encode([f"{q}. tags: {q}"], normalize_embeddings=True)[0].tolist()
+        if len(qvec) != 384:
+            raise HTTPException(status_code=500, detail=f"Embedding dimension {len(qvec)} != 384")
+
+        kn_body = {
+            "size": min(50, max(size, 10)),
+            "query": {
+                "knn": {
+                    "field": "vector",
+                    "query_vector": qvec,
+                    "k": min(50, max(size, 10)),
+                    "num_candidates": 200
+                }
+            }
+        }
+        kn_hits = ES.search(index=ES_INDEX, body=kn_body)["hits"]["hits"]
+    except Exception as e:
+        print("⚠️ kNN search failed, falling back to BM25-only:", e)
+
+    # -------------------------
+    # 3️⃣ Fuse results (if both succeed)
+    # -------------------------
+    if kn_hits:
+        bm_norm, kn_norm = _norm(bm_hits), _norm(kn_hits)
+        all_ids = set(bm_norm) | set(kn_norm)
+
+        # Weighted fusion
+        fused = sorted(
+            ((i, 0.6 * kn_norm.get(i, 0.0) + 0.4 * bm_norm.get(i, 0.0)) for i in all_ids),
+            key=lambda x: x[1],
+            reverse=True,
+        )[:size]
+
+        ids_ordered = [int(i) for i, _ in fused]
+        scores_map = {str(i): s for i, s in fused}
+
+        return hydrate(ids_ordered, scores_map)
+
+    # -------------------------
+    # 4️⃣ BM25 fallback only
+    # -------------------------
+    ids_ordered = [int(h["_id"]) for h in bm_hits[:size]]
+    scores_map = {str(h["_id"]): float(h.get("_score", 0.0)) for h in bm_hits[:size]}
+    return hydrate(ids_ordered, scores_map)
+
+
+# ------------------------------
+# 🧩 Helper: Hydrate from Postgres
+# ------------------------------
+def hydrate(ids_in_order, scores_by_id):
+    """Fetch event details from Postgres preserving ES ranking order."""
+    if not ids_in_order:
+        return []
+
+    placeholders = ",".join(["%s"] * len(ids_in_order))
+    sql = f'SELECT * FROM public."Event" WHERE event_id IN ({placeholders})'
+
+    with get_connection() as conn:
+        df = pd.read_sql(sql, conn, params=ids_in_order)
+
+    by_id = {int(r["event_id"]): dict(r) for _, r in df.iterrows()}
+    results = []
+
+    for eid in ids_in_order:
+        row = by_id.get(int(eid))
+        if not row:
+            continue
+
+        tags_val = row.get("tags")
+        if isinstance(tags_val, str):
+            row["tags"] = [t.strip() for t in tags_val.strip("{} ").split(",") if t.strip()]
+        elif isinstance(tags_val, list):
+            row["tags"] = tags_val
+        else:
+            row["tags"] = []
+
+        row["score"] = float(scores_by_id.get(str(eid), 0.0))
+        results.append(row)
+
+    return results

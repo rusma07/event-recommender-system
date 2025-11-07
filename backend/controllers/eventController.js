@@ -6,7 +6,7 @@ import { pool } from "../db.js"; // ✅ Import named export
 // ===============================
 export const getAllEvents = async (_req, res) => {
   try {
-    const { rows } = await pool.query(`SELECT * FROM public."Events" ORDER BY event_id ASC`);
+    const { rows } = await pool.query(`SELECT * FROM public."Event" ORDER BY event_id ASC`);
     res.json(rows);
   } catch (err) {
     console.error("Error fetching all events:", err.message);
@@ -109,18 +109,21 @@ export const getEventsByUserTags = async (req, res) => {
       return res.json({ events: [], message: "No tags found in preferences" });
     }
 
-    // 3️⃣ Query events using RAW POOL QUERY
+    // 3️⃣ Query events using normalized lowercase comparison
     const eventQuery = `
-      SELECT event_id, title, image, start_date, end_date, location, tags, price, url
-      FROM public."Event"
-      WHERE tags && $1::text[]
-      ORDER BY start_date DESC
-      LIMIT 50
-    `;
-    
-    console.log(`🎯 Querying events with tags:`, tags);
-    const eventResult = await pool.query(eventQuery, [tags]);
-    
+  SELECT event_id, title, image, start_date, end_date, location, tags, price, url
+  FROM public."Event"
+  WHERE EXISTS (
+    SELECT 1 FROM unnest(tags) AS t
+    WHERE LOWER(TRIM(t)) ILIKE ANY($1::text[])
+  )
+  ORDER BY start_date DESC
+  LIMIT 50;
+`;
+
+const loweredTags = tags.map(t => `%${t.trim().toLowerCase()}%`);
+
+const eventResult = await pool.query(eventQuery, [loweredTags]);
     console.log(`✅ Found ${eventResult.rows.length} events for user ${userId}`);
     return res.json({ 
       events: eventResult.rows,

@@ -10,6 +10,7 @@ import Register from "../pages/Register/Register.jsx";
 import Edit from "../pages/EditProfile/Edit.jsx";
 import { ViewEvents } from "../pages/VeiwEvents/ViewEvents.jsx";
 import ResetPassword from "../pages/ResetPassword.jsx";
+import TagSelection from "../pages/TagSelection/TagSelection.jsx";
 
 const AppRoutes = () => {
   const { user } = useAuth() || {};
@@ -43,6 +44,7 @@ const AppRoutes = () => {
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/reset-password/:token" element={<ResetPassword />} />
       <Route path="/aboutus" element={<AboutUs />} />
+      <Route path="/tag-selection" element={<TagSelection/>} />
     </Routes>
   );
 };

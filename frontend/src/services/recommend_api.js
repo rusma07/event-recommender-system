@@ -1,8 +1,8 @@
 // services/recommend_api.js
 
 // ✅ Load from environment
-const BASE_URL = import.meta.env.VITE_API_BASE_URL ;
-const BACKEND_URL = import.meta.env.VITE_API_BACKEND_URL ;
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const BACKEND_URL = import.meta.env.VITE_API_BACKEND_URL;
 
 // =============================
 // 🔹 Fetch Recommendations
@@ -54,27 +54,31 @@ export const getEventById = async (eventId) => {
 };
 
 // =============================
-// 🔹 Search Events (Backend Search)
+// 🔹 Search Events (Hybrid Search via FastAPI)
 // =============================
-export const searchEvents = async (userId, query) => {
-  if (!query) return [];
+export const searchEvents = async (userId, query, size = 50) => {
+  if (!query?.trim()) return [];
   try {
-    const res = await fetch(`${BACKEND_URL}/events/search?query=${encodeURIComponent(query)}`);
-    if (!res.ok) throw new Error("Search failed");
-    const data = await res.json();
+    const url = `${BASE_URL}/search?q=${encodeURIComponent(query)}&size=${size}`;
+    const res = await fetch(url, { headers: { "Content-Type": "application/json" } });
+    if (!res.ok) throw new Error("Hybrid search failed");
 
+    const data = await res.json();
     if (userId) {
       await logInteraction(userId, null, "search", { query });
     }
 
-    return data.events || data; // make sure backend returns { events: [...] }
+    // backend returns array of events with scores
+    return Array.isArray(data) ? data : data.events || [];
   } catch (err) {
-    console.error("Search error:", err);
+    console.error("Hybrid search error:", err);
     return [];
   }
 };
 
-
+// =============================
+// 🔹 Get Events by User Tags
+// =============================
 export const getEventsByUserTags = async (userId) => {
   if (!userId) return [];
   try {
