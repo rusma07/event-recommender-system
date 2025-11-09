@@ -1,40 +1,40 @@
-import React,{useEffect} from 'react';
-import './Aboutus.css'; 
+import React, { useEffect } from 'react';
+import './Aboutus.css';
 
 const AboutUs = () => {
   useEffect(() => {
-  document.body.classList.add('about-page');
-  return () => document.body.classList.remove('about-page');
-}, []);
+    document.body.classList.add('about-page');
+    return () => document.body.classList.remove('about-page');
+  }, []);
 
   return (
     <section className="about-us">
       <div className="container">
-        <h1>About Us</h1>
+        <h1>About TechEvents</h1>
         <p>
-          Welcome to <strong>Eventhub</strong>, your all-in-one platform for discovering, managing, and attending events effortlessly. Whether it's a workshop, conference, seminar, or competition, our platform helps you stay updated, register on time, and never miss an opportunity.
+          <strong>TechEvents</strong> is your all-in-one platform for discovering, managing, and attending events with ease. From workshops and conferences to competitions and seminars, we ensure you stay informed, register on time, and never miss an opportunity.
         </p>
 
         <h2>Our Mission</h2>
         <p>
-          We aim to centralize event information and streamline participation — making event planning and attendance efficient, transparent, and user-friendly.
+          Our mission is to centralize event information and simplify participation. We strive to make event planning and attendance efficient, transparent, and seamless for both attendees and organizers.
         </p>
 
-        <h2>Why Choose Us?</h2>
+        <h2>Why Choose TechEvents?</h2>
         <ul>
-          <li>Centralized event timeline to never miss a deadline</li>
-          <li>Personalized event recommendations tailored to your interests</li>
-          <li>Built with a user-first approach for simplicity and reliability</li>
-          <li>Empowering event organizers and attendees to connect easily</li>
+          <li>Comprehensive event timeline to track all upcoming events</li>
+          <li>Personalized recommendations tailored to your interests</li>
+          <li>User-centric design for simplicity, reliability, and convenience</li>
+          <li>Empowering organizers and attendees to connect effortlessly</li>
         </ul>
 
         <h2>Join Our Community</h2>
         <p>
-          Whether you’re a student, professional, or enthusiast, Eventhub helps you stay informed, plan ahead, and seize every opportunity for growth and networking.
+          Whether you’re a student, professional, or enthusiast, TechEvents keeps you informed, helps you plan ahead, and enables you to seize every opportunity for personal and professional growth.
         </p>
 
         <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:contact@eventhub.com">contact@eventhub.com</a></p>
+        <p>Email: <a href="mailto:contact@techevents.com">contact@techevents.com</a></p>
         <p>Phone: +977-9841123456</p>
       </div>
     </section>

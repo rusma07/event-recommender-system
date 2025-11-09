@@ -9,11 +9,10 @@ import { AuthContext } from "../../context/AuthContext";
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({ email: "", password: "" });
+  const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-
-  // ✅ Use context inside component
-  const { user, setUser } = useContext(AuthContext);
+  const { setUser } = useContext(AuthContext);
 
   useEffect(() => {
     document.body.classList.add("login-page");
@@ -24,10 +23,37 @@ const Login = () => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+
+    // Remove error while typing
+    setErrors({ ...errors, [e.target.name]: "" });
+  };
+
+  // ✅ Inline validation
+  const validateForm = () => {
+    let newErrors = {};
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Enter a valid email";
+    }
+
+    if (!formData.password.trim()) {
+      newErrors.password = "Password is required";
+    } else if (formData.password.length < 6) {
+      newErrors.password = "Password must be at least 6 characters";
+    }
+
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleLogin = async (e) => {
     e.preventDefault();
+
+    if (!validateForm()) return;
+
     setLoading(true);
 
     try {
@@ -37,18 +63,13 @@ const Login = () => {
         password: formData.password,
       });
 
-      // Save JWT token and user info in localStorage
       localStorage.setItem("token", response.data.token);
       localStorage.setItem("user", JSON.stringify(response.data.user));
 
-      // Update context so Navbar shows username immediately
       setUser(response.data.user);
-
-      toast.success(`Login Successful!! 
-        Welcome, ${response.data.user.name}`);
-      navigate("/dashboard"); // redirect after login
+      toast.success(`Welcome, ${response.data.user.name}!`);
+      navigate("/dashboard");
     } catch (error) {
-      console.error(error);
       toast.error(error.response?.data?.message || "Login failed");
     } finally {
       setLoading(false);
@@ -66,8 +87,8 @@ const Login = () => {
             placeholder="Enter your email"
             value={formData.email}
             onChange={handleChange}
-            required
           />
+          {errors.email && <p className="error-text">{errors.email}</p>}
 
           <label>Password</label>
           <div className="password-input">
@@ -77,24 +98,23 @@ const Login = () => {
               placeholder="Enter your password"
               value={formData.password}
               onChange={handleChange}
-              required
             />
             <span onClick={togglePassword}>
               {showPassword ? <FiEyeOff /> : <FiEye />}
             </span>
           </div>
+          {errors.password && <p className="error-text">{errors.password}</p>}
 
           <div className="login-options">
             <label>
               <input
                 type="checkbox"
                 name="rememberMe"
-                checked={formData.rememberMe}
                 onChange={(e) =>
                   setFormData({ ...formData, rememberMe: e.target.checked })
                 }
-              />{" "}
-              Remember me.
+              />
+              Remember me
             </label>
             <Link to="/forgot-password" className="forgot-link">
               Forgot Password?

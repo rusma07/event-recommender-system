@@ -109,6 +109,14 @@ input[type="password"],
     background-color: #e0e0e0;
 }
 
+.error-text {
+  color: red;
+  font-size: 13px;
+  margin-top: -5px;
+  margin-bottom: 8px;
+}
+
+
 /* Responsive for tablet */
 @media (max-width: 768px) {
     .signup-box {
