@@ -56,41 +56,42 @@ function Recommendations({ userId }) {
       </h2>
 
       <div ref={scrollRef} className="flex overflow-hidden gap-6 pb-4">
-        {displayEvents.map((event, idx) => (
-          <div
-            key={idx}
-            onMouseEnter={() => (isPaused.current = true)}   // 🟢 Pause on hover
-            onMouseLeave={() => (isPaused.current = false)}  // 🟢 Resume on leave
-            onClick={() => handleEventClick(event.event_id)}
-            className="cursor-pointer flex-shrink-0 w-80 md:w-96 bg-slate-800/70 backdrop-blur-md shadow-lg rounded-2xl border border-slate-700 h-[440px] transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
-          >
-            <div className="relative h-56 overflow-hidden rounded-t-2xl">
-              <img
-                src={event.image}
-                alt={event.title}
-                className="w-full h-full object-cover"
-              />
-              <span className="absolute top-3 right-3 bg-sky-600 text-white text-xs px-3 py-1 rounded-full shadow">
-                {event.price && event.price !== "0"
-                  ? `NPR ${event.price}`
-                  : "Free"}
-              </span>
-            </div>
+        {displayEvents.map((event, idx) => {
+          return (
+            <div
+              key={idx}
+              onMouseEnter={() => (isPaused.current = true)} // 🟢 Pause on hover
+              onMouseLeave={() => (isPaused.current = false)} // 🟢 Resume on leave
+              onClick={() => handleEventClick(event.event_id)}
+              className="cursor-pointer flex-shrink-0 w-80 md:w-96 bg-slate-800/70 backdrop-blur-md shadow-lg rounded-2xl border border-slate-700 h-[440px] transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+            >
+              <div className="relative h-56 overflow-hidden rounded-t-2xl">
+                <img
+                  src={event.image}
+                  alt={event.title}
+                  className="w-full h-full object-cover" />
+                <span className="absolute top-3 right-3 bg-sky-600 text-white text-xs px-3 py-1 rounded-full shadow">
+                  {event.price && event.price !== "0"
+                    ? `NPR ${event.price}`
+                    : "Free"}
+                </span>
+              </div>
 
-            <div className="p-5 flex flex-col justify-start gap-2 text-[1.2rem] leading-snug text-slate-100">
-              <h3 className="text-lg font-semibold text-white truncate">
-                {event.title}
-              </h3>
-              <p className="text-sm text-slate-300">
-                📅 {formatDate(event.start_date)} – {formatDate(event.end_date) || "TBD"}
-              </p>
-              <p className="text-sm text-slate-300">📍 {event.location}</p>
-              <p className="text-sm text-slate-300 line-clamp-2">
-                🏷️ {Array.isArray(event.tags) ? event.tags.join(", ") : event.tags}
-              </p>
+              <div className="p-5 flex flex-col justify-start gap-2 text-[1.2rem] leading-snug text-slate-100">
+                <h3 className="text-lg font-semibold text-white truncate">
+                  {event.title}
+                </h3>
+                <p className="text-sm text-slate-300">
+                  📅 {formatDate(event.start_date)} – {formatDate(event.end_date) || "TBD"}
+                </p>
+                <p className="text-sm text-slate-300">📍 {event.location}</p>
+                <p className="text-sm text-slate-300 line-clamp-2">
+                  🏷️ {Array.isArray(event.tags) ? event.tags.join(", ") : event.tags}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

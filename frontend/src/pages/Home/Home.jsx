@@ -1,6 +1,5 @@
-import React from "react";
+
 import { useNavigate } from "react-router-dom";
-import AboutUs from "../Aboutus/Aboutus";
 import Recommendatons from "../HomeEventShow/EventExample";
 
 const Home = () => {

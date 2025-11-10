@@ -1,12 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Aboutus.css';
 
 const AboutUs = () => {
-  useEffect(() => {
-    document.body.classList.add('about-page');
-    return () => document.body.classList.remove('about-page');
-  }, []);
-
   return (
     <section className="about-us">
       <div className="container">
@@ -30,7 +25,7 @@ const AboutUs = () => {
 
         <h2>Join Our Community</h2>
         <p>
-          Whether you’re a student, professional, or enthusiast, TechEvents keeps you informed, helps you plan ahead, and enables you to seize every opportunity for personal and professional growth.
+          Whether you're a student, professional, or enthusiast, TechEvents keeps you informed, helps you plan ahead, and enables you to seize every opportunity for personal and professional growth.
         </p>
 
         <h2>Contact Us</h2>
