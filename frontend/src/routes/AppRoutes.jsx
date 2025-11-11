@@ -13,6 +13,8 @@ import ResetPassword from "../pages/ResetPassword.jsx";
 import TagSelection from "../pages/TagSelection/TagSelection.jsx";
 import OnboardingPage from "../components/onboarding/OnboardingPage.jsx";
 
+import AdminRoute from "./AdminRoutes.jsx";
+import AdminEvents from "../pages/Admin/AdminEvents.jsx";
 // Protected Route Component - handles authentication and onboarding checks
 const ProtectedRoute = ({ children }) => {
   const { user } = useAuth() || {};
@@ -95,11 +97,11 @@ const AppRoutes = () => {
       />
 
       <Route
-        path="/tag-selection"
+        path="/admin/events"
         element={
-          <ProtectedRoute>
-            <TagSelection />
-          </ProtectedRoute>
+          <AdminRoute>
+            <AdminEvents />
+          </AdminRoute>
         }
       />
 
