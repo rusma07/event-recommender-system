@@ -85,4 +85,18 @@ router.post("/", async (req, res) => {
   }
 });
 
+// Onboarding status (new user if no tag_click)
+router.get("/:userId/onboarding-status", async (req, res) => {
+  const { userId } = req.params;
+  const q = `
+    SELECT NOT EXISTS(
+      SELECT 1 FROM public."User_Event"
+      WHERE user_id=$1 AND interaction_type='tag_click'
+    ) AS "isNewUser"
+  `;
+  const { rows } = await pool.query(q, [userId]);
+  res.json({ isNewUser: rows[0]?.isNewUser ?? true });
+});
+
+
 export default router;

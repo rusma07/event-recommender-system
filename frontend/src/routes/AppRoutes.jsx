@@ -11,29 +11,25 @@ import Edit from "../pages/EditProfile/Edit.jsx";
 import { ViewEvents } from "../pages/VeiwEvents/ViewEvents.jsx";
 import ResetPassword from "../pages/ResetPassword.jsx";
 import TagSelection from "../pages/TagSelection/TagSelection.jsx";
-import OnboardingPage from "../components/onboarding/onboardingPage.jsx";
+import OnboardingPage from "../components/onboarding/OnboardingPage.jsx";
 
 // Protected Route Component - handles authentication and onboarding checks
 const ProtectedRoute = ({ children }) => {
   const { user } = useAuth() || {};
   const location = useLocation();
 
-  // Not authenticated - redirect to login
   if (!user || !localStorage.getItem("token")) {
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
 
-  // Check if user has completed onboarding (using localStorage with user ID)
   const onboardingKey = `onboardingComplete_${user.id}`;
-  const hasCompletedOnboarding = localStorage.getItem(onboardingKey) === 'true';
+  const hasCompletedOnboarding = localStorage.getItem(onboardingKey) === "true";
 
-  // User hasn't completed onboarding and trying to access protected pages
-  if (!hasCompletedOnboarding && location.pathname !== '/onboarding') {
+  if (!hasCompletedOnboarding && location.pathname !== "/onboarding") {
     return <Navigate to="/onboarding" replace />;
   }
 
-  // User has completed onboarding but trying to access onboarding page
-  if (hasCompletedOnboarding && location.pathname === '/onboarding') {
+  if (hasCompletedOnboarding && location.pathname === "/onboarding") {
     return <Navigate to="/event" replace />;
   }
 
@@ -70,7 +66,7 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
-      
+
       <Route
         path="/event"
         element={

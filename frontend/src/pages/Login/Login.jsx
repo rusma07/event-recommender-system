@@ -51,24 +51,37 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
     if (!validateForm()) return;
-
     setLoading(true);
 
     try {
       const BACKEND_URL = import.meta.env.VITE_API_BACKEND_URL;
-      const response = await axios.post(`${BACKEND_URL}/users/login`, {
+
+      const { data } = await axios.post(`${BACKEND_URL}/users/login`, {
         email: formData.email,
         password: formData.password,
       });
 
-      localStorage.setItem("token", response.data.token);
-      localStorage.setItem("user", JSON.stringify(response.data.user));
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("user", JSON.stringify(data.user));
+      setUser(data.user);
+      toast.success(`Welcome, ${data.user.name}!`);
 
-      setUser(response.data.user);
-      toast.success(`Welcome, ${response.data.user.name}!`);
-      navigate("/dashboard");
+      // 🔹 Optional: check onboarding status right away
+      let isNewUser = false;
+      try {
+        const res = await fetch(
+          `${BACKEND_URL}/interactions/${data.user.id}/onboarding-status`,
+          { credentials: "include" } // remove if you don't use cookies
+        );
+        const json = await res.json();
+        isNewUser = !!json?.isNewUser;
+      } catch {
+        // If this fails, ProtectedRoute will still handle it later
+      }
+
+      // ✅ Navigate based on status (or let ProtectedRoute handle it)
+      navigate(isNewUser ? "/onboarding" : "/event", { replace: true });
     } catch (error) {
       toast.error(error.response?.data?.message || "Login failed");
     } finally {

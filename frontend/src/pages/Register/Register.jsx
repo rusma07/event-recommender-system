@@ -29,7 +29,6 @@ const Register = () => {
     setErrors({ ...errors, [e.target.name]: "" });
   };
 
-  // ✅ Inline validation
   const validateForm = () => {
     let newErrors = {};
 
@@ -43,8 +42,11 @@ const Register = () => {
       newErrors.email = "Enter a valid email";
     }
 
-    if (formData.password.length < 6) {
-      newErrors.password = "Password must be at least 6 characters";
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#^()_+])[A-Za-z\d@$!%*?&#^()_+]{8,}$/;
+    if (!passwordRegex.test(formData.password)) {
+      newErrors.password =
+        "Password must be at least 8 characters, include uppercase, lowercase, number, and special character";
     }
 
     if (formData.confirmPassword !== formData.password) {
