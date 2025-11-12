@@ -1,10 +1,8 @@
-// eventController.js - FIXED IMPORT
+// eventController.js
 import { pool } from "../db.js";
 import { upsertEventToIndexer, deleteEventFromIndexer } from "../utils/indexerClient.js";
 
-// ===============================
-// 🔹 Get all events
-// ===============================
+// Get all events
 export const getAllEvents = async (_req, res) => {
   try {
     const { rows } = await pool.query(`SELECT * FROM public."Event" ORDER BY event_id ASC`);
@@ -15,9 +13,7 @@ export const getAllEvents = async (_req, res) => {
   }
 };
 
-// ======================================================
-// 🔹 SEARCH EVENTS (Unified Logic for Title + Tags)
-// ======================================================
+// Search events (title + tags)
 export const searchEvents = async (req, res) => {
   try {
     const { query } = req.query;
@@ -46,7 +42,6 @@ export const searchEvents = async (req, res) => {
         start_date DESC
       LIMIT 50;
     `;
-
     const { rows } = await pool.query(sql, [searchTerm, searchQuery]);
     res.json(rows);
   } catch (err) {
@@ -55,9 +50,7 @@ export const searchEvents = async (req, res) => {
   }
 };
 
-// ===============================
-// 🔹 Get events based on user's clicked tags
-// ===============================
+// Get events by user's clicked tags
 export const getEventsByUserTags = async (req, res) => {
   try {
     const { userId } = req.params;
@@ -113,9 +106,7 @@ export const getEventsByUserTags = async (req, res) => {
   }
 };
 
-// ===============================
-// 🔹 Create event (Admin)
-// ===============================
+// Create event (Admin)
 export const createEvent = async (req, res) => {
   try {
     const {
@@ -126,7 +117,7 @@ export const createEvent = async (req, res) => {
       location = null,
       tags = [],
       price = null,
-      url = null,// if you have it
+      url = null,
     } = req.body;
 
     if (!title || !start_date) {
@@ -145,9 +136,9 @@ export const createEvent = async (req, res) => {
 
     const sql = `
       INSERT INTO public."Event"
-        (title, image, start_date, end_date, location, tags, price, url, description)
-      VALUES ($1, $2, $3, $4, $5, $6::text[], $7, $8, $9)
-      RETURNING event_id, title, image, start_date, end_date, location, tags, price, url, description
+        (title, image, start_date, end_date, location, tags, price, url)
+      VALUES ($1, $2, $3, $4, $5, $6::text[], $7, $8)
+      RETURNING event_id, title, image, start_date, end_date, location, tags, price, url
     `;
 
     const { rows } = await pool.query(sql, [
@@ -163,7 +154,7 @@ export const createEvent = async (req, res) => {
 
     const created = rows[0];
 
-    // 🚀 Non-blocking indexer call
+    // fire & forget to indexer
     upsertEventToIndexer(created);
 
     return res.status(201).json({ message: "Event created", event: created });
@@ -173,9 +164,7 @@ export const createEvent = async (req, res) => {
   }
 };
 
-// ===============================
-// 🔹 Update event (Admin, partial)
-// ===============================
+// Update event (Admin, partial)
 export const updateEvent = async (req, res) => {
   try {
     const { eventId } = req.params;
@@ -214,9 +203,9 @@ export const updateEvent = async (req, res) => {
         location   = COALESCE($6, location),
         tags       = COALESCE($7::text[], tags),
         price      = COALESCE($8, price),
-        url        = COALESCE($9, url),
+        url        = COALESCE($9, url)
       WHERE event_id = $1
-      RETURNING event_id, title, image, start_date, end_date, location, tags, price, url, description
+      RETURNING event_id, title, image, start_date, end_date, location, tags, price, url
     `;
 
     const { rows } = await pool.query(sql, [
@@ -237,7 +226,7 @@ export const updateEvent = async (req, res) => {
 
     const updated = rows[0];
 
-    // 🚀 Non-blocking indexer call
+    // fire & forget to indexer
     upsertEventToIndexer(updated);
 
     return res.json({ message: "Event updated", event: updated });
@@ -247,9 +236,7 @@ export const updateEvent = async (req, res) => {
   }
 };
 
-// ===============================
-// 🔹 Delete event (Admin)
-// ===============================
+// Delete event (Admin)
 export const deleteEvent = async (req, res) => {
   try {
     const { eventId } = req.params;
@@ -261,7 +248,7 @@ export const deleteEvent = async (req, res) => {
       return res.status(404).json({ error: "Event not found" });
     }
 
-    // 🚀 Non-blocking indexer delete
+    // fire & forget to indexer
     deleteEventFromIndexer(eventId);
 
     return res.json({ message: "Event deleted" });
