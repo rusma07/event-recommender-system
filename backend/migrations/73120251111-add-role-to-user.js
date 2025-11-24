@@ -10,3 +10,4 @@ export async function up(queryInterface, Sequelize) {
 export async function down(queryInterface) {
   await queryInterface.removeColumn('Users', 'role');
 }
+ 

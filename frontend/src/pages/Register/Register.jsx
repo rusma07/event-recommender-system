@@ -46,7 +46,7 @@ const Register = () => {
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#^()_+])[A-Za-z\d@$!%*?&#^()_+]{8,}$/;
     if (!passwordRegex.test(formData.password)) {
       newErrors.password =
-        "Password must be at least 8 characters, include uppercase, lowercase, number, and special character";
+        "Password must be at least 6 characters.";
     }
 
     if (formData.confirmPassword !== formData.password) {
