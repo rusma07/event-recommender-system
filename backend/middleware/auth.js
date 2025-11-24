@@ -1,30 +1,56 @@
+// authMiddleware.js
 import jwt from "jsonwebtoken";
-import User from "../models/User.js"; // Sequelize model
 
-export default async function auth(req, res, next) {
-  try {
+export default class AuthMiddleware {
+  constructor(UserModel, jwtSecret) {
+    this.UserModel = UserModel;
+    this.jwtSecret = jwtSecret;
+
+    // Bind so `this` works when passed directly to Express
+    this.handle = this.handle.bind(this);
+  }
+
+  // Clean helper to extract token
+  _getTokenFromHeader(req) {
     const authHeader = req.header("Authorization");
-    const token = authHeader?.split(" ")[1]; // Expect "Bearer <token>"
-    if (!token) {
-      return res.status(401).json({ message: "Access denied, no token provided" });
-    }
+    if (!authHeader) return null;
 
-    // Decode and verify token
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    if (!decoded?.id) {
-      return res.status(403).json({ message: "Invalid token" });
-    }
+    const [scheme, token] = authHeader.split(" ");
+    if (scheme !== "Bearer" || !token) return null;
 
-    // Fetch user from DB to attach role
-    const user = await User.findByPk(decoded.id, { attributes: ["id", "email", "role", "name"] });
-    if (!user) {
-      return res.status(404).json({ message: "User not found" });
-    }
+    return token;
+  }
 
-    req.user = user; // Make the user object available in controllers
-    next();
-  } catch (err) {
-    console.error("Auth error:", err);
-    res.status(403).json({ message: "Invalid or expired token" });
+  async handle(req, res, next) {
+    try {
+      const token = this._getTokenFromHeader(req);
+
+      if (!token) {
+        return res
+          .status(401)
+          .json({ message: "Access denied, no token provided" });
+      }
+
+      // Decode and verify token
+      const decoded = jwt.verify(token, this.jwtSecret);
+      if (!decoded?.id) {
+        return res.status(403).json({ message: "Invalid token" });
+      }
+
+      // Fetch user from DB to attach role
+      const user = await this.UserModel.findByPk(decoded.id, {
+        attributes: ["id", "email", "role", "name"],
+      });
+
+      if (!user) {
+        return res.status(404).json({ message: "User not found" });
+      }
+
+      req.user = user; // Make the user object available in controllers
+      next();
+    } catch (err) {
+      console.error("Auth error:", err);
+      res.status(403).json({ message: "Invalid or expired token" });
+    }
   }
 }

@@ -54,12 +54,27 @@ const TAGS = [
   "Web",
 ];
 
+// --- helpers ---
+// Make sure tags are always an array of trimmed strings
+function parseTagsInput(value) {
+  if (Array.isArray(value)) {
+    return value
+      .map((t) => (t == null ? "" : String(t).trim()))
+      .filter(Boolean);
+  }
+  return String(value || "")
+    .split(",")
+    .map((t) => t.trim())
+    .filter(Boolean);
+}
+
 export const Dashboard = ({ userId }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const { events, loading, search, selectedTags, currentPage, eventsPerPage } =
     useSelector((state) => state.dashboard);
+
   const [searchParams, setSearchParams] = useSearchParams();
   const [localSearch, setLocalSearch] = useState(search || "");
   const loggedEventsRef = useRef(new Set());
@@ -82,21 +97,36 @@ export const Dashboard = ({ userId }) => {
       try {
         if (queryParam.trim() !== "") {
           console.log("🔍 Using searchEvents with query:", queryParam);
-          data = await searchEvents(userId,queryParam);
+          data = await searchEvents(userId, queryParam);
           dispatch(setSearch(queryParam));
         } else if (selectedTags.length > 0) {
           console.log(
             "🏷️ Using getEventsByUserTags with CURRENT tags:",
             selectedTags
           );
+
           const allUserTaggedEvents = await getEventsByUserTags(userId);
 
           if (allUserTaggedEvents && Array.isArray(allUserTaggedEvents)) {
-            data = allUserTaggedEvents.filter(
-              (event) =>
-                event.tags &&
-                event.tags.some((tag) => selectedTags.includes(tag))
+            // normalize tags for each event first
+            const normalizedEvents = allUserTaggedEvents.map((event) => ({
+              ...event,
+              tags: parseTagsInput(event.tags),
+            }));
+
+            const selectedLower = selectedTags.map((t) =>
+              String(t).toLowerCase()
             );
+
+            data = normalizedEvents.filter((event) => {
+              const eventTagsLower = (event.tags || []).map((t) =>
+                String(t).toLowerCase()
+              );
+              return eventTagsLower.some((tag) =>
+                selectedLower.includes(tag)
+              );
+            });
+
             console.log(
               `🎯 Filtered to ${data.length} events matching current tags:`,
               selectedTags
@@ -110,7 +140,13 @@ export const Dashboard = ({ userId }) => {
           dispatch(setSearch(""));
         }
 
-        const finalData = Array.isArray(data) ? data : [];
+        // Final normalization of tags for everything we store
+        const finalDataRaw = Array.isArray(data) ? data : [];
+        const finalData = finalDataRaw.map((event) => ({
+          ...event,
+          tags: parseTagsInput(event.tags),
+        }));
+
         console.log("🚀 Dispatching events to Redux:", finalData.length);
         dispatch(setEvents(finalData));
       } catch (error) {
@@ -198,8 +234,13 @@ export const Dashboard = ({ userId }) => {
 
       const results = await searchEvents(userId, trimmed);
       console.log(`🔍 Found ${results.length} events for query: "${trimmed}"`);
-      dispatch(setEvents(results));
 
+      const normalizedResults = (results || []).map((event) => ({
+        ...event,
+        tags: parseTagsInput(event.tags),
+      }));
+
+      dispatch(setEvents(normalizedResults));
       setLocalSearch("");
     } catch (err) {
       console.error("❌ Error fetching search results:", err);
@@ -495,7 +536,7 @@ export const Dashboard = ({ userId }) => {
               )}
 
               {/* Events List */}
-              {currentEvents.map((event, index) => (
+              {currentEvents.map((event) => (
                 <div
                   key={event.event_id}
                   className="transform hover:scale-[1.01] transition-transform duration-200"

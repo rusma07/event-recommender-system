@@ -1,4 +1,3 @@
-# api/event_api.py
 from fastapi import APIRouter, Query, HTTPException
 from typing import List, Optional, Dict
 from pydantic import BaseModel, field_validator
@@ -10,27 +9,41 @@ import traceback
 from difflib import SequenceMatcher
 
 # --- Search deps (OpenSearch + embeddings) ---
-from opensearchpy import OpenSearch  # type: ignore 
-from opensearchpy.exceptions import TransportError # type: ignore
-from sentence_transformers import SentenceTransformer # type: ignore
+from opensearchpy import OpenSearch  # type: ignore
+from opensearchpy.exceptions import TransportError  # type: ignore
+from sentence_transformers import SentenceTransformer  # type: ignore
+
+# --- OOP Recommender imports ---
+# adjust the import path if recommender_oop.py lives in a package, e.g.:
+# from services.recommender_oop import DatabaseConfig, RecommendationEngine
+from services.recommender import DatabaseConfig, RecommendationEngine
 
 # Config (readable via env; defaults OK for local)
 ES_URL = os.getenv("ES_URL", "http://localhost:9200")
 ES_INDEX = os.getenv("ES_INDEX", "events")
 
-# ------------------------------
-# Setup
-# ------------------------------
 router = APIRouter()
 ES = OpenSearch(ES_URL, timeout=10)
 
-# Lazy-load the embedding model once
+# ---------- Recommender Engine (OOP) ----------
+db_conf = DatabaseConfig(
+    host=os.getenv("PGHOST", "localhost"),
+    database=os.getenv("PGDATABASE", "eventdb"),
+    user=os.getenv("PGUSER", "postgres"),
+    password=os.getenv("PGPASSWORD", "postgres"),
+)
+
+engine = RecommendationEngine(db_conf)
+
+
+# ---------- Embedding model (lazy) ----------
 _model: Optional[SentenceTransformer] = None
 def get_model() -> SentenceTransformer:
     global _model
     if _model is None:
         _model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
     return _model
+
 
 def get_connection():
     return psycopg2.connect(
@@ -40,8 +53,10 @@ def get_connection():
         password=os.getenv("PGPASSWORD", "postgres"),
     )
 
+
 def similarity(a: str, b: str) -> float:
     return SequenceMatcher(None, (a or "").lower(), (b or "").lower()).ratio()
+
 
 def _norm(hits) -> Dict[str, float]:
     """Min–max normalize scores into {_id: score}."""
@@ -54,9 +69,8 @@ def _norm(hits) -> Dict[str, float]:
         for h in hits
     }
 
-# ------------------------------
-# Pydantic Models
-# ------------------------------
+
+# ---------- Pydantic models ----------
 class EventRecommendation(BaseModel):
     event_id: int
     title: str
@@ -96,13 +110,13 @@ class EventRecommendation(BaseModel):
         except (ValueError, TypeError):
             return 0.0
 
+
 class RecommendationResponse(BaseModel):
     user_id: int
     recommendations: List[EventRecommendation]
 
-# ------------------------------
-# Routes
-# ------------------------------
+
+# ---------- Routes ----------
 
 # 👁️ Get single event by ID
 @router.get("/api/events/{event_id:int}")
@@ -134,9 +148,8 @@ def get_event_by_id(event_id: int):
 
     return event
 
-# 🤖 Personalized recommendations with optional (local) search filter
-from services.recommender import recommend_events
 
+# 🤖 Personalized recommendations with optional (local) search filter
 @router.get("/api/events/recommendations/{user_id:int}", response_model=RecommendationResponse)
 def get_recommendations(
     user_id: int,
@@ -144,14 +157,24 @@ def get_recommendations(
     query: str = Query("", min_length=0),
 ):
     try:
-        recommendations = recommend_events(user_id=user_id, top_k=top_k) or []
+        # ✅ Use OOP engine instead of functional recommend_events
+        recommendations = engine.recommend_events(
+            user_id=user_id,
+            top_k=top_k,
+            max_per_cluster=5,  # you can make this a query param if you like
+        ) or []
 
         # Normalize to dicts
         rec_dicts = []
         for rec in recommendations:
-            rec_dicts.append(rec if isinstance(rec, dict) else (rec.dict() if hasattr(rec, "dict") else rec))
+            if isinstance(rec, dict):
+                rec_dicts.append(rec)
+            elif hasattr(rec, "dict"):
+                rec_dicts.append(rec.dict())
+            else:
+                rec_dicts.append(rec)
 
-        # Optional local filter
+        # Optional local search filter
         if query:
             q = query.lower()
 
@@ -161,7 +184,7 @@ def get_recommendations(
             finally:
                 conn.close()
 
-            def parse_tags(x):
+            def parse_tags_local(x):
                 if isinstance(x, list):
                     return x
                 if isinstance(x, str):
@@ -169,7 +192,7 @@ def get_recommendations(
                 return []
 
             if "tags" in df.columns:
-                df["tags"] = df["tags"].apply(parse_tags)
+                df["tags"] = df["tags"].apply(parse_tags_local)
             event_lookup = {int(row["event_id"]): row for _, row in df.iterrows()}
 
             filtered = []
@@ -197,7 +220,7 @@ def get_recommendations(
             filtered.sort(key=lambda x: x[0], reverse=True)
             rec_dicts = [r for _, r in filtered]
 
-        # Cast to models
+        # Cast to Pydantic models
         events: List[EventRecommendation] = []
         for rec in rec_dicts:
             if "title" not in rec:
@@ -209,6 +232,7 @@ def get_recommendations(
     except Exception:
         traceback.print_exc()
         return RecommendationResponse(user_id=user_id, recommendations=[])
+
 
 # 🔎 Hybrid search (BM25 + vector kNN)
 @router.get("/api/events/search")
@@ -224,9 +248,7 @@ def hybrid_search(q: str = Query(..., min_length=1), size: int = Query(10, ge=1,
     except Exception as e:
         raise HTTPException(status_code=503, detail=f"OpenSearch not reachable: {e}")
 
-    # -------------------------
     # 1️⃣ BM25 text search
-    # -------------------------
     fuzz = "1" if len(q) <= 4 else "AUTO:1,2"
     bm_body = {
         "size": min(50, max(size, 10)),
@@ -236,7 +258,7 @@ def hybrid_search(q: str = Query(..., min_length=1), size: int = Query(10, ge=1,
                     {"match": {"title": {"query": q, "fuzziness": fuzz, "boost": 2.0}}},
                     {"match": {"tags": {"query": q, "fuzziness": fuzz}}},
                 ],
-                "minimum_should_match": 1
+                "minimum_should_match": 1,
             }
         },
     }
@@ -246,9 +268,7 @@ def hybrid_search(q: str = Query(..., min_length=1), size: int = Query(10, ge=1,
     except TransportError as e:
         raise HTTPException(status_code=503, detail=f"BM25 query failed: {getattr(e, 'info', str(e))}")
 
-    # -------------------------
     # 2️⃣ Vector (semantic) search
-    # -------------------------
     kn_hits = []
     try:
         model = get_model()
@@ -263,22 +283,19 @@ def hybrid_search(q: str = Query(..., min_length=1), size: int = Query(10, ge=1,
                     "field": "vector",
                     "query_vector": qvec,
                     "k": min(50, max(size, 10)),
-                    "num_candidates": 200
+                    "num_candidates": 200,
                 }
-            }
+            },
         }
         kn_hits = ES.search(index=ES_INDEX, body=kn_body)["hits"]["hits"]
     except Exception as e:
         print("⚠️ kNN search failed, falling back to BM25-only:", e)
 
-    # -------------------------
     # 3️⃣ Fuse results (if both succeed)
-    # -------------------------
     if kn_hits:
         bm_norm, kn_norm = _norm(bm_hits), _norm(kn_hits)
         all_ids = set(bm_norm) | set(kn_norm)
 
-        # Weighted fusion
         fused = sorted(
             ((i, 0.6 * kn_norm.get(i, 0.0) + 0.4 * bm_norm.get(i, 0.0)) for i in all_ids),
             key=lambda x: x[1],
@@ -290,9 +307,7 @@ def hybrid_search(q: str = Query(..., min_length=1), size: int = Query(10, ge=1,
 
         return hydrate(ids_ordered, scores_map)
 
-    # -------------------------
     # 4️⃣ BM25 fallback only
-    # -------------------------
     ids_ordered = [int(h["_id"]) for h in bm_hits[:size]]
     scores_map = {str(h["_id"]): float(h.get("_score", 0.0)) for h in bm_hits[:size]}
     return hydrate(ids_ordered, scores_map)

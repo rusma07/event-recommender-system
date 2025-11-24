@@ -8,6 +8,8 @@ import eventRoutes from "./routes/eventRoutes.js";
 import recommendationRoutes from "./routes/recommendationRoutes.js";
 import interactionRoutes from "./routes/interactionRoutes.js";
 import { ensureAdmins } from "./utils/ensureAdmins.js";   // ✅ add
+import adminModelRoutes from "./routes/adminModelRoutes.js";
+
 
 dotenv.config();
 const app = express();
@@ -19,6 +21,8 @@ app.use("/api/users", userRoutes);
 app.use("/api/events", eventRoutes);
 app.use("/api/recommendations", recommendationRoutes);
 app.use("/api/interactions", interactionRoutes);
+app.use("/api/admin-model", adminModelRoutes);
+
 
 const PORT = process.env.PORT || 5000;
 
