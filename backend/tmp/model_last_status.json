@@ -1,0 +1,6 @@
+{
+  "at": "2025-11-12T08:56:43.882Z",
+  "ok": false,
+  "err": "build script missing",
+  "build": "D:\\final-event-recommender\\event-recommender-system\\backend\\scripts\\build_model.py"
+}

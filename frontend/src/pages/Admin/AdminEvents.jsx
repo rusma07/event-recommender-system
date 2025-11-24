@@ -5,6 +5,7 @@ import {
   updateEventApi,
   deleteEventApi,
 } from "../../services/admin_events_api";
+import ConfirmationModal from "../../components/Modal/ConfirmationModal";
 
 const emptyForm = {
   title: "",
@@ -13,7 +14,7 @@ const emptyForm = {
   end_date: "",
   location: "",
   tags: [],
-  price: "",
+  price: "", // "" = no price (null on submit). 0 => Free
   url: "",
 };
 
@@ -34,6 +35,12 @@ function dateOnly(value) {
   return s.slice(0, 10);
 }
 
+function formatPrice(p) {
+  if (p === 0) return "Free";
+  if (p == null || p === "") return "—";
+  return String(p);
+}
+
 function EventForm({ initial = emptyForm, onCancel, onSave, saving }) {
   const [form, setForm] = useState(() => ({
     ...emptyForm,
@@ -41,6 +48,12 @@ function EventForm({ initial = emptyForm, onCancel, onSave, saving }) {
     start_date: dateOnly(initial?.start_date),
     end_date: dateOnly(initial?.end_date),
     tags: initial?.tags || [],
+    price:
+      initial?.price === 0
+        ? 0
+        : initial?.price == null
+        ? ""
+        : Number(initial.price),
   }));
   const isEdit = Boolean(initial?.event_id);
 
@@ -48,17 +61,33 @@ function EventForm({ initial = emptyForm, onCancel, onSave, saving }) {
 
   const submit = (e) => {
     e.preventDefault();
+
+    // derive price:
+    // - "" -> null
+    // - "Free" (if ever passed) -> 0
+    // - number/string -> Number(...)
+    let priceOut =
+      form.price === "" || form.price === null || form.price === undefined
+        ? null
+        : form.price;
+
+    if (typeof priceOut === "string") {
+      const s = priceOut.trim().toLowerCase();
+      priceOut = s === "free" ? 0 : Number(priceOut);
+    }
+
+    if (typeof priceOut === "number" && Number.isNaN(priceOut)) {
+      priceOut = null;
+    }
+
     const payload = {
       ...form,
-      // ensure date-only (or null)
       start_date: form.start_date ? dateOnly(form.start_date) : null,
       end_date: form.end_date ? dateOnly(form.end_date) : null,
       tags: parseTagsInput(form.tags),
-      price:
-        form.price === "" || form.price === null || form.price === undefined
-          ? null
-          : Number(form.price),
+      price: priceOut,
     };
+
     onSave(payload);
   };
 
@@ -129,16 +158,26 @@ function EventForm({ initial = emptyForm, onCancel, onSave, saving }) {
           <input
             className="w-full border p-2 rounded"
             type="number"
+            min="0"
             step="0.01"
-            value={form.price ?? ""}
-            onChange={(e) => set("price", e.target.value)}
+            placeholder="0 = Free • leave blank = no price"
+            value={form.price === "" ? "" : form.price}
+            onChange={(e) => {
+              const v = e.target.value;
+              // keep state as "" or Number
+              set("price", v === "" ? "" : Number(v));
+            }}
           />
+          <p className="text-xs text-gray-500 mt-1">
+            Enter <strong>0</strong> to mark as Free.
+          </p>
         </div>
+
         <div>
           <label className="block text-sm font-medium">
             Tags (comma separated)
           </label>
-        <input
+          <input
             className="w-full border p-2 rounded"
             placeholder="AI, Tech, Startup"
             value={Array.isArray(form.tags) ? form.tags.join(", ") : form.tags}
@@ -175,6 +214,9 @@ export default function AdminEvents() {
   const [filter, setFilter] = useState("");
   const [editing, setEditing] = useState(null); // event or null
   const [showForm, setShowForm] = useState(false);
+
+  const [confirmEvent, setConfirmEvent] = useState(null); // for delete modal
+  const [deletingId, setDeletingId] = useState(null); // track deletion
 
   const load = async () => {
     try {
@@ -219,15 +261,33 @@ export default function AdminEvents() {
     setShowForm(true);
   };
 
-  const onDelete = async (event_id) => {
-    if (!confirm("Delete this event?")) return;
+  // --- delete with confirmation modal ---
+  const askDelete = (ev) => {
+    setConfirmEvent(ev);
+  };
+
+  const cancelDelete = () => {
+    setConfirmEvent(null);
+    setDeletingId(null);
+  };
+
+  const confirmDelete = async () => {
+    if (!confirmEvent) return;
+
+    const event_id = confirmEvent.event_id;
+
     try {
-      const prev = events;
+      setDeletingId(event_id);
+      setError("");
+
+      // optimistic update
       setEvents((list) => list.filter((e) => e.event_id !== event_id));
       await deleteEventApi(event_id);
+      cancelDelete();
     } catch (e) {
       setError(e.message || "Delete failed");
-      await load();
+      await load(); // restore events if delete failed
+      cancelDelete();
     }
   };
 
@@ -235,6 +295,13 @@ export default function AdminEvents() {
     try {
       setSaving(true);
       setError("");
+
+      // ensure backend-friendly price (optional redundancy)
+      if (typeof payload.price === "string") {
+        const s = payload.price.trim().toLowerCase();
+        payload.price = s === "free" ? 0 : Number(payload.price);
+        if (Number.isNaN(payload.price)) payload.price = null;
+      }
 
       if (editing?.event_id) {
         const { event } = await updateEventApi(editing.event_id, payload);
@@ -293,7 +360,7 @@ export default function AdminEvents() {
       <div className="mb-4">
         <input
           className="w-full md:w-80 border p-2 rounded"
-          placeholder="Filter by title, location or tags…"
+          placeholder="Filter by title,tags…"
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
         />
@@ -322,6 +389,9 @@ export default function AdminEvents() {
                   {dateOnly(ev.start_date)}{" "}
                   {ev.end_date ? `→ ${dateOnly(ev.end_date)}` : ""}
                 </div>
+                <div className="text-xs text-gray-700">
+                  Price: {formatPrice(ev.price)}
+                </div>
               </div>
 
               <div className="flex items-center gap-2">
@@ -332,7 +402,7 @@ export default function AdminEvents() {
                   Edit
                 </button>
                 <button
-                  onClick={() => onDelete(ev.event_id)}
+                  onClick={() => askDelete(ev)}
                   className="px-3 py-1.5 rounded bg-red-600 text-white"
                 >
                   Delete
@@ -342,6 +412,23 @@ export default function AdminEvents() {
           ))}
         </div>
       )}
+
+      {/* Delete confirmation modal */}
+      <ConfirmationModal
+        open={!!confirmEvent}
+        title="Delete Event?"
+        message={
+          confirmEvent
+            ? `Are you sure you want to delete "${confirmEvent.title}"? This action cannot be undone.`
+            : ""
+        }
+        confirmText="Delete"
+        cancelText="Cancel"
+        danger
+        loading={!!deletingId}
+        onCancel={cancelDelete}
+        onConfirm={confirmDelete}
+      />
     </div>
   );
 }

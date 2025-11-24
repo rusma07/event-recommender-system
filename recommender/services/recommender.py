@@ -227,6 +227,7 @@ class UserProfiler:
         user_inter = interactions_df[interactions_df['user_id'] == user_id]
         tags_counter = Counter()
 
+        # Tag click interactions (including onboarding tag selections)
         tag_clicks = user_inter[user_inter['interaction_type'] == 'tag_click']
         for _, row in tag_clicks.iterrows():
             meta = row.get('meta_parsed', {}) or {}
@@ -237,6 +238,7 @@ class UserProfiler:
                 if t:
                     tags_counter[t] += self.tag_click_weight
 
+        # Views / registrations contribute from event tags
         view_events = user_inter[user_inter['interaction_type'].isin(['view', 'register'])]
         for _, row in view_events.iterrows():
             event_tags = row.get('meta_parsed', {}).get('tags')
@@ -260,7 +262,10 @@ class SimilarityModel:
             with open(self.model_path, "r") as f:
                 model = json.load(f)
             self.event_ids = [int(eid) for eid in model["event_ids"]]
-            self.similarity_matrix = np.array(model["similarity_matrix"])
+#              This matrix is exactly your equation:
+# Sᵢⱼ = sim(vᵢ, vⱼ) → item-to-item similarities.
+            self.similarity_matrix = np.array(model["similarity_matrix"])  
+            
             self.event_id_to_index = {eid: idx for idx, eid in enumerate(self.event_ids)}
             self.loaded = True
             print("✅ Similarity model loaded successfully")
@@ -305,17 +310,14 @@ class RecommendationEngine:
 
         can_proceed = self._diagnose_user_interactions(user_id, interactions_df)
         if not can_proceed:
-            print("❌ Not enough interaction data for similarity model")
-            if user_tag_profile:
-                return self._tag_only_recommendations(events_df, user_tag_profile, top_k)
-            return self._recommend_new_user(events_df, top_k, max_per_cluster)
+            print("❌ Not enough interaction data for similarity model, using tag-only recommendations")
+            return self._tag_only_recommendations(events_df, user_tag_profile, top_k)
 
         # Load similarity model
         self.model.load()
         if not self.model.is_loaded():
-            if user_tag_profile:
-                return self._tag_only_recommendations(events_df, user_tag_profile, top_k)
-            return self._recommend_new_user(events_df, top_k, max_per_cluster)
+            print("❌ Similarity model not loaded, using tag-only recommendations")
+            return self._tag_only_recommendations(events_df, user_tag_profile, top_k)
 
         # Use hybrid similarity + tag scoring
         return self._hybrid_recommendations(
@@ -354,57 +356,38 @@ class RecommendationEngine:
             valid_interactions = user_interactions[user_interactions['interaction_type'].isin(valid_types)]
             has_tag_click = any(user_interactions['interaction_type'] == 'tag_click')
 
+            # With onboarding, min 3 tag_clicks usually => can proceed
             return (len(overlap) > 0 and len(valid_interactions) >= 3) or has_tag_click
 
         except Exception as e:
             print(f"❌ Error loading model in diagnostics: {e}")
             has_tag_click = any(user_interactions['interaction_type'] == 'tag_click')
+            # If we have tag_click data, we can still rely on tag-only
             return has_tag_click
 
     def _tag_only_recommendations(self, events_df: pd.DataFrame, user_tag_profile: Counter, top_k: int):
         print("⚠️ Using tag-only ranking")
-        tag_scores = compute_tag_score_for_events(events_df, user_tag_profile)
         events_df = events_df.copy()
+
+        # Ensure tags column is parsed
+        events_df['tags'] = events_df['tags'].apply(
+            lambda x: x if isinstance(x, list) else parse_tags_field(x)
+        )
+
+        tag_scores = compute_tag_score_for_events(events_df, user_tag_profile)
         events_df['tag_score'] = tag_scores
         events_df['final_score'] = events_df['tag_score']
 
         today = datetime.today().date()
         ranked = events_df.sort_values(by='final_score', ascending=False)
+
+        # Prefer upcoming events; if none, use all
         upcoming = ranked[ranked['end_date'].apply(lambda d: d.date() >= today if pd.notna(d) else True)]
+        if upcoming.empty:
+            upcoming = ranked
+
         recs = upcoming.head(top_k).to_dict(orient='records')
         return self._finalize_recommendations(recs)
-
-    def _recommend_new_user(self, events_df: pd.DataFrame, top_k=15, max_per_cluster=2):
-        print("⚠️ Using new-user cluster-based fallback recommendations")
-        today = datetime.today().date()
-        upcoming_events = events_df[events_df['end_date'].apply(lambda d: d.date() >= today if pd.notna(d) else False)]
-        if upcoming_events.empty:
-            upcoming_events = events_df
-            print("ℹ️ No upcoming events found, using all events for fallback")
-
-        clusters = upcoming_events['cluster'].unique()
-        recommendations = []
-
-        for cluster_id in clusters:
-            cluster_events = upcoming_events[upcoming_events['cluster'] == cluster_id]
-            n = min(len(cluster_events), max_per_cluster)
-            if n > 0:
-                sampled = cluster_events.sample(n).to_dict(orient='records')
-                recommendations.extend(sampled)
-                print(f"🎯 Cluster '{cluster_id}': selected {n} events")
-
-        random.shuffle(recommendations)
-
-        if len(recommendations) < top_k:
-            existing_ids = {r.get("event_id") for r in recommendations}
-            remaining_events = upcoming_events[~upcoming_events['event_id'].isin(existing_ids)]
-            remaining_needed = top_k - len(recommendations)
-            if not remaining_events.empty:
-                additional_events = remaining_events.sample(min(remaining_needed, len(remaining_events))).to_dict(orient='records')
-                recommendations.extend(additional_events)
-                print(f"📈 Added {len(additional_events)} events to reach {top_k}")
-
-        return self._finalize_recommendations(recommendations[:top_k])
 
     def _hybrid_recommendations(
         self,
@@ -449,10 +432,8 @@ class RecommendationEngine:
         weights = [weight_map[idx] for idx in interacted_indices]
 
         if len(interacted_indices) == 0:
-            print("❌ No matching interacted events in similarity model, falling back to tag/new-user")
-            if user_tag_profile:
-                return self._tag_only_recommendations(events_df, user_tag_profile, top_k)
-            return self._recommend_new_user(events_df, top_k, max_per_cluster)
+            print("❌ No matching interacted events in similarity model, falling back to tag-only")
+            return self._tag_only_recommendations(events_df, user_tag_profile, top_k)
 
         weighted_sim = np.average(similarity_matrix[interacted_indices], axis=0, weights=weights)
 
@@ -462,17 +443,24 @@ class RecommendationEngine:
         })
 
         interacted_event_ids = set(interacted_df['event_id'].dropna().astype(int).tolist())
+        # Downweight already interacted events
         scores_df["similarity_score"] = scores_df.apply(
             lambda row: row["similarity_score"] * 0.3 if int(row["event_id"]) in interacted_event_ids else row["similarity_score"],
             axis=1
         )
 
         merged_df = scores_df.merge(events_df, on="event_id", how="left")
-        merged_df['tags'] = merged_df['tags'].apply(lambda x: x if isinstance(x, list) else parse_tags_field(x))
 
+        # Ensure tags are parsed
+        merged_df['tags'] = merged_df['tags'].apply(
+            lambda x: x if isinstance(x, list) else parse_tags_field(x)
+        )
+
+        # Tag scores
         tag_scores_series = compute_tag_score_for_events(merged_df, user_tag_profile)
         merged_df['tag_score'] = tag_scores_series.values
 
+        # Hybrid final score
         merged_df['final_score'] = (
             self.similarity_weight * merged_df['similarity_score'] +
             self.tag_weight * merged_df['tag_score']
