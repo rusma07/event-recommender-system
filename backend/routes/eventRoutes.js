@@ -3,8 +3,9 @@ import {
   createEvent,
   deleteEvent,
   getAllEvents,
+   searchEvents,
   getEventsByUserTags,
-  searchEvents,
+  getEventsByTags,
   updateEvent
 } from '../controllers/eventController.js';
 import auth from '../middleware/auth.js';
@@ -17,6 +18,7 @@ router.get('/', getAllEvents);
 // put /search BEFORE /:userId/tags
 router.get('/search', searchEvents);
 router.get('/:userId/tags', getEventsByUserTags);
+router.get("/by-tags", getEventsByTags);
 
 router.post('/', auth, adminOnly, createEvent);
 router.put('/:eventId', auth, adminOnly, updateEvent);

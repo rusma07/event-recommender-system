@@ -31,9 +31,6 @@ export default async function auth(req, res, next) {
       return res.status(404).json({ message: "User not found" });
     }
 
-    // Optional: log once to see what role looks like
-    console.log("✅ Auth user:", user.toJSON());
-
     // Attach plain object instead of Sequelize instance (less weird in logs/middleware)
     req.user = user.toJSON();
 

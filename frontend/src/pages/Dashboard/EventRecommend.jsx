@@ -6,6 +6,7 @@ import {
   searchEvents,
   logInteraction,
   getEventsByUserTags,
+  getEventsByTags,
 } from "../../services/recommend_api";
 import EventCard from "../../components/EventCard";
 import {
@@ -101,39 +102,12 @@ export const Dashboard = ({ userId }) => {
           dispatch(setSearch(queryParam));
         } else if (selectedTags.length > 0) {
           console.log(
-            "🏷️ Using getEventsByUserTags with CURRENT tags:",
+            "🏷️ Using getEventsByTags with CURRENT tags:",
             selectedTags
           );
 
-          const allUserTaggedEvents = await getEventsByUserTags(userId);
-
-          if (allUserTaggedEvents && Array.isArray(allUserTaggedEvents)) {
-            // normalize tags for each event first
-            const normalizedEvents = allUserTaggedEvents.map((event) => ({
-              ...event,
-              tags: parseTagsInput(event.tags),
-            }));
-
-            const selectedLower = selectedTags.map((t) =>
-              String(t).toLowerCase()
-            );
-
-            data = normalizedEvents.filter((event) => {
-              const eventTagsLower = (event.tags || []).map((t) =>
-                String(t).toLowerCase()
-              );
-              return eventTagsLower.some((tag) =>
-                selectedLower.includes(tag)
-              );
-            });
-
-            console.log(
-              `🎯 Filtered to ${data.length} events matching current tags:`,
-              selectedTags
-            );
-          } else {
-            data = [];
-          }
+          const eventsByTags = await getEventsByTags(selectedTags);
+          data = eventsByTags || [];
         } else {
           console.log("🎯 Using getRecommendations");
           data = await getRecommendations(userId, 50);

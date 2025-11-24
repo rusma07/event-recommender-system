@@ -1,6 +1,4 @@
 // services/recommend_api.js
-
-// ✅ Load from environment
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const BACKEND_URL = import.meta.env.VITE_API_BACKEND_URL;
 
@@ -90,3 +88,35 @@ export const getEventsByUserTags = async (userId) => {
     return [];
   }
 };
+
+// =============================
+// 🔹 Get Events by Selected Tags (GET /events/by-tags)
+// =============================
+export const getEventsByTags = async (tags = []) => {
+  const tagList = Array.isArray(tags)
+    ? tags.filter(Boolean)
+    : String(tags || "")
+        .split(",")
+        .map((t) => t.trim())
+        .filter(Boolean);
+
+  if (tagList.length === 0) return [];
+
+  const params = new URLSearchParams({
+    tags: tagList.join(","), // "Ai,Tech,Chess"
+  });
+
+  try {
+    const res = await fetch(
+      `${BACKEND_URL}/events/by-tags?${params.toString()}`
+    );
+    if (!res.ok) throw new Error("Failed to fetch events by tags");
+
+    const data = await res.json(); // { events, selectedTags, total }
+    return data.events || [];
+  } catch (err) {
+    console.error("Error fetching events by tags:", err);
+    return [];
+  }
+};
+

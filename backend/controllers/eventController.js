@@ -58,56 +58,51 @@ class EventController {
 
   // 🔹 NEW: Get events by selected tags (supports multiple tags)
   getEventsByTags = async (req, res) => {
-    try {
-      let { tags } = req.body || {};
+  try {
+    let { tags } = req.query;
 
-      // also support GET /events/by-tags?tags=Ai,Tech,Chess style
-      if (!tags && typeof req.query.tags === "string") {
-        tags = req.query.tags.split(",").map((t) => t.trim());
-      }
-
-      if (!tags || (Array.isArray(tags) && tags.length === 0)) {
-        return res.json({ events: [], selectedTags: [], total: 0 });
-      }
-
-      // normalize to array of lowercase strings
-      const tagList = Array.isArray(tags) ? tags : [tags];
-      const normalizedTags = tagList
-        .map((t) => String(t || "").trim().toLowerCase())
-        .filter(Boolean);
-
-      if (normalizedTags.length === 0) {
-        return res.json({ events: [], selectedTags: [], total: 0 });
-      }
-
-      // ANY of the selected tags (OR logic):
-      // event is included if it has at least one of the selected tags
-      const sql = `
-        SELECT event_id, title, image, start_date, end_date, location, tags, price, url
-        FROM public."Event"
-        WHERE EXISTS (
-          SELECT 1 FROM unnest(tags) AS t
-          WHERE LOWER(TRIM(t)) = ANY($1::text[])
-        )
-        ORDER BY start_date DESC
-        LIMIT 50;
-      `;
-
-      // If you ever want "must contain ALL tags" logic instead of ANY:
-      // you would need something like HAVING COUNT(DISTINCT ...) = number of selected tags.
-
-      const { rows } = await this.pool.query(sql, [normalizedTags]);
-
-      return res.json({
-        events: rows,
-        selectedTags: normalizedTags,
-        total: rows.length,
-      });
-    } catch (err) {
-      console.error("❌ Error in getEventsByTags:", err.message);
-      res.status(500).json({ error: "Failed to fetch events by tags" });
+    // Support ?tags=Tag1,Tag2
+    if (typeof tags === "string") {
+      tags = tags.split(",").map((t) => t.trim());
     }
-  };
+
+    if (!Array.isArray(tags) || tags.length === 0) {
+      return res.json({ events: [], selectedTags: [], total: 0 });
+    }
+
+    // Normalize tags: lowercase + remove spaces
+    const normalizedTags = tags
+      .map((t) => String(t).toLowerCase().replace(/\s+/g, ""))
+      .filter(Boolean);
+
+    // Convert tags into patterns for SQL LIKE
+    const patterns = normalizedTags.map((t) => `%${t}%`);
+
+    const sql = `
+      SELECT event_id, title, image, start_date, end_date, location, tags, price, url
+      FROM public."Event"
+      WHERE EXISTS (
+        SELECT 1 
+        FROM unnest(tags) AS t
+        WHERE REPLACE(LOWER(TRIM(t)), ' ', '') LIKE ANY($1::text[])
+      )
+      ORDER BY start_date DESC
+      LIMIT 50;
+    `;
+
+    const { rows } = await this.pool.query(sql, [patterns]);
+
+    res.json({
+      events: rows,
+      selectedTags: tags,
+      total: rows.length,
+    });
+  } catch (err) {
+    console.error("❌ getEventsByTags error:", err.message);
+    res.status(500).json({ error: "Failed to fetch events by tags" });
+  }
+};
+
 
   // Get events by user's clicked tags (preference-based)
   getEventsByUserTags = async (req, res) => {

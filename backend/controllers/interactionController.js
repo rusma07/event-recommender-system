@@ -9,7 +9,12 @@ class InteractionController {
   // POST /api/interactions
   logInteraction = async (req, res) => {
     try {
-      const { user_id, event_id = null, interaction_type, meta = null } = req.body;
+      const {
+        user_id,
+        event_id = null,
+        interaction_type,
+        meta = null,
+      } = req.body;
 
       if (!user_id || !interaction_type) {
         return res
@@ -38,7 +43,17 @@ class InteractionController {
           [user_id]
         );
 
-        let newTags = meta ? meta.tags || [] : [];
+        // 1️⃣ Normalize incoming tags:
+        //    - ensure array
+        //    - toString + trim
+        //    - remove ALL spaces (e.g. "Data Analysis" -> "DataAnalysis")
+        let newTags = [];
+        if (meta && Array.isArray(meta.tags)) {
+          newTags = meta.tags
+            .map((t) => String(t || "").trim())
+            .filter(Boolean)
+            .map((t) => t.replace(/\s+/g, "")); // remove spaces
+        }
 
         if (existing.rows.length > 0) {
           // meta might be JSON or string, handle both
@@ -50,29 +65,45 @@ class InteractionController {
               currentMeta = {};
             }
           }
-          const currentTags = Array.isArray(currentMeta?.tags)
+
+          let currentTags = Array.isArray(currentMeta?.tags)
             ? currentMeta.tags
             : [];
 
-          newTags = Array.from(new Set([...currentTags, ...newTags]));
+          // 2️⃣ Normalize existing tags the same way (trim + remove spaces)
+          currentTags = currentTags
+            .map((t) => String(t || "").trim())
+            .filter(Boolean)
+            .map((t) => t.replace(/\s+/g, "")); // remove spaces
+
+          // 3️⃣ Merge + dedupe
+          const mergedTags = Array.from(new Set([...currentTags, ...newTags]));
 
           const update = await this.pool.query(
             `UPDATE public."User_Event"
              SET meta = $1, interaction_time = NOW()
              WHERE user_id=$2 AND interaction_type='tag_click'
              RETURNING *`,
-            [JSON.stringify({ tags: newTags }), user_id]
+            [JSON.stringify({ tags: mergedTags }), user_id]
           );
+
           return res
             .status(200)
             .json({ success: true, interaction: update.rows[0] });
         } else {
+          // First time tag_click for this user
           const insert = await this.pool.query(
             `INSERT INTO public."User_Event" (user_id, event_id, interaction_type, meta)
              VALUES ($1, $2, $3, $4)
              RETURNING *`,
-            [user_id, null, interaction_type, JSON.stringify({ tags: newTags })]
+            [
+              user_id,
+              null,
+              interaction_type,
+              JSON.stringify({ tags: newTags }), // already normalized
+            ]
           );
+
           return res
             .status(201)
             .json({ success: true, interaction: insert.rows[0] });
@@ -97,7 +128,12 @@ class InteractionController {
         `INSERT INTO public."User_Event" (user_id, event_id, interaction_type, meta)
          VALUES ($1, $2, $3, $4)
          RETURNING *`,
-        [user_id, event_id, interaction_type, meta ? JSON.stringify(meta) : null]
+        [
+          user_id,
+          event_id,
+          interaction_type,
+          meta ? JSON.stringify(meta) : null,
+        ]
       );
 
       return res
@@ -132,8 +168,7 @@ const interactionController = new InteractionController(pool);
 
 // Named exports for routes
 export const logInteraction = interactionController.logInteraction;
-export const getOnboardingStatus =
-  interactionController.getOnboardingStatus;
+export const getOnboardingStatus = interactionController.getOnboardingStatus;
 
 // Optional default export of the instance
 export default interactionController;
