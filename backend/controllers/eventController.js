@@ -56,7 +56,60 @@ class EventController {
     }
   };
 
-  // Get events by user's clicked tags
+  // 🔹 NEW: Get events by selected tags (supports multiple tags)
+  getEventsByTags = async (req, res) => {
+    try {
+      let { tags } = req.body || {};
+
+      // also support GET /events/by-tags?tags=Ai,Tech,Chess style
+      if (!tags && typeof req.query.tags === "string") {
+        tags = req.query.tags.split(",").map((t) => t.trim());
+      }
+
+      if (!tags || (Array.isArray(tags) && tags.length === 0)) {
+        return res.json({ events: [], selectedTags: [], total: 0 });
+      }
+
+      // normalize to array of lowercase strings
+      const tagList = Array.isArray(tags) ? tags : [tags];
+      const normalizedTags = tagList
+        .map((t) => String(t || "").trim().toLowerCase())
+        .filter(Boolean);
+
+      if (normalizedTags.length === 0) {
+        return res.json({ events: [], selectedTags: [], total: 0 });
+      }
+
+      // ANY of the selected tags (OR logic):
+      // event is included if it has at least one of the selected tags
+      const sql = `
+        SELECT event_id, title, image, start_date, end_date, location, tags, price, url
+        FROM public."Event"
+        WHERE EXISTS (
+          SELECT 1 FROM unnest(tags) AS t
+          WHERE LOWER(TRIM(t)) = ANY($1::text[])
+        )
+        ORDER BY start_date DESC
+        LIMIT 50;
+      `;
+
+      // If you ever want "must contain ALL tags" logic instead of ANY:
+      // you would need something like HAVING COUNT(DISTINCT ...) = number of selected tags.
+
+      const { rows } = await this.pool.query(sql, [normalizedTags]);
+
+      return res.json({
+        events: rows,
+        selectedTags: normalizedTags,
+        total: rows.length,
+      });
+    } catch (err) {
+      console.error("❌ Error in getEventsByTags:", err.message);
+      res.status(500).json({ error: "Failed to fetch events by tags" });
+    }
+  };
+
+  // Get events by user's clicked tags (preference-based)
   getEventsByUserTags = async (req, res) => {
     try {
       const { userId } = req.params;
@@ -282,10 +335,10 @@ const eventController = new EventController(pool);
 // Export the same function names so existing routes don't have to change
 export const getAllEvents = eventController.getAllEvents;
 export const searchEvents = eventController.searchEvents;
+export const getEventsByTags = eventController.getEventsByTags; // 👈 NEW EXPORT
 export const getEventsByUserTags = eventController.getEventsByUserTags;
 export const createEvent = eventController.createEvent;
 export const updateEvent = eventController.updateEvent;
 export const deleteEvent = eventController.deleteEvent;
 
-// (Optionally) default export the instance if you ever want to use it as a whole
 export default eventController;
