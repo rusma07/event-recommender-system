@@ -37,10 +37,24 @@ class SimilarityModelBuilder:
     def parse_tags(tags: Any) -> List[str]:
         """
         Parse tags from the DB.
-        Expects something like '{tag1,tag2}' as a string, otherwise returns [].
+
+        Supports:
+        - Postgres text[] → comes into Python as a list: ['Ai', 'DataAnalysis', ...]
+        - String format "{Ai,DataAnalysis,...}"
         """
+        # Case 1: Postgres text[] → Python list
+        if isinstance(tags, list):
+            return [str(tag).strip() for tag in tags if str(tag).strip()]
+
+        # Case 2: String in "{tag1,tag2}" format
         if isinstance(tags, str):
-            return [tag.strip() for tag in tags.strip("{}").split(",") if tag.strip()]
+            s = tags.strip()
+            # remove surrounding { } if present
+            if s.startswith("{") and s.endswith("}"):
+                s = s[1:-1]
+            return [t.strip() for t in s.split(",") if t.strip()]
+
+        # Fallback: no tags
         return []
 
     # --- Data loading ---
@@ -73,7 +87,7 @@ class SimilarityModelBuilder:
 
             tags_list = self.parse_tags(tags)
 
-            # Combine tags + title for text
+            # Use tags as the main text; if tags are empty, fall back to title
             text_source = " ".join(tags_list) or (title or "")
             tokens = self.tokenize(text_source)
 
