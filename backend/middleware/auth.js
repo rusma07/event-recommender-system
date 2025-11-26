@@ -1,6 +1,5 @@
-// middleware/auth.js
 import jwt from "jsonwebtoken";
-import User from "../models/User.js"; // Sequelize model
+import User from "../models/User.js"; 
 
 export default async function auth(req, res, next) {
   try {
@@ -24,14 +23,13 @@ export default async function auth(req, res, next) {
 
     // Fetch user from DB and include role
     const user = await User.findByPk(decoded.id, {
-      attributes: ["id", "email", "role", "name"], // adjust if your field is `isAdmin` etc.
+      attributes: ["id", "email", "role", "name"], 
     });
 
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
 
-    // Attach plain object instead of Sequelize instance (less weird in logs/middleware)
     req.user = user.toJSON();
 
     next();

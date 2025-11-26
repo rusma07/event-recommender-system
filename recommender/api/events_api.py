@@ -248,7 +248,7 @@ def hybrid_search(q: str = Query(..., min_length=1), size: int = Query(10, ge=1,
     except Exception as e:
         raise HTTPException(status_code=503, detail=f"OpenSearch not reachable: {e}")
 
-    # 1️⃣ BM25 text search
+    # 1️ BM25 text search
     fuzz = "1" if len(q) <= 4 else "AUTO:1,2"
     bm_body = {
         "size": min(50, max(size, 10)),
@@ -268,7 +268,7 @@ def hybrid_search(q: str = Query(..., min_length=1), size: int = Query(10, ge=1,
     except TransportError as e:
         raise HTTPException(status_code=503, detail=f"BM25 query failed: {getattr(e, 'info', str(e))}")
 
-    # 2️⃣ Vector (semantic) search
+    # 2 Vector (semantic) search
     kn_hits = []
     try:
         model = get_model()
@@ -291,7 +291,7 @@ def hybrid_search(q: str = Query(..., min_length=1), size: int = Query(10, ge=1,
     except Exception as e:
         print("⚠️ kNN search failed, falling back to BM25-only:", e)
 
-    # 3️⃣ Fuse results (if both succeed)
+    # 3 Fuse results (if both succeed)
     if kn_hits:
         bm_norm, kn_norm = _norm(bm_hits), _norm(kn_hits)
         all_ids = set(bm_norm) | set(kn_norm)

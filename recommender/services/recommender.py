@@ -7,10 +7,7 @@ import numpy as np
 from datetime import datetime
 from collections import defaultdict, Counter
 
-# =========================
 #  CONFIG & CONSTANTS
-# =========================
-
 TAG_CLUSTER_MAP = {
     "Ai": "Tech", "Blockchain": "Tech", "Cybersecurity": "Tech", "Data Analysis": "Tech",
     "Devops": "Tech", "Mobile Development": "Tech", "Networking": "Tech",
@@ -29,9 +26,7 @@ TAG_CLUSTER_MAP = {
 }
 
 
-# =========================
 #  LOW-LEVEL HELPERS
-# =========================
 
 def safe_parse_meta(m):
     """Parse meta field which may be dict, JSON string, or NULL."""
@@ -115,11 +110,7 @@ def clean_recommendations(recommendations):
         cleaned.append(cleaned_rec)
     return cleaned
 
-
-# =========================
 #  DATABASE CONFIG & REPOS
-# =========================
-
 class DatabaseConfig:
     def __init__(self, host="localhost", database="eventdb", user="postgres", password="postgres"):
         self.host = host
@@ -215,9 +206,8 @@ class UserInteractionRepository:
         return all_df[all_df["user_id"] == user_id]
 
 
-# =========================
+
 #  USER PROFILE & MODEL
-# =========================
 
 class UserProfiler:
     def __init__(self, tag_click_weight: float = 2.0):
@@ -274,9 +264,7 @@ class SimilarityModel:
         return self.loaded
 
 
-# =========================
 #  RECOMMENDATION ENGINE
-# =========================
 
 class RecommendationEngine:
     def __init__(

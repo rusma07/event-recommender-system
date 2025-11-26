@@ -1,4 +1,3 @@
-// backend/controllers/interactionController.js
 import { pool } from "../db.js";
 
 class InteractionController {

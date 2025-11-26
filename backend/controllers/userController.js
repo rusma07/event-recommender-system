@@ -8,7 +8,6 @@ import bcrypt from "bcrypt";
 
 class UserController {
   constructor() {
-    // bind methods so `this` is correct when used as handlers
     this.registerUser = this.registerUser.bind(this);
     this.loginUser = this.loginUser.bind(this);
     this.logoutUser = this.logoutUser.bind(this);
@@ -17,9 +16,7 @@ class UserController {
     this.resetPassword = this.resetPassword.bind(this);
   }
 
-  // ===========================
   // REGISTER USER
-  // ===========================
   async registerUser(req, res) {
     try {
       const { name, email, password } = req.body;
@@ -39,9 +36,7 @@ class UserController {
     }
   }
 
-  // ===========================
   // LOGIN USER
-  // ===========================
   async loginUser(req, res) {
     try {
       const { email, password } = req.body;
@@ -65,17 +60,15 @@ class UserController {
     }
   }
 
-  // ===========================
+
   // LOGOUT USER
-  // ===========================
   logoutUser(req, res) {
     // For JWT, just instruct client to delete token
     res.json({ message: "User logged out successfully" });
   }
 
-  // ===========================
+
   // UPDATE PROFILE (Protected)
-  // ===========================
   async updateUserProfile(req, res) {
     const userId = req.user.id;
     const { name, email, oldPassword, newPassword, confirmPassword } = req.body;
@@ -112,9 +105,8 @@ class UserController {
     }
   }
 
-  // ===========================
+
   // FORGOT PASSWORD
-  // ===========================
   async forgotPassword(req, res) {
     const { email } = req.body;
     try {
@@ -156,9 +148,8 @@ class UserController {
     }
   }
 
-  // ===========================
+
   // RESET PASSWORD
-  // ===========================
   async resetPassword(req, res) {
     const { token, newPassword, confirmPassword } = req.body;
 

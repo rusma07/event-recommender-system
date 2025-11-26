@@ -1,4 +1,3 @@
-// backend/controllers/eventController.js
 import { pool } from "../db.js";
 
 class EventController {
@@ -19,42 +18,6 @@ class EventController {
     }
   };
 
-  // Search events (title + tags)
-  searchEvents = async (req, res) => {
-    try {
-      const { query } = req.query;
-      if (!query || query.trim() === "") {
-        return res.status(400).json({ error: "Search query is required" });
-      }
-
-      const searchQuery = query.trim().toLowerCase();
-      const searchTerm = `%${searchQuery}%`;
-
-      const sql = `
-        SELECT event_id, title, image, start_date, end_date, location, tags, price, url
-        FROM public."Event"
-        WHERE 
-          LOWER(title) LIKE $1
-          OR EXISTS (
-            SELECT 1 FROM unnest(tags) AS tag
-            WHERE LOWER(tag) LIKE $1
-          )
-        ORDER BY
-          CASE 
-            WHEN LOWER(title) = $2 THEN 1
-            WHEN LOWER(title) LIKE $1 THEN 2
-            ELSE 3
-          END,
-          start_date DESC
-        LIMIT 50;
-      `;
-      const { rows } = await this.pool.query(sql, [searchTerm, searchQuery]);
-      res.json(rows);
-    } catch (err) {
-      console.error("❌ Error in searchEvents:", err.message);
-      res.status(500).json({ error: "Failed to search events" });
-    }
-  };
 
   // 🔹 NEW: Get events by selected tags (supports multiple tags)
   getEventsByTags = async (req, res) => {
@@ -327,10 +290,8 @@ class EventController {
 // Create a single controller instance
 const eventController = new EventController(pool);
 
-// Export the same function names so existing routes don't have to change
 export const getAllEvents = eventController.getAllEvents;
-export const searchEvents = eventController.searchEvents;
-export const getEventsByTags = eventController.getEventsByTags; // 👈 NEW EXPORT
+export const getEventsByTags = eventController.getEventsByTags; 
 export const getEventsByUserTags = eventController.getEventsByUserTags;
 export const createEvent = eventController.createEvent;
 export const updateEvent = eventController.updateEvent;

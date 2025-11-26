@@ -1,6 +1,5 @@
-// backend/models/Event.js
 import { DataTypes } from "sequelize";
-import sequelize from "../db.js"; // include .js extension in ESM
+import sequelize from "../db.js"; 
 
 const Event = sequelize.define("Event", {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
@@ -10,7 +9,7 @@ const Event = sequelize.define("Event", {
   start_date: { type: DataTypes.DATE },
   end_date: { type: DataTypes.DATE },
   location: { type: DataTypes.STRING },
-  tags: { type: DataTypes.STRING }, // comma separated or JSON
+  tags: { type: DataTypes.STRING },
   price: { type: DataTypes.STRING }
 });
 
