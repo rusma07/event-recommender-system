@@ -1,0 +1,121 @@
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bfcaf7;
+}
+
+.login-box {
+    background-color: #fff;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.login-box h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.login-subtext {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+input[type="name"],
+input[type="email"],
+input[type="password"],
+.password-input input {
+    width: 100%;
+    padding: 12px 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    margin-bottom: 20px;
+    font-size: 14px;
+    background-color: transparent;
+}
+
+.password-input {
+    position: relative;
+}
+
+.password-input span {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    cursor: pointer;
+    color: #555;
+}
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.login-btn {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 12px;
+    border-radius: 24px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.login-alt-btn {
+    width: 100%;
+    background-color: #f1f1f1;
+    color: black;
+    padding: 12px;
+    border-radius: 24px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+a {
+    color: #555;
+    text-decoration: none;
+}
+
+.forgot-link {
+    text-decoration: none;
+    color: #040f14;
+    font-size: 14px;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+.error-text {
+  color: red;
+  font-size: 13px;
+  margin-top: -5px;
+  margin-bottom: 8px;
+}

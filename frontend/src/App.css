@@ -1,0 +1,17 @@
+.app-container {
+  margin-top: 70px; /* space for navbar */
+}
+
+.hero-bg {
+  background:
+    radial-gradient(circle at 25% 25%, rgba(255,255,255,0.08) 0%, transparent 45%),
+    radial-gradient(circle at 75% 75%, rgba(255,255,255,0.08) 0%, transparent 45%),
+    linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  animation: float 20s infinite linear;
+}
+
+@keyframes float {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}

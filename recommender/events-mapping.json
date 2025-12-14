@@ -1,0 +1,48 @@
+﻿{
+  "settings": {
+    "index": { "knn": true },
+    "analysis": {
+      "filter": {
+        "shingle_3": { "type": "shingle", "min_shingle_size": 3, "max_shingle_size": 3 }
+      },
+      "analyzer": {
+        "trigram_analyzer": {
+          "tokenizer": "standard",
+          "filter": ["lowercase","asciifolding","shingle_3"]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "id":    { "type": "keyword" },
+      "title": {
+        "type": "text",
+        "fields": {
+          "ngrams": { "type": "text", "analyzer": "trigram_analyzer" },
+          "raw":    { "type": "keyword", "ignore_above": 256 }
+        }
+      },
+      "tags": {
+        "type": "text",
+        "fields": {
+          "ngrams": { "type": "text", "analyzer": "trigram_analyzer" },
+          "raw":    { "type": "keyword" }
+        }
+      },
+      "title_suggest": { "type": "completion" },
+      "tags_suggest":  { "type": "completion" },
+
+      "vector": {
+        "type": "knn_vector",
+        "dimension": 384,
+        "method": {
+          "name": "hnsw",
+          "engine": "lucene",
+          "space_type": "cosinesimil",
+          "parameters": { "ef_construction": 128, "m": 16 }
+        }
+      }
+    }
+  }
+}
